@@ -357,7 +357,7 @@
 % highest-level sectioning command that is to produce section numbers.
 %
  
-\setcounter{secnumdepth}{2}
+\setcounter{secnumdepth}{5}
  
 % APPENDIX
 %
