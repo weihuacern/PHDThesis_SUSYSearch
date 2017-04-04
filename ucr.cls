@@ -167,12 +167,9 @@
 %TCIDATA{Language=American English}
 %TCIDATA{CSTFile=ucr.cst}
 
-
 %% tcilatex is a package from Scientific Workplace.
 %% The user may remove the following line without serious damage.
 %% \input{tcilatex}
-
-
 
 \NeedsTeXFormat{LaTeX2e}
 %\ProvidesClass{ucthesis}[2004/12/19 v3.2 University of California Thesis Class]
@@ -254,7 +251,6 @@
 \ssp				  % Single-spaces and
 \overfullrule 5pt		  % causes overfull hboxes to be marked.
 \fi
-
 
 % PREPARING A FOREIGN LANGUAGE VERSION:
 %
