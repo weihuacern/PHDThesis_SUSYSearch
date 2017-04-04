@@ -27,11 +27,11 @@
 % \documentclass[11pt]{ucthesis}
 % \documentclass[11pt]{ucr}
 
-\documentclass[oneside,final, letterpaper]{ucr}
+\documentclass[oneside,final,letterpaper]{ucr}
 \begin{document}
-% Declarations for Front Matter
+%Declarations for Front Matter
 
-\title{The title goes here}
+\title{Search for Supersymmetry in pp Collisions at 13 TeV with customized Top Tagger in all hadronic channel}
 \author{Hua Wei}
 \degreemonth{MM DD}
 \degreeyear{2017}
@@ -47,7 +47,6 @@
 \approvalpage{}
 
 \degreesemester{Fall}
-
 \begin{frontmatter}
 
 \begin{acknowledgements}
@@ -70,15 +69,13 @@ Abstract should be double-spaced and limited to 350 words or 2,450 characters.
 \listoftables
 \end{frontmatter}
 
-% \part{First Part}
+%\part{First Part}
 
-\input{sections/chapter1} %usually intro
-\input{sections/chapter2}
-\input{sections/chapter3}
-\input{sections/chapter4}
-\input{sections/conclusions}
-
-
+\input{sections/c1_Introduction} %usually intro
+\input{sections/c2_SMAndSUSY}
+\input{sections/c3_LHCAndCMS}
+\input{sections/c4_SUSYTopTaggerAnalysis}
+\input{sections/Conclusions}
 
 \nocite{*}
 % \singlespacing
@@ -86,7 +83,5 @@ Abstract should be double-spaced and limited to 350 words or 2,450 characters.
 \bibliographystyle{plain}
 \bibliography{reference}
 
-\input{sections/appendix}
-
-
+\input{sections/Appendix}
 \end{document}
