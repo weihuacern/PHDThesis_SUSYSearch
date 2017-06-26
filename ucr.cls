@@ -110,26 +110,30 @@
 %%% ====================================================================
 \usepackage{anysize}
 \usepackage[left=1.5in,top=1.5in,right=1in,bottom=1in]{geometry}
-% \usepackage{bm}
-% \usepackage{mathrsfs}
-% \usepackage[dvips]{graphicx}
-% \usepackage{graphics}
-% \usepackage{subfigure}
-% \usepackage{flafter}
-% \usepackage{sw20uctd}
+%\usepackage{bm}
+%\usepackage{mathrsfs}
+%\usepackage[dvips]{graphicx}
+%\usepackage{graphics}
+%\usepackage{subfigure}
+%\usepackage{flafter}
+%\usepackage{sw20uctd}
 \usepackage{xspace}
 \usepackage{graphicx}
 \usepackage{pdfsync}
 \usepackage{amsmath}
-% \usepackage{amssymb}
-% \usepackage{amsthm}
-% \usepackage{fancyhdr} 
+%\usepackage{amssymb}
+%\usepackage{amsthm}
+%\usepackage{fancyhdr} 
 \usepackage{fncylab}
 \usepackage[usenames]{color}
-% \usepackage{enumerate}
-% \usepackage{multirow}
-% \usepackage{setspace}
-
+%\usepackage{enumerate}
+%\usepackage{multirow}
+%\usepackage{setspace}
+\usepackage{mathtools}
+%\usepackage{makecell}
+\newcommand{\specialcell}[2][c]{\begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
+%\usepackage{amsthm}
+%\usepackage[sumlimits]{amsmath}
 
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
@@ -156,8 +160,7 @@
 \newtheorem{solution}[theorem]{Solution}
 \newtheorem{summary}[theorem]{Summary}
 \newtheorem{observation}[theorem]{Observation}
-\newenvironment{proof}[1][Proof]{\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
-
+%\newenvironment{proof}[1][Proof]{\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
 
 %TCIDATA{OutputFilter=LATEX.DLL}
 %TCIDATA{Created=Saturday, April 29, 2006 22:07:22}
