@@ -163,7 +163,60 @@ The online alignment system for the strip detector is necessary with the complic
 
 \subsubsection{Calorimeters}
 \paragraph{Electromagnetic Calorimeter}
+The CMS electromagnetic calorimeter (ECAL) is a hermetic homogeneous calorimeter made of by lead tungstate (PbWO4) crystals. The lead tungstate is an appropriate choice for CMS ECAL because the crystal is both radiations hard in LHC environment and response rapid (same level as the LHC bunch crossing). 61200 lead tungstate crystals are installed in the ECAL barrel region while 7324 for endcap. The lead tungstate will emit 80\% of the light in 25 ns once the electron (or photon) hits on the crystal.
+
+Then we need a photon detector to collect the light yield from crystals. As the request we have for the crystal, we also need the photon detector to be both radiation tolerant and fast. To satisfy the requirement, the avalanche photodiodes (APD) are installed in barrel while the vacuum phototriodes in the endcap. All the photon detectors have been tested in the harsh environment (high radiation plus 4T magnet field) before actually installed. The light yield from the crystal is weak, so we also need to amplify them with photomultiplier. The multi gain pre-amplifiers (MGPA), an ASIC specifically designed for ECAL, are installed to reshape and amplify the signal from photon detectors.
+
+Then the amplified electrons will be integrated and digitized by the on-detector electronics and then pass to the central data acquisition from the off-detector electronics. The electronics, especially for the off-detector electronics, the ECAL is very similar with the HCAL (hadron calorimeter) counterpart, I will show more details in the next section since I am majorly working for HCAL in my PhD period. 
+
+The last thing need to mention is the preshower system for ECAL endcap. We have high-energy neutral pion in endcap region, and the prompt photons from the high-energy neutral pion can be an issue in the physics analysis since they are almost collinear. The major purpose of the preshower detector is to trigger the electromagnetic shower with high spatial resolution before ECAL endcap. As a result, the almost collinear photons can be distinguished by the ECAL reconstruction hits occupancy. 
+
 \paragraph{Hadron Calorimeter}
+
+The CMS HCAL is sets of detectors that measure the energy of hadronic particles consist of quarks and gluons. It contains four parts: Hadron Barrel (HB), Hadron Endcap (HE), Hadron Outer (HO) and Hadron Forward (HF). The overall geometry scheme plot is showed in Fig.~\ref{fig:c3cms2dhcal}. The CMS HCAL is a sampling calorimeter with brass absorber for shower trigger and scintillator for energy measurement. We take advantage from the dense absorber to fit the HCAL in the limited space inside the solenoid (Except for HO). However, we also suffer with the relatively big fluctuation in energy deposit due to the invisible energy loss in the absorber and uncompensated design of the calorimeter. The following paragraphs will have more description for HBHE, HO and HF.
+
+\begin{figure}[htbp]
+ \begin{center}
+  \includegraphics[width=0.8\textwidth]{figures/c3/c3_cms_2dhcal.pdf}
+ \end{center}
+ \caption{Phrase 1 HCAL tower segmentation in the r,z plane}
+ \label{fig:c3cms2dhcal}
+\end{figure}
+
+The HB and HE are major parts of the HCAL. As I mentioned before, they are typical sampling calorimeters with brass from Russia navel bullet and scintillator for ~ 70000 tiles. The lights from the scintillators is collected and amplified by hybrid photodiodes (HPDs) for phrase 0 HCAL. The HPDs will be replaced with Silicon photomultipliers (SiPMs) since the SiPMs are less noisy and more stable under heavy radiated area. 
+
+After the photon detectors, the analog signal will be delivered to the FrontEnd electronics. The charge pulse will be integrated and digitized on the charge integrate encoder (QIE). In the phrase 1 upgrade, we will replace the QIE8 with QIE11 for all frontend readout modules in HE. The QIE11 have a much better time resolution in level of 0.5ns. 
+
+After the FrontEnd, the digitalized signal will be delivered from the commission cavern to the service cavern through a long bonded fibers bundle. The backend electronics located in the service cavern will receive those signals, generate the trigger primitives and deliver the signals to the central DAQ link. The HCAL backend have been upgraded from VME to uTCA on HBHE since 2015-2016 YETS. 
+
+However, due to the limitation on the “compact” cavern, the EB (ECAL barrel) and HB cannot provide sufficient containment for the hadron showers. The HO is inserted just between the solenoid and muon system to ensure the adequate sampling depth in the barrel region. The solenoid coil is used as the absorber for HO to measure the shower deposit after HB. 
+
+The HO instruments is same as the phrase 0 HBHE, except for the photon detectors. The HO team has replaced the HPDs with the SiPMs since the LHC long shut down 1. The SiPMs have been proved super reliable in the current operation except a small leakage current drift monitoring issue at the beginning of LHC run 2. 
+
+The last component of HCAL is the Forward calorimeter. The calorimeter material is severely challenged by the extremely high radiation environment. Therefore, the quartz fibers are used as the active medium for forward calorimeter. Upon shower comes, the Cherenkov light will be emitted in the quartz fiber and transported to the photomultiplier tubers (PMT). The HF also provides input to the CMS luminosity measurement. 
+
+To sum up, we have four partitions in HCAL: HB, HE, HO and HF. We have 9216 readout channels for HB, 6912 for HE, 2376 for HO and 3456 for HF in the HCAL phrase 1 scheme. The backend electronics coordinates will be compressed into the RAW event data after the event builder in HLT. On one hand, the offline reconstruction software and online data quality monitor need to know the detector geometry coordinators to show the digitalized output in the physical space. We need to build a database object to map the backend coordinates and detector coordinates. On the other hand, the backend electronics are not connected directly to the HCAL tiles: we still have photomultiplier and frontend electronics in between. And HCAL has several different upgrade projects for different parts on different sub detectors during the LHC run2. Therefore, we need a dynamic map, which reflects the real connections among all HCAL components. This map is called HCAL Logical Map. The logical will start with frontend coordinates, map upwards to photomultipliers, then detector tiles, downwards to the backend coordinates then trigger primitive channels. We avoid re-designing everything after the each upgrade with this dynamic structure of map. 
+
+To build a robust HCAL Logical map, we need inputs from experts in different fields. For example, we need to follow a special symmetric design in the frontend to backend optical patch. This symmetry is highly dependent on the firmware design. Although nowadays FPGA can be programmed with less restrict, we still need to keep the algorithm to be maintainable. We also plot the backend and detector coordinates respectively in frontend coordinates in order to check the symmetry in mapping (Fig.~\ref{fig:c3cmshcalhelmapfebe} and Fig.~\ref{fig:c3cmshcalhelmapfegeo}).
+
+\begin{figure}[htbp]
+ \begin{center}
+  \includegraphics[width=0.8\textwidth]{figures/c3/c3_cms_hcalhelmapfebe.png}
+ \end{center}
+ \caption{Backend coordinates in Frontend coordinates, HCAL endcap phrase 1 backend plus phrase 0 frontend in 2016 operation}
+ \label{fig:c3cmshcalhelmapfebe}
+\end{figure}
+
+\begin{figure}[htbp]
+ \begin{center}
+  \includegraphics[width=0.8\textwidth]{figures/c3/c3_cms_hcalhelmapfegeo.png}
+ \end{center}
+ \caption{Detector coordinates in Frontend coordinates, HCAL endcap phrase 1 backend plus phrase 0 frontend in 2016 operation}
+ \label{fig:c3cmshcalhelmapfegeo}
+\end{figure}
+
+
+The subset of the HCAL Logical map can be critical in the software world. One of the most important applications is the electronics map (EMap). The HCAL electronics map is a subset of logical map that contains backend coordinates and detector coordinates. As we mentioned, we the reconstruction software need to call for the EMap in the database to obtain the detector coordinates from backend coordinates. This is a necessary step in the RAW to DIGI in reconstruction and DIGI to RAW in MC simulation. Another application is the QIE calibration table. In the DIGI to RECO step, we need to translate from ADC (Analog Digital count) to the fC with the piecewise linear QIE gain function. This map is produced from logical map and pushed into database. The robustness of the Logical map is critical for the HCAL offline reconstruction. 
 
 \subsubsection{Muon Detectors}
 
@@ -228,9 +281,25 @@ The CMS RPCs are distributed in both barrel and endcap region. There are 96 RPCs
 \par\end{centering}
 \end{table}
 
-
 \subsubsection{Trigger system}
 
+The LHC have bunch crossing in every 25 ns, which means 40MHz in data rate. It is impossible for the data acquisition and storage system to deal with all of them. And it is not necessary too, since not all the events are interested in the physics analysis. Therefore, we need a system to reduce the data rate and select the events that we are interested in. The system is called trigger system - - - only triggered data will be read and stored from the LHC collision. 
+
+The CMS trigger system is a 2-level trigger system: the FPGA based L1T (Level 1 trigger) and PCs farm based HLT (High level trigger). In the old days we always add a custom hardware L2T layer in between L1T and HLT to ease the computing speed gap. However, with improvement of PCs farm’s computing power, we can avoid the additional L2T. This gives us a more robust system with less complicate structure. 
+
+The CMS L1T system receives part of the information from sub detectors and has a rough estimation on the physics object in the FPGA level. The data rate is reduced from 40MHz to 100kHz (85kHz to 90kHZ in real operation, mainly limited by data acquisition system) after the L1T. CMS L1T has been upgraded (Phrase 1) during the 2015-2016 YETS and 2016-2017 EYETS since the beam intensity increase significantly in the LHC run 2. The new scheme plot of phrase 1 L1T is showed in the Fig.~\ref{fig:c3cmsl1scheme}. The calorimeters will send the trigger primitive to the calo trigger layer then finally go to global trigger. And muon system will send information to the global muon trigger then finally arrive at global trigger. Then the L1A (level 1 acceptance) will be generated and sent to the sub detectors through TCDS (timing, control and distribution system). The sub detectors will send the information to data acquisition or keep on taking data for next bunch crossing based on the L1 decision. 
+
+\begin{figure}[htbp]
+ \begin{center}
+  \includegraphics[width=0.8\textwidth]{figures/c3/c3_cms_l1scheme.png}
+ \end{center}
+ \caption{Dataflow for the overall phrase 1 trigger system}
+ \label{fig:c3cmsl1scheme}
+\end{figure}
+
+The CMS HLT system uses all the information from detector readout and applies a simplified algorithm to reconstruct physics object. The promptly reconstructed object will be applied in the different high-level trigger menu for different physics purpose. However, just like the L1T, we have bandwidth limit for the HLT also. The current data rate after the HLT are constraint to be ~1000 Hz which is limited mainly by offline storage rather than online computing. HLT is the interface between physics analysis and online operation. On one side, each physics analysis group will have a trigger contact to collect the desired trigger menu from analyzers and make a proposal of a full menu set with rate estimation to the HLT that satisfy the data rate limit. On the other side, each the HLT menu will take at least one L1 seed as a starting point of the high-level trigger.
+
+The current (Phrase 1) trigger system will be continue in operation until the end of LHC run 3. However, there is a huge challenge on the trigger system with the following HL-LHC. Track trigger is necessary to maintain the current physics acceptance with the L1 rate ~1MHz. 
 
 \subsection{Event Reconstrunction}
 \subsubsection{Particle Flow}
