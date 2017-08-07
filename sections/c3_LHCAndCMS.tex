@@ -1,33 +1,80 @@
 \chapter{The LHC and The CMS Experiment}
 
 \section{The LHC}
-The Large Hadron Collider(LHC) is the largest and most powerful superconducting hadron accelerator and collider. The LHC was installed in an existing 26.7 km tunnel that was constructed for LEP machine between 1984 and 1989. The tunnel of LHC has 8 straight sections and 8 arcs, and locates between 45m and 170m below the surface. The LHC host 4 experiments currently: CMS(Point 5), ATLAS(Point 1), ALICE(Point 2) and LCHb(Point 8).
-\subsection{LHC: Performance and Main machine layout}
+
+The Large Hadron Collider (LHC) is the largest and most powerful hadron accelerator and collider. The LHC was installed in an existing 26.7 km tunnel that was constructed for LEP machine between 1984 and 1989. The tunnel of LHC has 8 straight sections and 8 arcs, and locates between 45m and 170m below the surface. The LHC hosts 4 experiments currently: CMS (Point 5), ATLAS (Point 1), ALICE (Point 2) and LHCb (Point 8). The LHC can accelerate the proton beam to 7TeV (running on 6.5TeV during the LHC run2).
+
+However, the LHC is not the only accelerator that boosts the proton to such a high energy. The LHC is the last and biggest accelerator in the whole chain. A simplified injection chain can be described by Fig.~\ref{fig:c3lhclpsspslhc}. Physicists inject hydrogen gas into a metal cylinder, and then put a strong electrical field to strip the electron from hydrogen to obtain proton beam. The protons will be accelerated to 90keV with a DC voltage power supply. Then a Radio Frequency Quadrupole (QRF) will focus and boost the protons beam to 750keV. After that, the proton beam will be injected to a linear accelerator (LINAC2) and accelerated to 50MeV. The current LHC uses the LINAC2 as the source of protons. The LINAC2 will be replaced by LINAC4 with negative hydrogen ion source, higher beam intensity and energy (160MeV) in 2019-2020. 
+
+\begin{figure}[htbp]
+ \begin{center}
+  \includegraphics[width=0.8\textwidth]{figures/c3/c3_lhc_lpsspslhc.jpg}
+ \end{center}
+ \caption{The LHC full injection chain}
+ \label{fig:c3lhclpsspslhc}
+\end{figure}
+
+The proton beam will be boosted to 6.5TeV with four circular accelerators from the linear accelerator. The first one in the chain is the proton synchrotron booster (PSB, Fig.~\ref{fig:c3lhcpsb}), a four-ring slow-cycling synchrotron. The PSB is inserted in between the LINAC and proton synchrotron in 1972 to increase the beam intensity. The PSB will bring the proton energy up to 1.4GeV in 530ms and then inject the beam to the proton synchrotron (PS). The proton will be accelerated to 25GeV inside the PS. PS is also responsible to form the standard injection beam for the LHC. Then, the super proton synchrotron (SPS) will take over the beam from PS and boost it to 450GeV in 4.3 seconds. And finally, the protons arrive to the LHC tunnel and obtain the 6.5TeV energy in 25min during beam ramp up. 
+
+\begin{figure}[htbp]
+ \begin{center}
+  \includegraphics[width=0.8\textwidth]{figures/c3/c3_lhc_psb.png}
+ \end{center}
+ \caption{The PS layout}
+ \label{fig:c3lhcpsb}
+\end{figure}
+
+We can have a simple calculation to obtain how long it takes from the LINAC2 to 450GeV SPS: 0.53+1.025+4.3=5.86 seconds. However, we also split one fill of the beam into several bunches and batches with certain time spacing to obtain a desired luminosity. Therefore, we have latency for different batch and the 5.86 seconds is just a lower limit for pre-LHC acceleration time. 
+
+The fill scheme before the LHC is relatively stable in the machine in the proton physics mode. The injection beam from PSB to PS contains 2 batches, 4 bunches for the first batch and 2 for the second. The first will take an additional 1200ms to be delivered. The proton beam will go through one triple split and two double splits. A 72 bunches beam will be formed after the splitting and delivered to SPS in a group of 4 72-bunch batches. The latencies are 10.8 seconds for the first batch, 7.2 for the second, 3.6 for the third and 0 for the fourth. Therefore, the maximum time from the LINAC2 to 450GeV SPS is 0.53+1.2+1.025+10.8+4.3=17.86 seconds. 
+
+The LHC fill scheme can be different for various purposes. One of the common fill scheme in the operation is 2808 bunches per LHC ring. The fill scheme can be described by the Fig.~\ref{fig:c3lhcfillscheme}. The SPS will have 12 injections to the LHC. The number of 72-bunch batches are in pattern of 234 334 334 334. We will have different luminosities for different fill schemes. In the detector operation, it is important to know the fill scheme and expected luminosity in advance to design the trigger menu in different bias level. 
+
+\begin{figure}[htbp]
+ \begin{center}
+  \includegraphics[width=0.8\textwidth]{figures/c3/c3_lhc_fillscheme.png}
+ \end{center}
+ \caption{Schematic of the Bunch Disposition around an LHC Ring for the 25ns Filling Scheme}
+ \label{fig:c3lhcfillscheme}
+\end{figure}
+
+\subsection{LHC: Machine layout and Performance}
+
+The LHC is a near-circle ring with 8 arcs and 8 straight sections (Fig.~\ref{fig:c3lhclayout}). Each straight section is around 528m long and can host detector system or beam related insertions. The two high luminosity experiments are located at opposite straight sections: ATLAS at point 1 and CMS at point 5. The ALICE experiment and the beam1 injection system are located at point 2, while the LHCb and beam2 injection system are at point 8. 
 
 \begin{figure}[htbp]
  \begin{center}
   \includegraphics[width=0.8\textwidth]{figures/c3/c3_lhc_latticelayout.jpg}
  \end{center}
- \caption{abcf}
+ \caption{The LHC layout}
  \label{fig:c3lhclayout}
 \end{figure}
-Performance, eq, lumi, xsection. Lumi equation from lhc parameter.
-Main machine layout: 2 beam with 2 rings, 8 long straight sections and 8 arcs.
+
+Two collimation systems are located at point 3 and point 7 respectively. The collimation system can protect the machine against unavoidable regular or irregular beam loss. The collimator at point 3 is designed to clean beam transverse momentum dispersion and the one at point 7 is for beam betatron emission. The materials of the collimators are required to be extremely radiation hard because they are installed in the most active region of the LHC. 
+
+The beam dump insertion is sat in the point 6. There are three steps to dump the beam: extraction, dilution and absorption. The magnet kicker will be turned on in 3000ns, which is the gap reserved for each orbit cycling. Then the beam will be kicked off by a 0.27 mrad angle. The extracted beam will be swept in a quasi-circular figure by two sets of deflecting dilution kickers. Finally, a 7m long segmented carbon cylinder will absorb the beam.
+
+The point 4 is the only straight section that contains the acceleration systems. Two radio frequency systems are installed for beam1 and beam2 respectively. 
+
+One of the aims of the LHC is the reveal the physics beyond the standard model. The exploration of the rate events in the LHC requires both high beam energies and high beam intensities. The energy of the beam is limited by the machine geometry. The luminosity of the machine can be described by the Eq.~\ref{eq:c3lhclumi} with the Gaussian beam distribution. The $N_{b}$ is the number of particles per bunch and $n_{b}$ is the number of bunches per beam. This indicates we can increase the luminosity with the optimization of fill scheme. The $f_{rev}$ is the revolution frequency, $gamma_{r}$ is the relativistic gamma factor, $\varepsilon_{n}$ is the normalized beam emittance and $\beta *$ is the impact parameter at the collision point. The F is the geometric luminosity reduction factor due to the crossing angle at the interaction point. 
 
 \begin{equation}
  L = \frac{N^{2}_{b}n_{b}f_{rev}\gamma_{r}}{4\pi \varepsilon_{n}\beta *}F \;
  \label{eq:c3lhclumi}
 \end{equation}
 
+The definition of F is in the Eq.~\ref{eq:c3lhcgeof}. The $\theta_{c}$ is the full crossing angle at the interaction point, the $\sigma_{z}$ is the RMS bunch length and $\sigma *$ is the transverse RMS beam size at the interaction point. The LHC experts are trying to reduce the crossing angle from 370 to 280 mrad, which increase the peak luminosity by 15 percents. 
 \begin{equation}
- F = (1+\frac{\theta_{c}\sigma_{c}}{2\sigma *})^{-1/2} \;
+ F = (1+\frac{\theta_{c}\sigma_{z}}{2\sigma *})^{-1/2} \;
  \label{eq:c3lhcgeof}
 \end{equation}
 
+In the CMS and ATLAS experiments, the designed peak luminosity at the collision point is approximately $10^{34}cm^{-2}s^{-1}$. The LHC has achieved this goal in 2016 and try to increase the luminosity with optimizations.
+
 \subsection{LHC: From operation point of view}
-The LHC is a extremely complex machine and it is almost impossible to grasp all details. However, the LHC is provide a summary of status for the operational activities, which are very useful in the detector operation.
+
 \subsubsection{Acclerator Mode}
-The accelerator mode provides a summary status of the LHC machine.The detector system(eg. CMS) need to make daily operational decision accroding to the accelerator mode.
+
 \begin{table}[htbp]
 \fontsize{10 pt}{1.2 em}
 \selectfont
@@ -119,8 +166,6 @@ The accelerator mode provides a summary status of the LHC machine.The detector s
 \end{tabular}
 \par\end{centering}
 \end{table}
-
-\subsubsection{Operation Mode}
 
 \section{The CMS Experiment}
 
