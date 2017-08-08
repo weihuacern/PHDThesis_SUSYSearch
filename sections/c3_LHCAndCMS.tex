@@ -358,11 +358,28 @@ The CMS L1T system receives part of the information from sub detectors and has a
  \label{fig:c3cmsl1scheme}
 \end{figure}
 
-The CMS HLT system uses all the information from detector readout and applies a simplified algorithm to reconstruct physics object. The promptly reconstructed object will be applied in the different high-level trigger menu for different physics purpose. However, just like the L1T, we have bandwidth limit for the HLT also. The current data rate after the HLT are constraint to be ~1000 Hz which is limited mainly by offline storage rather than online computing. HLT is the interface between physics analysis and online operation. On one side, each physics analysis group will have a trigger contact to collect the desired trigger menu from analyzers and make a proposal of a full menu set with rate estimation to the HLT that satisfy the data rate limit. On the other side, each the HLT menu will take at least one L1 seed as a starting point of the high-level trigger.
+The CMS HLT system uses all the information from detector readout and applies a simplified algorithm to reconstruct physics object. The promptly reconstructed object will be applied in the different high-level trigger menu for different physics purpose. However, just like the L1T, we have bandwidth limit for the HLT also. The current data rate after the HLT are constraint to be around 1000 Hz which is limited mainly by offline storage rather than online computing. HLT is the interface between physics analysis and online operation. On one side, each physics analysis group will have a trigger contact to collect the desired trigger menu from analyzers and make a proposal of a full menu set with rate estimation to the HLT that satisfy the data rate limit. On the other side, each the HLT menu will take at least one L1 seed as a starting point of the high-level trigger.
 
-The current (Phrase 1) trigger system will be continue in operation until the end of LHC run 3. However, there is a huge challenge on the trigger system with the following HL-LHC. Track trigger is necessary to maintain the current physics acceptance with the L1 rate ~1MHz. 
+The current (Phrase 1) trigger system will be continue in operation until the end of LHC run 3. However, there is a huge challenge on the trigger system with the following HL-LHC. Track trigger is necessary to maintain the current physics acceptance with the L1 rate around 1MHz. 
 
 \subsection{Event Reconstrunction}
+
+The data from the central data acquisition system will be selected and built in the high-level trigger farm and then transferred to the primary computing grid at CERN (Tier-0). The data directly from the detector electronics is called DAQ-RAW, which is the input of the online HLT cluster. The data will be reformatted and filtered with high-level trigger in the cluster. The outcome data is called RAW. Comparing to the DAQ-RAW, the RAW contains the HLT information and ready for offline reconstruction after reformatting. 
+
+Before entering the offline reconstruction chain, the data stream is filtered into different primary datasets (PD) for various purposes. Most of the categories are based on physics analysis and level 1 trigger. For example, in the all-hadronic SUSY search, the common PD for search region is HTMHT or MET. For the control region, we can select SingleElectron or SingleMuon PD. Then, the RAW with different PD streams will be delivered into the offline reconstruction system (CERN Tier-0 or any Tier-1, Fig.~\ref{fig:c3cmstiers}). 
+
+\begin{figure}[htbp]
+ \begin{center}
+  \includegraphics[width=0.8\textwidth]{figures/c3/c3_cms_tiers.png}
+ \end{center}
+ \caption{CMS offline computing structure}
+ \label{fig:c3cmstiers}
+\end{figure}
+
+In the offline reconstruction, the RAW dataset will be unpacked from the electronics based digital counts to detector based digital hits. This is so called RAW to DIGI step in the reconstruction. After that, the DIGI will be converted to reconstructed hits with calibration information. This is called DIGI to RecHits step. The offline database are highly involved in these 2 steps, providing electronic-detector map, calibration table, pedestal subtraction, radiation damage correction, etc. Then, the physics objects will be generated with the reconstructed algorithm. The outcome dataset after the offline reconstruction is called RECO, which combines the RecHits and physics object information together. 
+
+However, the size of the RECO dataset is about 1.3 MB per event. The further reduce of the data size is necessary for the physics analysis. Therefore, the information that not very commonly used for physics analysis is dropped to form a new data format: miniAOD. It contains the standard physics objects that used by most of the CMS physics analysis group. More details of those objects will be discussed in the following sections. 
+
 \subsubsection{Particle Flow}
 \subsubsection{Tracks}
 \subsubsection{Electrons}
