@@ -403,7 +403,30 @@ The electron reconstruction in CMS relies on the information from inner tracker 
 The ECAL seed electron identification algorithm starts from the supercluster energy deposit in the ECAL. The supercluster is a 5 by 5 cluster combo in the ECAL. The initial energy and position in the supercluster will be used to estimate the electron trajectory in the first tracker layer. On the opposite, the tracker-based method begins with the tracks that are reconstructed by the general algorithm for charged particles. The tracks will be sent to a pre-selection and then matched to the ECAL supercluster. This mixture seed method has been validated with electron from W boson decay in 2010\cite{Khachatryan:2015hwa}. 
 
 The electron identification group also provides several working points to satisfy the needs from various physics analysis. For example, we choose the "Veto" working point in the SUSY analysis described in this thesis. The "Veto" has the loosest identification criteria, which help us to reject leptonic decayed background to the most extent. 
+
 \subsubsection{Jets and Particle Flow}
+
+The jet is a collimated flux of stable hadrons that originate from quarks and gluons after fragmentation and hadronization. The jet algorithm is the approximate method to reverse the fragmentation and hadronization processes.  There are several different jet algorithm approaches. But the inputs of the jet algorithm are always the clustered energy deposits in 2-dimensional plane. 
+
+There are two major requirements for the jet algorithm: collinear safe and infrared safe. The collinear safe means the results of the jet algorithm are invariant under collinear splitting of any input pixels. The infrared safety indicates that a soft emission will not change the results of jet algorithm. The infrared safety is requested not only from the soft emission QCD, but also from the collider point of view: the jet algorithm results should not change just because of a soft pile-up jet. 
+
+The anti-$k_{T}$ algorithm\cite{Cacciari:2008gp} is the default jet algorithm for all the LHC experiments. The anti-$k_{T}$ algorithm is one of the sequential recombination algorithms. In this approach, we define a special distance of the two input observables in the Eq.~\ref{eq:c3cmsantikt}:
+
+\begin{equation}
+ d_{ij} = min(k_{Ti}^{-2},k_{Tj}^{-2})\frac{(y_{i}-y_{j})^{2}+(\phi_{i}-\phi_{j})^{2}}{R^{2}} \;
+ \label{eq:c3cmsantikt}
+\end{equation}
+
+Where $k_{Ti}$ means the energy (or any other response) of the ith input pixel. The numerator is the geometrical distance between the two objects. R is the cone size parameter in the algorithm. The CMS experiment now support R=0.4 for the normal jets and R=0.8 for the fat-jets, which is useful for the boost object. The special distance between the input pixel and beam is defined as: $d_{iB} = k_{Ti}^{-2}$.
+
+The first step is to compute all the $d_{ij}$ and $d_{iB}$, and find the smallest one. Then iterate the following steps until all pixels are clustered into jet: 
+
+If the smallest one is a $d_{ij}$, we combine the two pixels i and j. Then we recalculate the special distance as the input of next iteration.
+If the smallest one is a $d_{iB}$, we remove pixel i and call it a jet.
+
+The anti-$k_{T}$ algorithm is obviously both collinear safety and infrared safety. A new collinear pixel means the geometrical distance is 0. Therefore the new pixel will be clustered first. A new soft pixel means the special distance will go to infinity. Therefore this new pixel will be clustered last or form a new zero jet. The jet results for the anti-$k_{T}$ algorithm remain unchanged for the both cases. 
+
+However, there are other algorithms that are both collinear safety and infrared safety, like SiSCone\cite{Salam:2007xv} and $k_{T}$\cite{Cacciari:2005hq}. The jets from anti-$k_{T}$ algorithm always have a near-circle jet area\cite{Cacciari:2008gn}, which makes them easier to correct for the detector-related effects.
 
 \subsubsection{Missing Transverse Energy}
 
