@@ -380,8 +380,26 @@ In the offline reconstruction, the RAW dataset will be unpacked from the electro
 
 However, the size of the RECO dataset is about 1.3 MB per event. The further reduce of the data size is necessary for the physics analysis. Therefore, the information that not very commonly used for physics analysis is dropped to form a new data format: miniAOD. It contains the standard physics objects that used by most of the CMS physics analysis group. More details of those objects will be discussed in the following sections. 
 
-\subsubsection{Particle Flow}
 \subsubsection{Tracks}
+
+Tracks are detected by inner silicon detector signals in the CMS to form the basis of the event reconstruction. Track reconstruction serves the following purposes: 
+\begin{itemize}
+\item Vertex reconstruction: The vertexes in the proton-proton collision can be reconstructed from the gather point of tracks. However, there can be multiple vertexes in one event because the pile up effect. The vertex with the maximum sum of the square of the $p_{T}$ of all the associated tracks is identified as the primary vertex. We can also reconstruct the secondary vertex from the primary one. The secondary vertex information is useful in the b-jet identification.
+\item Momentum measurement: The CMS inner silicon system has a high resolution in the track momentum measurement because of the strong magnetic field (3.8T). The jet $p_{T}$ measurement benefits a lot from the high precision track momentum with the particle flow algorithm. More details will be covered in the jet reconstruction section.
+\item Particle identification: The charged can be identified with track information. For example, an electron candidate is found when the energy deposit in ECAL supercluster can be associated with track. Muon identification can also benefits from the inner track matching technique.
+\end{itemize}
+
+Given the importance of track reconstruction in physics, a reliable algorithm is required. The desirable algorithm must have a near 100\% efficiency in track reconstruction together with relatively small fake rate. The jet energy can be deadly mis-measured with an unidentified or fake track.
+There are two steps in the track reconstruction: 
+\begin{itemize}
+\item Local reconstruction: the signals from the strip and pixel are clustered to evaluate the position and error matrices of hits.
+\item Global reconstruction: Tracks are reconstructed with several iteration of the combinatorial track finder method ref xxx. Different seed will be used in different iteration to improve the tracking efficiency for various types of tracks.
+\end{itemize}
+The track finder algorithm is very powerful. It can even find the track with very low energy ($p_{T}<2 GeV$). Some of the low energy tracks have more number of hits than the number of detector layers, others tracks cannot reach to the preshower. Those tracks are kept in the data file for the low energy physics study at CMS. 
+
 \subsubsection{Electrons}
+\subsubsection{Photons}
+\subsubsection{Jets and Particle Flow}
+\subsubsection{Missing Transverse Energy}
 \subsubsection{Muons}
-\subsubsection{Jets and Missing Transverse Energy}
+
