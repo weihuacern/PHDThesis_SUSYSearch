@@ -5,6 +5,8 @@ all: thesis.pdf
 # Simple case:  no figures or BibTeX
 thesis.pdf: thesis.tex
 	pdflatex thesis
+	bibtex thesis
+	pdflatex thesis
 	pdflatex thesis
 
 # More complicated case:  BibTeX invoked, PostScript figures
