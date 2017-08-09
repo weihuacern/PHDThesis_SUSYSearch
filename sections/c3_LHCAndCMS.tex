@@ -398,6 +398,11 @@ There are two steps in the track reconstruction:
 The track finder algorithm is very powerful. It can even find the track with very low energy ($p_{T}<2 GeV$). Some of the low energy tracks have more number of hits than the number of detector layers, others tracks cannot reach to the preshower. Those tracks are kept in the data file for the low energy physics study at CMS. 
 
 \subsubsection{Electrons}
+The electron reconstruction in CMS relies on the information from inner tracker and ECAL. The track momentum can be measured with smaller uncertainty in the inner tracker system. On the opposite, the calorimeter has a better resolution for the high-energy object. Therefore, a mixture of “ECAL seed” and “tracker seed” algorithm is designed to optimize the electron identification in both high and low pt spectrum. 
+
+The ECAL seed electron identification algorithm starts from the supercluster energy deposit in the ECAL. The supercluster is a 5 by 5 cluster combo in the ECAL. The initial energy and position in the supercluster will be used to estimate the electron trajectory in the first tracker layer. On the opposite, the tracker-based method begins with the tracks that are reconstructed by the general algorithm for charged particles. The tracks will be sent to a pre-selection and then matched to the ECAL supercluster. This mixture seed method has been validated with electron from W boson decay in 2010. 
+
+The electron identification group also provides several working points to satisfy the needs from various physics analysis. For example, we choose the “Veto” working point in the SUSY analysis described in this thesis. The “Veto” has the loosest identification criteria, which help us to reject leptonic decayed background to the most extent. 
 \subsubsection{Photons}
 \subsubsection{Jets and Particle Flow}
 \subsubsection{Missing Transverse Energy}
