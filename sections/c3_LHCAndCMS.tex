@@ -400,11 +400,21 @@ The track finder algorithm is very powerful. It can even find the track with ver
 \subsubsection{Electrons}
 The electron reconstruction in CMS relies on the information from inner tracker and ECAL. The track momentum can be measured with smaller uncertainty in the inner tracker system. On the opposite, the calorimeter has a better resolution for the high-energy object. Therefore, a mixture of "ECAL seed" and "tracker seed" algorithm is designed to optimize the electron identification in both high and low $p_{T}$ spectrum. 
 
-The ECAL seed electron identification algorithm starts from the supercluster energy deposit in the ECAL. The supercluster is a 5 by 5 cluster combo in the ECAL. The initial energy and position in the supercluster will be used to estimate the electron trajectory in the first tracker layer. On the opposite, the tracker-based method begins with the tracks that are reconstructed by the general algorithm for charged particles. The tracks will be sent to a pre-selection and then matched to the ECAL supercluster. This mixture seed method has been validated with electron from W boson decay in 2010. 
+The ECAL seed electron identification algorithm starts from the supercluster energy deposit in the ECAL. The supercluster is a 5 by 5 cluster combo in the ECAL. The initial energy and position in the supercluster will be used to estimate the electron trajectory in the first tracker layer. On the opposite, the tracker-based method begins with the tracks that are reconstructed by the general algorithm for charged particles. The tracks will be sent to a pre-selection and then matched to the ECAL supercluster. This mixture seed method has been validated with electron from W boson decay in 2010\cite{Khachatryan:2015hwa}. 
 
 The electron identification group also provides several working points to satisfy the needs from various physics analysis. For example, we choose the "Veto" working point in the SUSY analysis described in this thesis. The "Veto" has the loosest identification criteria, which help us to reject leptonic decayed background to the most extent. 
 \subsubsection{Jets and Particle Flow}
 
 \subsubsection{Missing Transverse Energy}
-\subsubsection{Muons}
 
+\subsubsection{Muons}
+The muon is a heavy particle that can penetrate the calorimeter and detector by the muon system outside the solenoid. The muon reconstruction has two traditional approaches: 
+
+\begin{itemize}
+	\item Global Muon reconstruction: The muon tracks are reconstructed first inside the muon system (DT, RPC, CSC) by a standalone method. Then, the muon standalone muon track will be matched with a tracker track by comparing the parameters of the two tracks. Finally, a global muon track will be derived from the hits of the two tracks by Kalman-filter method\cite{Fruhwirth:1987fm}. This is so called outside-in method since we start from the muon system, which is outer member of the CMS detectors. 
+\item Tracker Muon reconstruction: In this approach, we start from the tracks reconstructed by the inner silicon detectors. The tracks with $p_{T}<0.5 GeV$ and momentum $p>2.5GeV$ will be selected as the potential muon candidate. Then, the track will be extrapolated to the muon system considering the magnet field, average expected energy loss and multiple coulomb scattering effects. The track will be qualified as muon track if at least one muon hit matched with this track. This is inside-out method since it begins with the inner tracker system. 
+\end{itemize}
+
+The global muon reconstruction method has a better momentum resolution in the hard muons. The reason is the high $p_{T}$ tracker tracks performance is limited by the small geometry of the inner tracker system. However, the tracker muon reconstruction method has a better performance in the soft muons. This originates from the excellent low $p_{T}$ tracks measurement of inner tracker system. 
+
+A particle flow based algorithm has been designed to obtain good performance for both soft and hard muons. This particle flow muon reconstruction method is a combination of outside-in and inside-out methods. In this approach, global muon tracks and tracker tracks are gathered together and then selected with special criteria. The selection criteria are adjusted depending on environment of muon (e.g. isolation) and other detector input (e.g. energy deposit in calorimeter). This method is optimized to identify the muons within jets. The performances of the three approaches have been studied in\cite{Chatrchyan:2012xi}. 
