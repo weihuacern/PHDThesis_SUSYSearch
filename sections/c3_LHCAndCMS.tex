@@ -211,7 +211,7 @@ The pixel system is the part of inner tracking system that closest to the collis
 
 The phrase 0 pixel detector contains three barrel layers (BPix) and two endcap disks (FPix), which covers a pseudo rapidity range $-2.5<\eta<2.5$. In phrase 1 upgrade, to suffer from the radiation damage, we replaced all layers and disks with new ones, and added one layer in the barrel region, one disk in the endcap region.
 
-One special design of the pixel detector is the blade that module mounted are rotated by 20 degrees in a turbine geometry. Such an arrangement enhanced the charge sharing effects between the nearby pixels. The space resolution can be improved to 15num by the using the “charge sharing” effect in pixels. CMS take advantage of this effect with the analog readout of the collected charges by readout pixels in-group with readout chips. 
+One special design of the pixel detector is the blade that module mounted are rotated by 20 degrees in a turbine geometry. Such an arrangement enhanced the charge sharing effects between the nearby pixels. The space resolution can be improved to 15num by the using the "charge sharing" effect in pixels. CMS take advantage of this effect with the analog readout of the collected charges by readout pixels in-group with readout chips. 
 
 \paragraph{Silicon Strips}
 
@@ -250,7 +250,7 @@ After the photon detectors, the analog signal will be delivered to the FrontEnd 
 
 After the FrontEnd, the digitalized signal will be delivered from the commission cavern to the service cavern through a long bonded fibers bundle. The backend electronics located in the service cavern will receive those signals, generate the trigger primitives and deliver the signals to the central DAQ link. The HCAL backend have been upgraded from VME to uTCA on HBHE since 2015-2016 YETS. 
 
-However, due to the limitation on the “compact” cavern, the EB (ECAL barrel) and HB cannot provide sufficient containment for the hadron showers. The HO is inserted just between the solenoid and muon system to ensure the adequate sampling depth in the barrel region. The solenoid coil is used as the absorber for HO to measure the shower deposit after HB. 
+However, due to the limitation on the "compact" cavern, the EB (ECAL barrel) and HB cannot provide sufficient containment for the hadron showers. The HO is inserted just between the solenoid and muon system to ensure the adequate sampling depth in the barrel region. The solenoid coil is used as the absorber for HO to measure the shower deposit after HB. 
 
 The HO instruments is same as the phrase 0 HBHE, except for the photon detectors. The HO team has replaced the HPDs with the SiPMs since the LHC long shut down 1. The SiPMs have been proved super reliable in the current operation except a small leakage current drift monitoring issue at the beginning of LHC run 2. 
 
@@ -281,7 +281,7 @@ The subset of the HCAL Logical map can be critical in the software world. One of
 
 \subsubsection{Muon Detectors}
 
-The importance of the Muon detectors is implied by the experiment’s middle name (“M” is CMS). The CMS muon detectors provide precise measurement of muon tracks with the support of strong magnet field (3.8T). The measurement of muons is useful in both standard model physics (e.g. Higgs to ZZ) and new physics search (e.g. leptonic channel supersymmetry). More over, the muon system also provide muon related trigger to reduce the data rate.
+The importance of the Muon detectors is implied by the experiment’s middle name ("M" is CMS). The CMS muon detectors provide precise measurement of muon tracks with the support of strong magnet field (3.8T). The measurement of muons is useful in both standard model physics (e.g. Higgs to ZZ) and new physics search (e.g. leptonic channel supersymmetry). More over, the muon system also provide muon related trigger to reduce the data rate.
 
 The CMS muon detectors consist of three sub-detectors: Drift tube in the barrel region, cathode strip chamber in the endcap and resistive plate chamber in both barrel and endcap. A layout of CMS muon detectors are showed in the Fig.~\ref{fig:c3cms2dmuondets}. More details are demonstrated in the following sections. 
 
@@ -398,13 +398,13 @@ There are two steps in the track reconstruction:
 The track finder algorithm is very powerful. It can even find the track with very low energy ($p_{T}<2 GeV$). Some of the low energy tracks have more number of hits than the number of detector layers, others tracks cannot reach to the preshower. Those tracks are kept in the data file for the low energy physics study at CMS. 
 
 \subsubsection{Electrons}
-The electron reconstruction in CMS relies on the information from inner tracker and ECAL. The track momentum can be measured with smaller uncertainty in the inner tracker system. On the opposite, the calorimeter has a better resolution for the high-energy object. Therefore, a mixture of “ECAL seed” and “tracker seed” algorithm is designed to optimize the electron identification in both high and low pt spectrum. 
+The electron reconstruction in CMS relies on the information from inner tracker and ECAL. The track momentum can be measured with smaller uncertainty in the inner tracker system. On the opposite, the calorimeter has a better resolution for the high-energy object. Therefore, a mixture of "ECAL seed" and "tracker seed" algorithm is designed to optimize the electron identification in both high and low $p_{T}$ spectrum. 
 
 The ECAL seed electron identification algorithm starts from the supercluster energy deposit in the ECAL. The supercluster is a 5 by 5 cluster combo in the ECAL. The initial energy and position in the supercluster will be used to estimate the electron trajectory in the first tracker layer. On the opposite, the tracker-based method begins with the tracks that are reconstructed by the general algorithm for charged particles. The tracks will be sent to a pre-selection and then matched to the ECAL supercluster. This mixture seed method has been validated with electron from W boson decay in 2010. 
 
-The electron identification group also provides several working points to satisfy the needs from various physics analysis. For example, we choose the “Veto” working point in the SUSY analysis described in this thesis. The “Veto” has the loosest identification criteria, which help us to reject leptonic decayed background to the most extent. 
-\subsubsection{Photons}
+The electron identification group also provides several working points to satisfy the needs from various physics analysis. For example, we choose the "Veto" working point in the SUSY analysis described in this thesis. The "Veto" has the loosest identification criteria, which help us to reject leptonic decayed background to the most extent. 
 \subsubsection{Jets and Particle Flow}
+
 \subsubsection{Missing Transverse Energy}
 \subsubsection{Muons}
 
