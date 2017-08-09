@@ -421,8 +421,10 @@ Where $k_{Ti}$ means the energy (or any other response) of the ith input pixel. 
 
 The first step is to compute all the $d_{ij}$ and $d_{iB}$, and find the smallest one. Then iterate the following steps until all pixels are clustered into jet: 
 
-If the smallest one is a $d_{ij}$, we combine the two pixels i and j. Then we recalculate the special distance as the input of next iteration.
-If the smallest one is a $d_{iB}$, we remove pixel i and call it a jet.
+\begin{itemize}
+  \item If the smallest one is a $d_{ij}$, we combine the two pixels i and j. Then we recalculate the special distance as the input of next iteration.
+  \item If the smallest one is a $d_{iB}$, we remove pixel i and call it a jet.
+\end{itemize}
 
 The anti-$k_{T}$ algorithm is obviously both collinear safety and infrared safety. A new collinear pixel means the geometrical distance is 0. Therefore the new pixel will be clustered first. A new soft pixel means the special distance will go to infinity. Therefore this new pixel will be clustered last or form a new zero jet. The jet results for the anti-$k_{T}$ algorithm remain unchanged for the both cases. 
 
@@ -435,7 +437,7 @@ The muon is a heavy particle that can penetrate the calorimeter and detector by 
 
 \begin{itemize}
 	\item Global Muon reconstruction: The muon tracks are reconstructed first inside the muon system (DT, RPC, CSC) by a standalone method. Then, the muon standalone muon track will be matched with a tracker track by comparing the parameters of the two tracks. Finally, a global muon track will be derived from the hits of the two tracks by Kalman-filter method\cite{Fruhwirth:1987fm}. This is so called outside-in method since we start from the muon system, which is outer member of the CMS detectors. 
-\item Tracker Muon reconstruction: In this approach, we start from the tracks reconstructed by the inner silicon detectors. The tracks with $p_{T}<0.5 GeV$ and momentum $p>2.5GeV$ will be selected as the potential muon candidate. Then, the track will be extrapolated to the muon system considering the magnet field, average expected energy loss and multiple coulomb scattering effects. The track will be qualified as muon track if at least one muon hit matched with this track. This is inside-out method since it begins with the inner tracker system. 
+  \item Tracker Muon reconstruction: In this approach, we start from the tracks reconstructed by the inner silicon detectors. The tracks with $p_{T}<0.5 GeV$ and momentum $p>2.5GeV$ will be selected as the potential muon candidate. Then, the track will be extrapolated to the muon system considering the magnet field, average expected energy loss and multiple coulomb scattering effects. The track will be qualified as muon track if at least one muon hit matched with this track. This is inside-out method since it begins with the inner tracker system. 
 \end{itemize}
 
 The global muon reconstruction method has a better momentum resolution in the hard muons. The reason is the high $p_{T}$ tracker tracks performance is limited by the small geometry of the inner tracker system. However, the tracker muon reconstruction method has a better performance in the soft muons. This originates from the excellent low $p_{T}$ tracks measurement of inner tracker system. 
