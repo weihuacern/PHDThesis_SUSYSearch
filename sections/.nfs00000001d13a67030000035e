@@ -1,0 +1,50 @@
+\chapter{SUSY Search with a customized top tagger}
+
+\clearpage
+\section{Introduction}
+\label{sec:c4intro}
+\input{sections/mc4/Introduction/Introduction.tex}
+
+\clearpage
+\section{Customized top tagger}
+
+\clearpage
+\section{Event selection and Search bin design}
+
+\clearpage
+\section{Background Estimation}
+
+\clearpage
+\subsection{Backgrounds from top and W decays}
+\begin{figure}[htbp]
+ \begin{center}
+  \includegraphics[width=0.8\textwidth]{figures/c4/c4_top_w_decaymod.png}
+ \end{center}
+ \caption{abcf}
+ \label{fig:c4twdecaymod}
+\end{figure}
+
+\clearpage
+\subsubsection{Combined translation factor method}
+
+\clearpage
+\subsubsection{Classical LostLepton method}
+\label{sec:c4bgll}
+\input{sections/mc4/Backgrounds/LostLepton/lostlepton.tex}
+
+\clearpage
+\subsubsection{Classical Hadronic Tau method}
+
+\clearpage
+\subsection{Backgrounds from neutrinos in Z decays}
+
+\clearpage
+\subsection{Backgrounds from QCD multi-jet}
+\label{sec:c4bgqcd}
+\input{sections/mc4/Backgrounds/QCD/qcd.tex}
+
+\clearpage
+\subsection{Backgrounds from TTZ and Other Standard Model Rare process}
+
+\clearpage
+\section{Interpretations}

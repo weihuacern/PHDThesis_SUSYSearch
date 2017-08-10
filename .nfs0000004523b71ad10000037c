@@ -1,0 +1,129 @@
+\begin{thebibliography}{10}
+
+\bibitem{CMS-PAS-JME-07-003}
+{Performance of Jet Algorithms in CMS}.
+\newblock Technical Report CMS-PAS-JME-07-003, CERN, Geneva.
+
+\bibitem{CMS-PAS-PFT-09-001}
+{Particle-Flow Event Reconstruction in CMS and Performance for Jets, Taus, and
+  MET}.
+\newblock Technical Report CMS-PAS-PFT-09-001, CERN, Geneva, Apr 2009.
+
+\bibitem{CMS-PAS-JME-16-004}
+{Performance of missing energy reconstruction in 13 TeV pp collision data using
+  the CMS detector}.
+\newblock Technical Report CMS-PAS-JME-16-004, CERN, Geneva, 2016.
+
+\bibitem{PhysRevD.96.012004}
+Search for supersymmetry in the all-hadronic final state using top quark
+  tagging in $pp$ collisions at $\sqrt{s}=13\text{ }\text{ }\mathrm{TeV}$.
+\newblock {\em Phys. Rev. D}, 96:012004, Jul 2017.
+
+\bibitem{Adam:2005cg}
+W.~Adam, B.~Mangano, T.~Speer, and T.~Todorov.
+\newblock {Track reconstruction in the CMS tracker}.
+\newblock 2005.
+
+\bibitem{Alwall:2008ag}
+Johan Alwall, Philip Schuster, and Natalia Toro.
+\newblock {Simplified Models for a First Characterization of New Physics at the
+  LHC}.
+\newblock {\em Phys. Rev.}, D79:075020, 2009.
+
+\bibitem{Assmann:691766}
+R~W Assmann.
+\newblock {Preliminary Beam-based specifications for the LHC collimators}.
+\newblock Technical Report LHC-PROJECT-NOTE-277, CERN, Geneva, Jan 2002.
+
+\bibitem{cms-note-2011-005}
+{ATLAS and CMS Collaborations}.
+\newblock {Procedure for the LHC Higgs boson search combination in Summer
+  2011}.
+\newblock Technical Report CMS-NOTE-2011-005, ATL-PHYS-PUB-2011-11, 2011.
+
+\bibitem{Cacciari:2005hq}
+Matteo Cacciari and Gavin~P. Salam.
+\newblock {Dispelling the $N^{3}$ myth for the $k_t$ jet-finder}.
+\newblock {\em Phys. Lett.}, B641:57--61, 2006.
+
+\bibitem{Cacciari:2008gp}
+Matteo Cacciari, Gavin~P. Salam, and Gregory Soyez.
+\newblock {The Anti-k(t) jet clustering algorithm}.
+\newblock {\em JHEP}, 04:063, 2008.
+
+\bibitem{Cacciari:2008gn}
+Matteo Cacciari, Gavin~P. Salam, and Gregory Soyez.
+\newblock {The Catchment Area of Jets}.
+\newblock {\em JHEP}, 04:005, 2008.
+
+\bibitem{Chatrchyan:2012xi}
+Serguei Chatrchyan et~al.
+\newblock {Performance of CMS muon reconstruction in $pp$ collision events at
+  $\sqrt{s}=7$ TeV}.
+\newblock {\em JINST}, 7:P10002, 2012.
+
+\bibitem{HiggsCombine}
+{CMS Higgs Combination Group}.
+\newblock Documentation of the roostats-based statistics tools for higgs pag.
+\newblock
+  \url{https://twiki.cern.ch/twiki/bin/viewauth/CMS/SWGuideHiggsAnalysisCombin%
+edLimit}, 2015.
+
+\bibitem{1748-0221-6-11-P11002}
+The~CMS collaboration.
+\newblock Determination of jet energy calibration and transverse momentum
+  resolution in cms.
+\newblock {\em Journal of Instrumentation}, 6(11):P11002, 2011.
+
+\bibitem{Fruhwirth:1987fm}
+R.~Fruhwirth.
+\newblock {Application of Kalman filtering to track and vertex fitting}.
+\newblock {\em Nucl. Instrum. Meth.}, A262:444--450, 1987.
+
+\bibitem{Giurgiu:2008ir}
+Gavril Giurgiu, D.~Fehling, P.~Maksimovic, M.~Swartz, and V.~Chiochia.
+\newblock {Pixel Hit Reconstruction with the CMS Detector}.
+\newblock 2008.
+
+\bibitem{Khachatryan:2015hwa}
+Vardan Khachatryan et~al.
+\newblock {Performance of Electron Reconstruction and Selection with the CMS
+  Detector in Proton-Proton Collisions at √s = 8 TeV}.
+\newblock {\em JINST}, 10(06):P06005, 2015.
+
+\bibitem{Klein:2140071}
+Katja Klein.
+\newblock {The Phase-1 Upgrade of the CMS Pixel Detector}.
+\newblock Technical Report CMS-CR-2016-036, CERN, Geneva, Mar 2016.
+
+\bibitem{CMS:2012tda}
+J.~Mans, J.~Anderson, B.~Dahmes, P.~de~Barbaro, J.~Freeman, T.~Grassi,
+  E.~Hazen, J.~Mans, R.~Ruchti, I.~Schimdt, et~al.
+\newblock {CMS Technical Design Report for the Phase 1 Upgrade of the Hadron
+  Calorimeter}.
+\newblock 2012.
+
+\bibitem{Martin:1997ns}
+Stephen~P. Martin.
+\newblock {A Supersymmetry primer}.
+\newblock 1997.
+\newblock [Adv. Ser. Direct. High Energy Phys.18,1(1998)].
+
+\bibitem{Salam:2007xv}
+Gavin~P. Salam and Gregory Soyez.
+\newblock {A Practical Seedless Infrared-Safe Cone jet algorithm}.
+\newblock {\em JHEP}, 05:086, 2007.
+
+\bibitem{Sirunyan:2017rbc}
+Albert~M Sirunyan et~al.
+\newblock {Mechanical stability of the CMS strip tracker measured with a laser
+  alignment system}.
+\newblock {\em JINST}, 12(04):P04023, 2017.
+
+\bibitem{Sirunyan:2017cwe}
+Albert~M Sirunyan et~al.
+\newblock {Search for supersymmetry in multijet events with missing transverse
+  momentum in proton-proton collisions at 13 TeV}.
+\newblock 2017.
+
+\end{thebibliography}
