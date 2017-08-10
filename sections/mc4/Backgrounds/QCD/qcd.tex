@@ -17,7 +17,7 @@ MC simulation tells us a fact that the high $\MET$ and
 $\Delta\phi_{\mathrm{jets~and}~\MET}$ cuts, as well as the multiple jets, 
 remove nearly all the QCD contribution. An unfortunate consequence of the excellent veto power of the selection
 criteria is that the QCD contribution is also very small 
-in the ``sideband" samples typically used for residual QCD background 
+in the sideband samples typically used for residual QCD background 
 estimation. The fact that these control samples are most frequently 
 leptonic-\ttbar dominate makes it difficult to use the more common background 
 estimation techniques which would simply extrapolate QCD dominated distributions 
@@ -34,8 +34,6 @@ search region. Due to lack of statistics, we use MC samples to
 derive the translation factor, although we normalize their values to a 
 data measurement in the 200 GeV$<\MET<$ 250 GeV bin, just below the 
 signal region, where there are enough statistics.
-
-%\input{QCD/qcd_changes}
 
 \subsubsection{Description of the method}
 
@@ -293,13 +291,13 @@ sources of systematic uncertainty to the QCD background prediction.}
 \hspace*{-4ex}
 \begin{tabular}{|c|c|c|}
 \hline
-Process & Source & Effect on QCD Prediction in $\%$\\
+Process & Source & \specialcell{Effect on QCD \\ Prediction in \%} \\
 \hline
-$T_{QCD}^{Scale}$ factors & Statistical uncertainty on $T_{QCD}^{MC}$ and $T_{QCD}^{Data}$ & 30 to 330 \\
+$T_{QCD}^{Scale}$ factors & \specialcell{Statistical uncertainty \\ on $T_{QCD}^{MC}$ and $T_{QCD}^{Data}$} & 30 to 330 \\
 \hline
-Closure & Non-closure and statistical precision of the closure & 30 to 500 \\
+Closure & \specialcell{Non-closure and statistical \\ precision of the closure} & 30 to 500 \\
 \hline
-Contamination from other backgrounds & Uncertainties from other background input & 2 to 50 \\
+\specialcell{Contamination from \\ other backgrounds} & \specialcell{Uncertainties from \\ other background input} & 2 to 50 \\
 \hline
 \end{tabular}
 \par\end{centering}
@@ -308,7 +306,7 @@ Contamination from other backgrounds & Uncertainties from other background input
 \subsubsection{QCD background prediction}
 The QCD background predictions for the full $35.9$fb$^{-1}$ dataset in all 
 search bins are shown in Fig.~\ref{fig:SBPrediction} and listed in 
-Table~\ref{tab:QCDpred84_1} and Table~\ref{tab:QCDpred84_2}, which includes statistical and systematic uncertainties.
+Table~\ref{tab:QCDpred84_1}, Table~\ref{tab:QCDpred84_2} and Table~\ref{tab:QCDpred84_3}, which includes statistical and systematic uncertainties.
 %% QCD search bin Prediction
 \begin{figure}[htbp]
 \begin{center}
@@ -322,7 +320,7 @@ Table~\ref{tab:QCDpred84_1} and Table~\ref{tab:QCDpred84_2}, which includes stat
 \selectfont
 \begin{centering}
 \caption{\label{tab:QCDpred84_1} Predicted QCD backgrounds corresponding to 
-the full $35.9$~fb$^{-1}$ data sample in first 48 search bins.}
+the full $35.9$~fb$^{-1}$ data sample in first 37 search bins.}
 \hspace*{-4ex}
 \begin{tabular}{|c|c|c|c|c||c|}
 \hline
@@ -402,6 +400,20 @@ the full $35.9$~fb$^{-1}$ data sample in first 48 search bins.}
  \hline
              36 &               1 &               2 &            650+ &            750+ & 0.000 $^{+0.021}_{-0.000}$  $^{+0.003}_{-0.003}$  \\
  \hline
+\end{tabular}
+\par\end{centering}
+\end{table}
+
+
+\begin{table}[htbp]
+\fontsize{10 pt}{1.2 em}
+\selectfont
+\begin{centering}
+\caption{\label{tab:QCDpred84_2} Predicted QCD backgrounds corresponding to
+the full $35.9$~fb$^{-1}$ data sample in following 11 search bins.}
+\hspace*{-4ex}
+\begin{tabular}{|c|c|c|c|c||c|}
+\hline
      Search Bin &          \ntops &         \nbjets &   \HT [GeV] &     \MET [GeV] & QCD Prediction\\
  \hline
              37 &               1 &              3+ &        300-1000 &         250-350 & 2.024 $^{+1.685}_{-1.399}$  $^{+1.807}_{-1.807}$  \\
@@ -434,7 +446,7 @@ the full $35.9$~fb$^{-1}$ data sample in first 48 search bins.}
 \fontsize{10 pt}{1.2 em}
 \selectfont
 \begin{centering}
-\caption{\label{tab:QCDpred84_2} Predicted QCD backgrounds corresponding to
+\caption{\label{tab:QCDpred84_3} Predicted QCD backgrounds corresponding to
 the full $35.9$~fb$^{-1}$ data sample in remaining 36 search bins.}
 \hspace*{-4ex}
 \begin{tabular}{|c|c|c|c|c||c|}
