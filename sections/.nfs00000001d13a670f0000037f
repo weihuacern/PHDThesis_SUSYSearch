@@ -30,7 +30,7 @@
 \clearpage
 \subsubsection{Classical LostLepton method}
 \label{sec:c4bgll}
-\input{sections/mc4/Backgrounds/LostLepton/LostLepton.tex}
+\input{sections/mc4/Backgrounds/LostLepton/lostlepton.tex}
 
 \clearpage
 \subsubsection{Classical Hadronic Tau method}
@@ -41,7 +41,7 @@
 \clearpage
 \subsection{Backgrounds from QCD multi-jet}
 \label{sec:c4bgqcd}
-\input{sections/mc4/Backgrounds/QCD/QCD.tex}
+\input{sections/mc4/Backgrounds/QCD/qcd.tex}
 
 \clearpage
 \subsection{Backgrounds from TTZ and Other Standard Model Rare process}

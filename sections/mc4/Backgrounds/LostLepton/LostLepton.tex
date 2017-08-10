@@ -72,9 +72,9 @@ $E_{Mtw}$ correction factors, obtained from simulation, as a function of muon $p
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
-Muon $p_T$ (GeV) & 10-20 & 20-30 & 30-40 & 40-50 & 50-70 & 70-100 & $>100$ \\
+\specialcell{Muon \\ $p_T$ [GeV]} & 10-20 & 20-30 & 30-40 & 40-50 & 50-70 & 70-100 & $>100$ \\
 \hline
-$E_{Mtw}$ correction factor & 1.04$\pm$0.01 & 1.06$\pm$0.01 & 1.07$\pm$0.01 & 1.09$\pm$0.01 & 1.11$\pm$0.01 & 1.19$\pm$0.01 & 1.66$\pm$0.02 \\
+\specialcell{$M_{tW}$ \\ factor} & 1.04$\pm$0.01 & 1.06$\pm$0.01 & 1.07$\pm$0.01 & 1.09$\pm$0.01 & 1.11$\pm$0.01 & 1.19$\pm$0.01 & 1.66$\pm$0.02 \\
 \hline
 \end{tabular}
 \end{center}
@@ -339,26 +339,35 @@ The source and contribution of the different components of the lost lepton metho
 
 \begin{table}[htbp]
 \fontsize{10 pt}{1.2 em}
-\caption{Source and contribution of the different components of the lost 
-lepton method systematic uncertainties.} 
+\caption{Source and contribution of the different components of the lost lepton method systematic uncertainties.} 
 \begin{center}
 \begin{tabular}{|c|c|c|c|}
 \hline
-Source & Source & electron control sample & muon control sample\\
+Source & Note & \specialcell{Electron \\ control sample} & \specialcell{Muon \\ control sample} \\
 \hline
-Muon Iso 			& Data-MC correction from tag and probe & 1\% to 3\% & 1\% to 4\% \\
-Elec Iso 			& Data-MC correction from tag and probe & 4\% to 8\% & 2\% to 5\% \\
-Muon reco/ID 			& Data-MC correction from tag and probe & 2\% to 7\% & 4\% to 11\% \\
-Elec reco/ID 			& Data-MC correction from tag and probe & 6\% to 11\% & 2\% to 8\% \\
-Acceptance 			& PDF and MC scale variation & 4\% to 97\% & 4\% to 97\% \\ 
-Other SM contribution   	& 20\% uncertainty on the purity & 0\% & 0\% \\
-Di-Muon Contribution 	        & Statistical uncertainty + 50\% & 0\% & 0\% \\
-Di-Electron Contribution 	& Statistical uncertainty + 50\% & 1\% & 1\% \\
-Transverse Mass-Cut		& Variation of \MET energy scale & 0\% & 0\% \\
-Iso track veto                  & Data-MC correction on iso track veto efficiencies & 10\% & 10\% \\
-Closure                         & Non-closure and statistical precision of the closure & 2\% to 104\% & 2\% to 86\% \\
+Muon Iso 			& \specialcell{Data-MC correction \\ from tag and probe} & 1\% to 3\% & 1\% to 4\% \\
 \hline
-Total, combined systematic	& & 13\% to 143\% & 12\% to 131\% \\
+Elec Iso 			& \specialcell{Data-MC correction \\ from tag and probe} & 4\% to 8\% & 2\% to 5\% \\
+\hline
+Muon ID 			& \specialcell{Data-MC correction \\ from tag and probe} & 2\% to 7\% & 4\% to 11\% \\
+\hline
+Elec ID 			& \specialcell{Data-MC correction \\ from tag and probe} & 6\% to 11\% & 2\% to 8\% \\
+\hline
+Acceptance    & \specialcell{PDF and MC \\ scale variation} & 4\% to 97\% & 4\% to 97\% \\ 
+\hline
+\specialcell{Other SM \\ contribution}  & \specialcell{20\% uncertainty on the purity} & 0\% & 0\% \\
+\hline
+\specialcell{Di-Muon \\ Correction}     & \specialcell{Statistical uncertainty + 50\%} & 0\% & 0\% \\
+\hline
+\specialcell{Di-Electron \\ Correction} & \specialcell{Statistical uncertainty + 50\%} & 1\% & 1\% \\
+\hline
+\specialcell{Transverse \\ Mass Cut}    & \specialcell{Variation of \MET energy scale} & 0\% & 0\% \\
+\hline
+\specialcell{Isolated \\ track veto}    & \specialcell{Data-MC correction \\ on isolated track \\ veto efficiencies} & 10\% & 10\% \\
+\hline
+Closure & \specialcell{Non-closure and \\ statistical precision \\ of the closure} & 2\% to 104\% & 2\% to 86\% \\
+\hline
+Total	& & 13\% to 143\% & 12\% to 131\% \\
 \hline
 \end{tabular}
 \end{center}
@@ -369,91 +378,45 @@ Total, combined systematic	& & 13\% to 143\% & 12\% to 131\% \\
 
 The lost lepton method is applied to collider data event samples (collected with the search triggers) corresponding to an integrated
 luminosity of $35.9$~fb$^{-1}$. 
-The final predictions for all search bins are 
-shown in Fig.~\ref{fig:LostLeptonResult_mu} and Fig.~\ref{fig:LostLeptonResult_ele} (red points) and listed in Tab.~\ref{tab:LLpred} to Tab.~\ref{tab:LLpred2b} for both muon and electron channels.% and Tab.~\ref{tab:LLpred37}.
-%Table~\ref{tab:LostLeptonResult}.% for inclusive search bins and in Table~\ref{tab:LostLeptonResult2} for exclusive search bins.
+The final predictions for all search bins are shown in Fig.~\ref{fig:LostLeptonResult_mu} and Fig.~\ref{fig:LostLeptonResult_el} (red points) and listed in Tab.~\ref{tab:LLpredmu1} to Tab.~\ref{tab:LLpredel3} for both muon and electron channels.
 
-Applying the procedure indicated by Eq.~\ref{eq:lostleptonequation}, each event in the control sample is weighted by the various efficiencies. %The distribution of the average weight computed in \ttbar, single top and W$+$jets MC is displayed in Fig.~\ref{fig:TFLL} for each search bin.
-Few bins have $0$ predicted events.
-In that case the statistical uncertainty is computed as the upper bound of the statistical uncertainty on 0 given by the Garwood interval (1.8) multiplied by the average translation factor to go from a raw number of events to the prediction. %shown in Fig.~\ref{fig:LostLeptonResult} and Tab.~\ref{tab:LLpred} to Tab.~\ref{tab:LLpred2b}.
+Applying the procedure indicated by Eq.~\ref{eq:lostleptonequation}, each event in the control sample is weighted by the various efficiencies. 
+Few bins have zero predicted events.
+In that case the statistical uncertainty is computed as the upper bound of the statistical uncertainty on 0 given by the Garwood interval (1.8) multiplied by the average translation factor to go from a raw number of events to the prediction. 
 This poisson uncertainty is treated in the Higgs combination tool using a gamma function~\cite{HiggsCombine,cms-note-2011-005}.
 
-Fig.~\ref{fig:LostLeptonResult_mu} and Fig.~\ref{fig:LostLeptonResult_ele} show the comparison of the lost lepton background prediction between this method and the TF method.
+Fig.~\ref{fig:LostLeptonResult_mu} and Fig.~\ref{fig:LostLeptonResult_el} show the comparison of the lost lepton background prediction between this method and the TF method.
 The first figure shows the prediction from muon CS and the second figure shows the results from electron CS. As we can see both methods have good agreement within uncertainties. This is a good cross-check of the important background.
 
 \begin{figure}[hptb]
 \begin{center}
 \begin{tabular}{c}
-\includegraphics[width=0.65\textwidth]{sections/mc4/Backgrounds/LostLepton/figures/v4_DataCardCampare_0_700_mu_cs.pdf}\\
-\includegraphics[width=0.65\textwidth]{sections/mc4/Backgrounds/LostLepton/figures/v4_DataCardCampare_0_50_mu_cs.pdf}\\
-\includegraphics[width=0.65\textwidth]{sections/mc4/Backgrounds/LostLepton/figures/v4_DataCardCampare_0_700_mu_cs_log.pdf}
+\includegraphics[width=0.50\textwidth]{sections/mc4/Backgrounds/LostLepton/figures/v4_DataCardCampare_0_700_mu_cs.pdf}\\
+\includegraphics[width=0.40\textwidth]{sections/mc4/Backgrounds/LostLepton/figures/v4_DataCardCampare_0_50_mu_cs.pdf}
+\includegraphics[width=0.40\textwidth]{sections/mc4/Backgrounds/LostLepton/figures/v4_DataCardCampare_0_700_mu_cs_log.pdf}
 \end{tabular}
 \end{center}
-\caption{Lost lepton background predictions on muon control sample, in red. The blue points are the results obtained with the average TF method. 
-The uncertainties include both the statistical and systematic uncertainties. Middle plot is a zoom of the top plot and the bottom plot is log sacle.}
+\caption{Lost lepton background predictions on muon control sample, in red. The blue points are the results obtained with the average TF method. The uncertainties include both the statistical and systematic uncertainties. Bottom left plot is a zoom of the top plot and the bottom right plot is log sacle.}
 \label{fig:LostLeptonResult_mu}
 \end{figure}
 
 \begin{figure}[hptb]
 \begin{center}
 \begin{tabular}{c}
-\includegraphics[width=0.65\textwidth]{sections/mc4/Backgrounds/LostLepton/figures/v4_DataCardCampare_0_700_el_cs.pdf}\\
-\includegraphics[width=0.65\textwidth]{sections/mc4/Backgrounds/LostLepton/figures/v4_DataCardCampare_0_50_el_cs.pdf}\\
-\includegraphics[width=0.65\textwidth]{sections/mc4/Backgrounds/LostLepton/figures/v4_DataCardCampare_0_700_el_cs_log.pdf}
+\includegraphics[width=0.50\textwidth]{sections/mc4/Backgrounds/LostLepton/figures/v4_DataCardCampare_0_700_el_cs.pdf}\\
+\includegraphics[width=0.40\textwidth]{sections/mc4/Backgrounds/LostLepton/figures/v4_DataCardCampare_0_50_el_cs.pdf}
+\includegraphics[width=0.40\textwidth]{sections/mc4/Backgrounds/LostLepton/figures/v4_DataCardCampare_0_700_el_cs_log.pdf}
 \end{tabular}
 \end{center}
-\caption{Lost lepton background predictions on electron control sample, in red. The blue points are the results obtained with the average TF method.
-The uncertainties include both the statistical and systematic uncertainties. Middle plot is a zoom of the top plot and the bottom plot is log sacle.}
-\label{fig:LostLeptonResult_ele}
+\caption{Lost lepton background predictions on electron control sample, in red. The blue points are the results obtained with the average TF method. The uncertainties include both the statistical and systematic uncertainties. Bottom left plot is a zoom of the top plot and the bottom right plot is log sacle.}
+\label{fig:LostLeptonResult_el}
 \end{figure}
-
-%The breakdown in term of not-isolated, not-reconstructed, and out of acceptance leptons is given in Table~\ref{tab:breakdown}.
-%
-%\begin{table}[htb]
-%\caption{Breakdown of the lost lepton prediction results. Uncertainties are statistical uncertainty only.} 
-%\begin{center}
-%\begin{tabular}{|c|c|c|c|c|}
-%\hline
-% & MET$>200$~GeV, 1b & high MET, 1b & MET$>200$~GeV, 2b & high MET, 2b \\
-%\hline
-%%muon: out of acceptance & $15.6\pm 1.3$ & $1.4\pm 0.4$ & $5.8\pm0.8$ & $0.2\pm0.1$ \\
-%%\hline
-%%muon: not-reco & $8.8\pm 0.9$ & $1.0\pm 0.3$  & $3.9\pm0.7$ & $0.2\pm0.1$ \\
-%%\hline
-%%muon: not isolated & $6.0\pm 0.8$ & $0.5\pm 0.2$  & $2.3\pm0.5$ & $0.1\pm0.1$ \\
-%%\hline
-%%total muon  & $30.4\pm 2.7$ & $2.9\pm 0.8$  & $11.9\pm1.7$ & $0.4\pm0.3$ \\
-%%\hline
-%%\hline
-%%electron: out of acceptance & $14.4\pm 1.2$ & $1.3\pm 0.4$  & $5.3\pm0.7$ & $0.2\pm0.1$ \\
-%%\hline
-%%electron: not-reco & $43.2\pm 4.9$ & $3.9\pm 1.5$  & $16.0\pm3.0$ & $0.5\pm0.4$ \\
-%%\hline
-%%electron: not isolated & $1.4\pm 0.2$ & $0.1\pm 0.1$  & $0.6\pm0.1$ & $0.1\pm0.1$ \\
-%%\hline
-%%total electron  & $59.0\pm 5.9$ & $5.3\pm 1.8$  & $21.8\pm3.6$ & $0.8\pm0.5$ \\
-%\hline
-%\end{tabular}
-%\end{center}
-%\label{tab:breakdown}
-%\end{table}
-
-%The final prediction for the baseline is compared in Fig.~\ref{fig:LostLeptonCompare} to plain MC simulation.
-%%% pred vs plain MC baseline
-%\begin{figure}[hp]
-%\begin{center}
-%%\includegraphics[width=0.55\textwidth]{lostleptons/figures/c10_baseline.pdf}
-%\end{center}
-%\caption{MET distribution for the baseline. Black points are the prediction from data. Colored lines are the expectations from MC simulation.}
-%\label{fig:LostLeptonCompare}
-%\end{figure}
 
 \begin{table}[htbp]
 \fontsize{10 pt}{1.2 em}
 \selectfont
 \begin{centering}
-\caption{\label{tab:LLpred} Predicted lost lepton background yield from the muon control sample with
-statistical and systematic uncertainties for a $35.9$~fb$^{-1}$ sample.}
+\caption{\label{tab:LLpredmu1} Predicted lost lepton background yield from the muon control sample with statistical and systematic uncertainties for a $35.9$~fb$^{-1}$ sample.}
 \hspace*{-4ex}
 \begin{tabular}{|c|c|c|c|c||c|}
 \hline
@@ -533,6 +496,18 @@ Search Bin & \ntops & \nbjets & \MTTwo [GeV] & \MET [GeV] & Lost Lepton Predicti
 \hline
 36 &               1 &               2 &            650+ &            750+ & 0.000 $^{+0.953}_{-0.000}$ $^{+0.000}_{-0.000}$ \\ 
 \hline
+\end{tabular}
+\par\end{centering}
+\end{table}
+
+\begin{table}[htbp]
+\fontsize{10 pt}{1.2 em}
+\selectfont
+\begin{centering}
+\caption{\label{tab:LLpredmu2} Predicted lost lepton background yield from the muon control sample with statistical and systematic uncertainties for a $35.9$~fb$^{-1}$ sample.}
+\hspace*{-4ex}
+\begin{tabular}{|c|c|c|c|c||c|}
+\hline
 37 &               1 &              3+ &        300-1000 &         250-350 & 35.608 $^{+5.692}_{-5.569}$ $^{+6.655}_{-6.875}$ \\ 
 \hline
 38 &               1 &              3+ &        300-1000 &         350-450 & 8.699 $^{+3.703}_{-3.514}$ $^{+1.994}_{-2.035}$ \\ 
@@ -563,8 +538,7 @@ Search Bin & \ntops & \nbjets & \MTTwo [GeV] & \MET [GeV] & Lost Lepton Predicti
 \fontsize{10 pt}{1.2 em}
 \selectfont
 \begin{centering}
-\caption{\label{tab:LLpred2} Predicted lost lepton background yield from the muon control sample with
-statistical and systematic uncertainties for a $35.9$~fb$^{-1}$ sample.}
+\caption{\label{tab:LLpredmu3} Predicted lost lepton background yield from the muon control sample with statistical and systematic uncertainties for a $35.9$~fb$^{-1}$ sample.}
 \hspace*{-4ex}
 \begin{tabular}{|c|c|c|c|c||c|}
 \hline
@@ -650,8 +624,7 @@ Search Bin & \ntops & \nbjets & \MTTwo [GeV] & \MET [GeV] & Lost Lepton Predicti
 \fontsize{10 pt}{1.2 em}
 \selectfont
 \begin{centering}
-\caption{\label{tab:LLpredb} Predicted lost lepton background yield from the electron control sample with
-statistical and systematic uncertainties for a $35.9$~fb$^{-1}$ sample.}
+\caption{\label{tab:LLpredel1} Predicted lost lepton background yield from the electron control sample with statistical and systematic uncertainties for a $35.9$~fb$^{-1}$ sample.}
 \hspace*{-4ex}
 \begin{tabular}{|c|c|c|c|c||c|}
 \hline
@@ -731,6 +704,18 @@ Search Bin & \ntops & \nbjets & \MTTwo [GeV] & \MET [GeV] & Lost Lepton Predicti
 \hline
 36 &               1 &               2 &            650+ &            750+ & 0.000 $^{+0.867}_{-0.000}$ $^{+0.000}_{-0.000}$ \\ 
 \hline
+\end{tabular}
+\par\end{centering}
+\end{table}
+
+\begin{table}[htbp]
+\fontsize{10 pt}{1.2 em}
+\selectfont
+\begin{centering}
+\caption{\label{tab:LLpredel2} Predicted lost lepton background yield from the electron control sample with statistical and systematic uncertainties for a $35.9$~fb$^{-1}$ sample.}
+\hspace*{-4ex}
+\begin{tabular}{|c|c|c|c|c||c|}
+\hline
 37 &               1 &              3+ &        300-1000 &         250-350 & 31.043 $^{+5.945}_{-5.752}$ $^{+6.260}_{-6.448}$ \\ 
 \hline
 38 &               1 &              3+ &        300-1000 &         350-450 & 3.717 $^{+2.068}_{-1.638}$ $^{+0.994}_{-1.009}$ \\ 
@@ -761,8 +746,7 @@ Search Bin & \ntops & \nbjets & \MTTwo [GeV] & \MET [GeV] & Lost Lepton Predicti
 \fontsize{10 pt}{1.2 em}
 \selectfont
 \begin{centering}
-\caption{\label{tab:LLpred2b} Predicted lost lepton background yield from the electron control sample with
-statistical and systematic uncertainties for a $35.9$~fb$^{-1}$ sample.}
+\caption{\label{tab:LLpredel3} Predicted lost lepton background yield from the electron control sample with statistical and systematic uncertainties for a $35.9$~fb$^{-1}$ sample.}
 \hspace*{-4ex}
 \begin{tabular}{|c|c|c|c|c||c|}
 \hline
