@@ -430,7 +430,41 @@ The anti-$k_{T}$ algorithm is obviously both collinear safety and infrared safet
 
 However, there are other algorithms that are both collinear safety and infrared safety, like SiSCone\cite{Salam:2007xv} and $k_{T}$\cite{Cacciari:2005hq}. The jets from anti-$k_{T}$ algorithm always have a near-circle jet area\cite{Cacciari:2008gn}, which makes them easier to correct for the detector-related effects.
 
+Now we have a reliable jet algorithm to combine the input pixels into jets. However, we can improve the performance by a more precise measurement on the energies of input pixels. In CMS experiment, we use particle flow (PF) algorithm\cite{CMS-PAS-PFT-09-001} to construct PF candidate as the input of CMS PF jets clustering. 
+
+The particle flow (PF) is a stable particle reconstruction and identification algorithm that uses the information from all sub detectors in the detector system. The PF algorithm is important especially for CMS jet and missing transverse energy reconstruction due to the uncompensated nature of CMS HCAL. A jet usually has three components: charged hadron ($\pi^{+},\pi^{-}$, etc.), photon ($\pi^{0}$), and neutral hadron ($K_{L}$, etc.). The fractions of three components are listed in the Table~\ref{tab:c3cmsjetf}. The inner tracker can perform a more precise measurement of charged hadron fraction. The CMS ECAL also provides an excellent measurement on the photon energy. The remaining 10\% neutral hadron fraction will not give a huge uncertainty to the final measurement, on the average level. 
+
+\begin{table}[htbp]
+\fontsize{10 pt}{1.2 em}
+\selectfont
+\begin{centering}
+\caption{\label{tab:c3cmsjetf} Average Jet components in GEANT4 Simulation}
+\hspace*{-4ex}
+\begin{tabular}{|c|c|c|c|}
+\hline
+Jet Constituent & Energy Fraction & Detection Instrument & Resolution \\
+\hline
+Charged Hadron  & 65\% & Inner Tracker & Negligible \\
+\hline
+Photon          & 25\% & ECAL &  $0.07^{2}E_{jet}$ \\
+\hline
+Neutral Hadron  & 10\% & ECAL and HCAL & $0.16^{2}E_{jet}$ \\
+\hline
+\end{tabular}
+\par\end{centering}
+\end{table}
+
+The key part of the PF algorithm is the charged fraction linking between the tracker and calorimeter. First, we have tracks collection by the iterative track reconstruction method that described in previous section. Then, we will cluster the calorimeter to obtain an initial separation the photon, charged hadron and neutral hadron. Then a complicate linking algorithm\cite{CMS-PAS-PFT-09-001} will be applied to chain the objects from inner tracker and calorimeters up. 
+
+The PF jets are still not the collection that we can directly use in the physics analysis. The PF jets energies still need to be corrected to match the energies of true particle jets. For the real data, there are three corrections need to be applied. The first one is the pile-up and noise correction. This correction is related to the real collider and detector effects and should be subtracted from the raw energy. The second one is the MC simulation correction. This is a pure evaluation on the reconstruction algorithm effect with MC samples. Finally, the jet energy will be corrected with di-jet data sample after the previous two corrections. More details of the jet energy corrections are described in\cite{1748-0221-6-11-P11002}. The jet energy corrections are applied in both data and MC in the physics analysis described in this thesis. 
+
 \subsubsection{Missing Transverse Energy}
+
+The missing transverse energy (\MET) is the imbalance in the transverse momentum of all visible particles. The \MET is an important variable in the R-parity conserved supersymmetry search since the lightest stable particles are heavy, stable in the physics model. The \MET is a powerful variable to suppress the standard model background in the search region. 
+However, on the reconstruction side, the \MET is a high-level variable since all visible particles involved in the calculation. The unexpected effects from detectors and collider or issue in any objects reconstruction can give us the wrong \MET. Therefore, we need to establish robust \MET filters before we use the \MET, especially for the high \MET case. The source of the abnormal \MET event can be HCAL noise in HPD, beam halo, etc. 
+
+After the filters, the \MET also need to be corrected, like jet energy correction. The most popular correction method is to propagate the jet energy correction to \MET (so called Type 1 correction). We apply the type 1 correction in this analysis. More details of the \MET filters and corrections are covered in\cite{CMS-PAS-JME-16-004}. 
+
 
 \subsubsection{Muons}
 The muon is a heavy particle that can penetrate the calorimeter and detector by the muon system outside the solenoid. The muon reconstruction has two traditional approaches: 
