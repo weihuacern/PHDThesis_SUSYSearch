@@ -486,12 +486,10 @@ The simulated events are also called MC (Monte-Carlo). The Monte Carlo is a name
 \subsubsection{Physics process simulation}
 
 \begin{equation}
- %\begin{aligned}
   \begin{split}
-		\frac{\sigma_{pp \rightarrow X}}{d\Phi}=& \sum_{\{s_{i}\}} \int \prod_{i} \frac{d^{3}q_{i}}{(2\pi^{3})2E_{i}} \sum_{ab} \int dx_{a}dx_{b}(2\pi)^{4}\delta^{4}(x_{a}p+x_{b}p\prime-\sum_{i}q_{i}) \\
+		\frac{\sigma_{pp \rightarrow X}}{d\Phi}=& \sum_{\{s_{i}\}} \int \prod_{i} \frac{d^{3}q_{i}}{(2\pi^{3})2E_{i}} \sum_{ab} \int dx_{a}dx_{b}(2\pi)^{4}\delta^{4}(x_{a}p+x_{b}p\prime-\sum_{i}q_{i}) 
 	                                          & f_{a}^{PDF}(x_{a})f_{b}^{PDF}(x_{b}) \frac{1}{2\hat{s}}|M|^{2}(ab \rightarrow \{s_{i}\};x_{a},x_{b},\{q_{i}\}) D(X(\{x_{i},q_{i}\};\Phi))
   \end{split}
- %\end{aligned}
  \label{eq:c3cmsppdf}
 \end{equation}
 \subsubsection{Detector performance simulation}
