@@ -56,14 +56,14 @@ The beam dump insertion is sat in the point 6. There are three steps to dump the
 
 The point 4 is the only straight section that contains the acceleration systems. Two radio frequency systems are installed for beam1 and beam2 respectively. 
 
-One of the aims of the LHC is to reveal the physics beyond the standard model. The exploration of the rate events in the LHC requires both high beam energies and high beam intensities. The energy of the beam is limited by the machine geometry. The luminosity of the machine can be described by the Eq.~\ref{eq:c3lhclumi} with the Gaussian beam distribution. The $N_{b}$ is the number of particles per bunch and $n_{b}$ is the number of bunches per beam. This indicates we can increase the luminosity with the optimization of fill scheme. The $f_{rev}$ is the revolution frequency, $\gamma_{r}$ is the relativistic gamma factor, $\varepsilon_{n}$ is the normalized beam emittance and $\beta *$ is the impact parameter at the collision point. The F is the geometric luminosity reduction factor due to the crossing angle at the interaction point. 
+One of the aims of the LHC is to reveal the physics beyond the standard model. The exploration of the rate events in the LHC requires both high beam energies and high beam intensities. The energy of the beam is limited by the machine geometry. The luminosity of the machine can be described by the Eq~\ref{eq:c3lhclumi} with the Gaussian beam distribution. The $N_{b}$ is the number of particles per bunch and $n_{b}$ is the number of bunches per beam. This indicates we can increase the luminosity with the optimization of fill scheme. The $f_{rev}$ is the revolution frequency, $\gamma_{r}$ is the relativistic gamma factor, $\varepsilon_{n}$ is the normalized beam emittance and $\beta *$ is the impact parameter at the collision point. The F is the geometric luminosity reduction factor due to the crossing angle at the interaction point. 
 
 \begin{equation}
  L = \frac{N^{2}_{b}n_{b}f_{rev}\gamma_{r}}{4\pi \varepsilon_{n}\beta *}F \;
  \label{eq:c3lhclumi}
 \end{equation}
 
-The definition of F is in the Eq.~\ref{eq:c3lhcgeof}. The $\theta_{c}$ is the full crossing angle at the interaction point, the $\sigma_{z}$ is the RMS bunch length and $\sigma *$ is the transverse RMS beam size at the interaction point. The LHC experts are trying to reduce the crossing angle from 370 to 280 mrad, which increase the peak luminosity by 15 percents. 
+The definition of F is in the Eq~\ref{eq:c3lhcgeof}. The $\theta_{c}$ is the full crossing angle at the interaction point, the $\sigma_{z}$ is the RMS bunch length and $\sigma *$ is the transverse RMS beam size at the interaction point. The LHC experts are trying to reduce the crossing angle from 370 to 280 mrad, which increase the peak luminosity by 15 percents. 
 \begin{equation}
  F = (1+\frac{\theta_{c}\sigma_{z}}{2\sigma *})^{-1/2} \;
  \label{eq:c3lhcgeof}
@@ -410,7 +410,7 @@ The jet is a collimated flux of stable hadrons that originate from quarks and gl
 
 There are two major requirements for the jet algorithm: collinear safe and infrared safe. The collinear safe means the results of the jet algorithm are invariant under collinear splitting of any input pixels. The infrared safety indicates that a soft emission will not change the results of jet algorithm. The infrared safety is requested not only from the soft emission QCD, but also from the collider point of view: the jet algorithm results should not change just because of a soft pile-up jet. 
 
-The anti-$k_{T}$ algorithm\cite{Cacciari:2008gp} is the default jet algorithm for all the LHC experiments. The anti-$k_{T}$ algorithm is one of the sequential recombination algorithms. In this approach, we define a special distance of the two input observables in the Eq.~\ref{eq:c3cmsantikt}:
+The anti-$k_{T}$ algorithm\cite{Cacciari:2008gp} is the default jet algorithm for all the LHC experiments. The anti-$k_{T}$ algorithm is one of the sequential recombination algorithms. In this approach, we define a special distance of the two input observables in the Eq~\ref{eq:c3cmsantikt}:
 
 \begin{equation}
  d_{ij} = min(k_{Ti}^{-2},k_{Tj}^{-2})\frac{(y_{i}-y_{j})^{2}+(\phi_{i}-\phi_{j})^{2}}{R^{2}} \;
@@ -485,6 +485,8 @@ The simulated events are also called MC (Monte-Carlo). The Monte Carlo is a name
 
 \subsubsection{Physics process simulation}
 
+The physics process simulation is described in this section. Let’s use proton-proton model to explain the processes. The high-energy proton-proton process calculation is based on the QCD factorization theorem\cite{Collins:1989gx}. The QCD factorization theorem declares that the hard-scattering cross section is a convolution product of a parton distribution function and a perturbative calculable hard scattering. Therefore, the non-perturbative nature of QCD are only included in the parton distribution function. To summarize, the differential cross section of the proton-proton collision can be expressed by Eq~\ref{eq:c3cmsppdf}:
+
 \begin{equation}
  %\begin{aligned}
   \begin{split}
@@ -494,7 +496,21 @@ The simulated events are also called MC (Monte-Carlo). The Monte Carlo is a name
  %\end{aligned}
  \label{eq:c3cmsppdf}
 \end{equation}
+
+The M is the matrix element, a calculable variable in the perturbative QCD. The $f^{PDF}$ is parton distribution function (PDF)\cite{Butterworth:2015oua}. The PDF cannot be calculated by the first principle. Therefore, the PDF need to be parameterized and derived from the experiment data. There are several different PDF collaborations, e.g. CTEQ or NNPDF. In the CMS run 2, we are using CTEQ6L1 PDF set. The last component D is the fragmentation function. The fragmentation function is the probability function of the out going parton $\{s_{i}\}$ decay into final state X. The fragmentation cannot be derived from the first principle, too. 
+
+Actually, it is not practical to calculate the cross section directly from the Eq~\ref{eq:c3cmsppdf} since there are too many combinations of final-state hadrons for given out-going partons. Therefore, we stopped the calculation before hadronization and use parton shower simulation instead to finish the calculation. More details of the parton shower simulation are described in\cite{Hoche:2014rga}. 
+
+Therefore, we finish the simulation of the hard process. However, the underlying events from soft processes can also be detected. For example, beam-beam remnant or multiple parton interactions. We use the minimum bias data (minimal trigger limited data) to study the effects of underlying events. More details are listed in\cite{Field:1393621}. 
+
+In CMS, we use two generators to complete the physics process simulation. First, A multi-purpose parton level generator (e.g. MadGraph\cite{Alwall:2011uj}) will calculate the matrix elements and parton with the PDF input. Then, the parton will be delivered to a hadronic event generator (e.g. PYTHIA\cite{Sjostrand:2014zea} or HERWIG\cite{Bellm:2015jjp}). All the stable and intermediate particles will be stored in the MC sample for study. The stable particles will be passed to detector simulation software. This will be described in the next section. 
+
 \subsubsection{Detector performance simulation}
 
+The 4-vectors of the final state particles are ready for next stage after physics process simulation. Then, we need to know the detector responses for those particles. All the particles and their secondary products from electromagnetic or hadronic showers will be traced and simulated by the first principle in the full simulation. 
 
+The core software for this simulation is GEANT4\cite{Agostinelli:2002hh}. The GEANT4 is a software toolkits that simulate the passage of particles through matter. The detector geometry, in this case, CMS detector geometry\cite{Lefebure:1999wja} is the input of GEANT4. Each subdetector has a geometry input class. The corresponding general GEANT4 geometry class will inherit this class. During the simulation, different particles will call various modules when they pass through the CMS detector system, depending on the type of subdetector. 
 
+However, the CPU time of full simulation is huge due to the complicate CMS geometry and nature of first principle calculation. Therefore, the CMS physicists design a fast simulation method\cite{1742-6596-396-6-062016}. The aim of fast simulation is to reduce the CPU time but keep the event simulation quality in the acceptable level. The simplifications are applied in several parts. For example, the pile-up simulation is simplified, the tracker geometry is roughened, and the showers are simulated with empirical formula rather than first principle. The simulation process has been largely accelerated after those simplifications. 
+
+The fast simulation method is applied on the SUSY signals, and some of the standard model processes. We can use the high level object, like jet, without worries in the fast-simulated samples. However, we need to be careful when we use the higher-level information (e.g. quark-gluon likelihood) in those simplified samples since the geometry are simplified. For example, in this thesis, the customized top tagger needs a fast-full simulation scale factor before the limit setting. We will have more discussion on this in the next chapter. 
