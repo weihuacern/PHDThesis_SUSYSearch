@@ -499,9 +499,17 @@ The physics process simulation is described in this section. Let’s use proton-
 
 The M is the matrix element, a calculable variable in the perturbative QCD. The $f^{PDF}$ is parton distribution function (PDF)\cite{Butterworth:2015oua}. The PDF cannot be calculated by the first principle. Therefore, the PDF need to be parameterized and derived from the experiment data. There are several different PDF collaborations, e.g. CTEQ or NNPDF. In the CMS run 2, we are using CTEQ6L1 PDF set. The last component D is the fragmentation function. The fragmentation function is the probability function of the out going parton $\{s_{i}\}$ decay into final state X. The fragmentation cannot be derived from the first principle, too. 
 
-Actually, it is not practical to calculate the cross section directly from the Eq~\ref{eq:c3cmsppdf} since there are too many combinations of final-state hadrons for given out-going partons. Therefore, we stopped the calculation before hadronization and use parton shower simulation instead to finish the calculation. More details of the parton shower simulation are described in\cite{Hoche:2014rga}. 
+Actually, it is not practical to calculate the cross section directly from the Eq~\ref{eq:c3cmsppdf} since there are too many combinations of final-state hadrons for given out-going partons. Therefore, we stopped the calculation before hadronization and use parton shower simulation rather than fragmentation function to finish the calculation. The collinear parton splitting and soft gluon emission are considered in the each order of shower model since they are dominant processes. More details of the parton shower simulation are described in\cite{Hoche:2014rga}. 
 
-Therefore, we finish the simulation of the hard process. However, the underlying events from soft processes can also be detected. For example, beam-beam remnant or multiple parton interactions. We use the minimum bias data (minimal trigger limited data) to study the effects of underlying events. More details are listed in\cite{Field:1393621}. 
+Therefore, we finish the simulation of the hard process. However, some other events from soft processes can also be detected. For example, beam-beam remnant or multiple parton interactions. A schematic underlying process together with hard process event plot is showed in Fig~\ref{fig:c3cmsunderlyingevents}. We use the minimum bias data (minimal trigger limited data) to study the effects of underlying events. Finally the underlying events are tuned accordingly in the CMS MC sample. More details are listed in\cite{Field:1393621}. 
+
+\begin{figure}[htbp]
+ \begin{center}
+  \includegraphics[width=0.8\textwidth]{figures/c3/c3_cms_underlyingevents.png}
+ \end{center}
+ \caption{Left: Illustration of the underlying event modeled by PYTHIA, togather with hard process. Right: Illustration of the correlations in the azimuthal angle relative to the direction of the leading charged jet}
+ \label{fig:c3cmsunderlyingevents}
+\end{figure}
 
 In CMS, we use two generators to complete the physics process simulation. First, A multi-purpose parton level generator (e.g. MadGraph\cite{Alwall:2011uj}) will calculate the matrix elements and parton with the PDF input. Then, the parton will be delivered to a hadronic event generator (e.g. PYTHIA\cite{Sjostrand:2014zea} or HERWIG\cite{Bellm:2015jjp}). All the stable and intermediate particles will be stored in the MC sample for study. The stable particles will be passed to detector simulation software. This will be described in the next section. 
 
