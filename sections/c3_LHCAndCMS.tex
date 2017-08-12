@@ -1,5 +1,6 @@
 \chapter{The LHC and The CMS Experiment}
 
+\clearpage
 \section{The LHC}
 
 The Large Hadron Collider (LHC) is the largest and most powerful hadron accelerator and collider. The LHC was installed in an existing 26.7 km tunnel that was constructed for LEP machine between 1984 and 1989. The tunnel of LHC has 8 straight sections and 8 arcs, and locates between 45m and 170m below the surface. The LHC hosts 4 experiments currently: CMS (Point 5), ATLAS (Point 1), ALICE (Point 2) and LHCb (Point 8). The LHC can accelerate the proton beam to 7TeV (running on 6.5TeV during the LHC run2).
@@ -38,6 +39,7 @@ The LHC fill scheme can be different for various purposes. One of the common fil
  \label{fig:c3lhcfillscheme}
 \end{figure}
 
+\clearpage
 \subsection{LHC: Machine layout and Performance}
 
 The LHC is a near-circle ring with 8 arcs and 8 straight sections (Fig~\ref{fig:c3lhclayout}). Each straight section is around 528m long and can host detector system or beam related insertions. The two high luminosity experiments are located at opposite straight sections: ATLAS at point 1 and CMS at point 5. The ALICE experiment and the beam1 injection system are located at point 2, while the LHCb and beam2 injection system are at point 8. 
@@ -71,6 +73,7 @@ The definition of F is in the Eq~\ref{eq:c3lhcgeof}. The $\theta_{c}$ is the ful
 
 In the CMS and ATLAS experiments, the designed peak luminosity at the collision point is approximately $10^{34}cm^{-2}s^{-1}$. The LHC has achieved this goal in 2016 and try to increase the luminosity with optimizations.
 
+\clearpage
 \subsection{LHC: From operation point of view}
 
 The LHC is an extremely complex machine and it is almost impossible to grasp every details. However, the LHC provides a summary of status for the operational activities, which are very useful in the detector operation.
@@ -183,10 +186,12 @@ The beam modes are showed in the Table~\ref{tab:c3lhcbeammode}. The beam modes d
 
 The beams modes are used to estimate the time remain before next collision. For example, the CMS system requires all the subsystem to be ready for data taking when the LHC declare the injection physics beam. Some of the subsystems need to do the alignment or calibration during this period. The time estimation from the LHC beam status is important for a smooth data taking.
 
+\clearpage
 \section{The CMS Experiment}
 
 The CMS Experiment is a particle physics experiment based on CMS detector system on the LHC. It contains with CMS detector system and event reconstruction, supported by the detector operation team, computing/storage department and software fraction.
 
+\clearpage
 \subsection{CMS Detector System}
 
 The Compact Muon Solenoid (CMS) is one of the general-purpose detection system on the LHC. To fullfill the "general-purpose", the CMS is designed as a combo of several subsystems: Sillicon Pixels and Strips for tracking information, Electromagnetic and Hadron Calorimeters for "light" particle energy deposition and drift tubes and cathode strip/resisstive plate chambers for muon details. The locations of these subdectors in the CMS are not random: The sillicon tracking subsystems are located on the inner CMS, closest to the collision point, and the calorimeter subsystems after the sillicon subdetectors, because of its destructive detection nature; Finally the muon system in the outer layer to capture our heavy object which go through the calorimeter subsystems. To obtain the high performance, the CMS is immersed in a 4-T field, which is powered by a superconducting solenoid("S" in CMS). The magnet components have a major contribution on the CMS total weight: 12500 tones out of 14000. However, comparing with its heavy weight, the size of the CMC system is relatively small: only 5000 $m^{3}$. Then the given name "Compact" is imposed in front of "Muon Solenoid" since its density near to 3000 $kg/m^{3}$.
@@ -362,6 +367,7 @@ The CMS HLT system uses all the information from detector readout and applies a 
 
 The current (Phrase 1) trigger system will be continue in operation until the end of LHC run 3. However, there is a huge challenge on the trigger system with the following HL-LHC. Track trigger is necessary to maintain the current physics acceptance with the L1 rate around 1MHz. 
 
+\clearpage
 \subsection{Event Reconstrunction}
 
 The data from the central data acquisition system will be selected and built in the high-level trigger farm and then transferred to the primary computing grid at CERN (Tier-0). The data directly from the detector electronics is called DAQ-RAW, which is the input of the online HLT cluster. The data will be reformatted and filtered with high-level trigger in the cluster. The outcome data is called RAW. Comparing to the DAQ-RAW, the RAW contains the HLT information and ready for offline reconstruction after reformatting. 
@@ -478,6 +484,7 @@ The global muon reconstruction method has a better momentum resolution in the ha
 
 A particle flow based algorithm has been designed to obtain good performance for both soft and hard muons. This particle flow muon reconstruction method is a combination of outside-in and inside-out methods. In this approach, global muon tracks and tracker tracks are gathered together and then selected with special criteria. The selection criteria are adjusted depending on environment of muon (e.g. isolation) and other detector input (e.g. energy deposit in calorimeter). This method is optimized to identify the muons within jets. The performances of the three approaches have been studied in\cite{Chatrchyan:2012xi}. 
 
+\clearpage
 \subsection{Event simulation}
 The event simulation is critical in particle physics analysis. As far as I know, we have to trust simulation results and use simulation information (yield, shape, etc.) to some extent in particle physics analysis. The simulation in the CMS experiment can be categorized into two parts: physics process simulation and detector performance simulation. The former one is the proton-proton collision physics and the latter one is the detector response simulation for physics objects. 
 
