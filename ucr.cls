@@ -110,6 +110,10 @@
 %%% ====================================================================
 \usepackage{anysize}
 \usepackage[left=1.5in,top=1.5in,right=1in,bottom=1in]{geometry}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=black,bookmarksopen=false]{hyperref}
+%\usepackage{bookmark}
+%\bookmarksetup{startatroot}
+
 %\usepackage{bm}
 %\usepackage{mathrsfs}
 %\usepackage[dvips]{graphicx}
