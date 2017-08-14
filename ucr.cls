@@ -128,7 +128,7 @@
 \usepackage{fncylab}
 \usepackage[usenames]{color}
 %\usepackage{enumerate}
-%\usepackage{multirow}
+\usepackage{multirow}
 %\usepackage{setspace}
 \usepackage{mathtools}
 %\usepackage{makecell}
