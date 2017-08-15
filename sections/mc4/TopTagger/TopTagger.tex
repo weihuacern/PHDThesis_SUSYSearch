@@ -1,0 +1,35 @@
+\subsubsection{Motivation}
+A cut-based top jet tagger is applied in 2015 paper for this analysis ref xxx. The cut-based top jet tagger has a wonderful efficiency over the top pt spectrum. However, the mistag rate is also relatively high in this tagger. Therefore, we design a new top tagger to reduce the mistag rate. 
+
+\subsubsection{Description of the method}
+
+Before we move to the top tagger algorithm, let’s review the top decay modes. The top jet decay (fig xxx) can be categorized into two classes: hadronically decayed tops and leptonically (and semi-leptonically) decayed tops. We focus on the hadronically decayed tops since we are searching SUSY in hadronic channels. The hadronically decayed tops can majorly be detected in three ways (fig xxx): a fat mono-jet with mass close to top mass, a fat mono-jet with mass close to W mass and one b-jet, and 3 resolved jets. Our cut-based algorithm is designed following these three scenarios respectively. 
+
+The details of the cut-based top tagger is listed:
+
+Only the small AK4 cone jet collection is used in the cut-based tagger to avoid jet removing from different collections. The side effect of this treatment is the remnant system can be relatively big in the mono-jet and di-jet case. The cut-based algorithm is not very powerful in the tri-jets system, compared with multi-variable algorithms. Therefore, the new top tagger has 2 major upgrades: fat jet (AK8 jet) for mono-jet and di-jet top decay, and multi-variable algorithm for tri-jet system. We expect lower mistag rate with the similar efficiencies after the upgrade. 
+
+The mono-jet top selection is relatively simple. The requirements for the mono-AK8 jet are:
+
+
+If an AK8 jet is used in the mono-jet case, it will be removed from the jet collection for next steps. 
+
+We require one W-like AK8 jet and b-like AK4 jet in the di-jet case. The W-like AK8 jet is selected with following requirements:
+
+While the b-like AK4 jet:
+
+We start using both AK4 and AK8 jet collections from this step. We design an overlap remove algorithm to avoid jet energy reusing in the algorithm. A dR matching between AK4 jets and soft-drop sub-jets of the AK8 jets is applied for jet removal. 
+
+As we mentioned before, multi-variable algorithm is applied to select the tri-jets top. There are two key elements in the multi-variable algorithm design: input variables and algorithm. 
+
+In general, we have two input variables types: the high-level physics variables, like jet pt, and base level physics variable, like particle flow candidate, and calorimeter pixels. The algorithm choosing is dependent on the input variables. For example, the high-level variables are more suited for the decision tree based algorithm, while base level variables prefer neutral network. 
+
+We choose the high-level physics variables and decision tree based algorithm in our analysis. All three-jets combinations will be the potential top candidate. The following variables are considered in the algorithm: 
+
+Top candidate properties: mass, pt, dR;
+Constituent jet properties: jet pt, eta, phi; CSV value (b jet likelyhood), quark-gluon discriminator;
+Angular variables between jets: dphi, deta, dR;
+
+
+All the variables are feed into random forest ref xxx training algorithm for training in simulation samples. The final top-jet efficiencies are about 0.6. The mistag rate about 0.2, 50\% reduced compared with the cut-based legacy tagger. More details, like data/simulation scale factors, full/fast simulation scale factors are demonstrated in ref xxx. 
+
