@@ -1,0 +1,47 @@
+The hadronic decay of $\tau$ leptons (\tauh) is one of the largest components 
+of the background from \ttbar , $W$+jets and single-top events contributing to the 
+search regions. With respect to the Run 1 analysis, the 2015 version 
+described in this note incorporates a veto on isolated tracks to reduce
+the hadronic $\tau$ background while sustaining a minimal 
+impact on signal efficiency. After applying the veto, the remnant hadronic
+$\tau$ events are estimated using the method described in the succeeding
+sections. 
+
+\subsubsection{Tau response function method}
+\label{sec:tauresponse}
+
+When a $W$ boson decays to a neutrino and a hadronically decaying 
+$\tau$ lepton ($\tauh$), the presence of neutrinos in the final state 
+results in \MET, and the event passes the lepton veto because the 
+hadronically decaying $\tau$ is reconstructed as a jet. 
+This background is estimated from a control sample (CS) of $\mu$\,+\,jets 
+events selected from data using a $\mu+\HT$-based trigger, 
+HLT\_Mu15\_IsoVVVL\_PFHT350\_v, and requiring exactly one 
+$\mu$ with $p_{T}^{\mu}>20 GeV$ and $|\eta|<2.4$.
+A cut on the transverse mass of the $W$, 
+$m_\mathrm{T}=\sqrt{2p_{T}^{\mu}\MET(1-\cos\Delta\phi)}<$ 100 GeV, 
+is required in order 
+to select events containing a $W\to\mu\nu$ decay and to suppress 
+possible new physics signal contamination, i.e., signal events
+present in the $\mu$\,+\,jets sample. Here,
+$\Delta\phi$ is the azimuthal angle between the $\vec{p_{T}}^\mu$ and the 
+\MET directions.
+Because the $\mu$\,+\,jets and \tauh{}\,+\,jets events arise from the same 
+physics processes, the hadronic component of the two samples is the same 
+except for the response of the detector to the muon or the $\tauh$ jet. 
+The trick consists of replacing the muon $p_{T}$ by a random sample of a
+simulated \tauh jet response ``template'' function for a 
+hadronically-decaying $\tau$ lepton. The 
+global variables of the event are recalculated with this $\tauh$ jet, and the 
+search selections are applied to predict the \tauh background.
+
+As shown in Fig.~\ref{fig:templates}, the template is measured in
+four $p_{T}$ bins to account for the $p_{T}$ dependence of $\tau$ jet response.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.5\textwidth]{sections/mc4/Backgrounds/HadTau/figures/TauResponseTemplate.pdf}
+\caption{Tau jet visible energy fraction templates in tau lepton $p_{T}$ bins.}
+\label{fig:templates}
+\end{figure}
+
