@@ -2,7 +2,7 @@ As we mentioned at the begining of chapter 4, The analysis is designed for maxim
 
 Targeting the above-mentioned final states, data are initially selected by requiring a number of jets and b-jets (\njets and \nbjets) and a large \MET. The search regions are ultimately defined in exclusive bins of \ntops, \nbjets, \HT, \MET and \MTTwo. SM backgrounds come from processes such as \ttbar QCD multijet events, Z+jets, W/top+jets, and smaller contributions from rare processes.
 
-The data selection process starts with the triggers and follows with a pre-selection and the definition of the search bins. The top reconstruction and identification procedure (top tagging) is described in this section, as well as the Monte Carlo (MC) samples that model signal and backgrounds.
+The data selection process starts with the triggers and follows with a baseline selection and the definition of the search bins. The top reconstruction and identification procedure (top tagging) is described in this section, as well as the Monte Carlo (MC) samples that model signal and backgrounds.
 
 \subsection{Trigger}
 \label{sec:trig}
@@ -284,20 +284,16 @@ Jets in the \HT calculation must meet the same jet seletion criteria defined abo
 
 \item Muon veto:
 
-Muon candidates are selected using the ``Medium Muon" selection~\cite{POGmuon},
+Muon candidates are selected using the ``Medium Muon" selection,
 recommended by the muon Physics Objects Group (POG).
 Muon candidates satisfy $p_{T}>10$ GeV and $|\eta|<2.4$.
 Details of the muon medium ID criteria are listed in the Table~\ref{tab:MuonMediumID} and Table~\ref{tab:MuonMediumIDGoodGlobalMuon}.
 In addition to the official medium selection, we also apply the additional impact parameter cut to select muon candidate, details listed in the Table~\ref{tab:MuonMediumIDImpactParameter}.
 %Note that there are multiple places with the words "2016 ICHEP". This is precisely because SUSY PAG recommends to keep using IDs from ICHEP therefore we label them accordingly with "2016 ICHEP".
-%  The recommended PF relative-isolation criterion
-%  with $\delta\beta$-based corrections and $\Delta R = 0.4$ is used with
-%  a ``loose" cut of $< 0.20$ to eliminate events with an isolated muon.
 A PF relative-isolation criteria is enforced (mini-isolation), for which the
 the isolation cone shrinks as a function of increasing muon $p_{T}$. The $p_{T}$ 
 in the mini-isolation cone is required to be less than 20\% of the 
 muon $p_{T}$ to eliminate events with an isolated muon. 
-%\fixme{Update to new recommended medium WP to come soon.}
 
 \newsavebox{\closureBox}
 
@@ -561,11 +557,7 @@ using the Fast Simulation application.
 
 \paragraph{Standard Model Samples}
 
-Monte Carlo samples of SM processes reconstructed with CMSSW release 8.0 (Summer16) are used throughout this analysis note.
-A complete list of these samples is shown in Table~\ref{tab:MCsamples1} and Table~\ref{tab:MCsamples2}. 
-The cross sections listed come from calculations performed at the 
-next-to-next-to-leading-order (NNLO) unless otherwise noted.
-All samples use the "Moriond17" pileup scenario, which simulates a pileup distribution with an average of 25 interactions per bunch crossing and a 25~ns interval between bunches.
+Monte Carlo samples of SM processes reconstructed with CMSSW release 8.0 (Summer16) are used throughout this analysis note. A complete list of these samples is shown in Table~\ref{tab:MCsamples1} and Table~\ref{tab:MCsamples2}. The cross sections listed come from calculations performed at the next-to-next-to-leading-order (NNLO) unless otherwise noted. All samples use the "Moriond17" pileup scenario, which simulates a pileup distribution with an average of 25 interactions per bunch crossing and a 25~ns interval between bunches.
 
 % This table is out-dated, if needed, can copy the table from the MT2 AN2016_460
 \begin{table}[hp]
@@ -663,23 +655,17 @@ ZZZ\_TuneCUETP8M1\_13TeV-amcatnlo-pythia8 & 0.014 \\
 
 \paragraph{Signal samples}
 
-Diagrams associated with the signal simplified models (SMS) used in this search for interpretation of the results are shown in Fig~\ref{Fig:signal_diagrams}. The top diagram is often referred to as T2tt($x,y$) and represents direct squark-antisquark pair production with $x$ and $y$ the top squark and \chiOneZero masses, respectively~\cite{CMS-SMS-paper}. Under the assumption that the SUSY particles that could decay to top squarks are too heavy and beyond the reach of LHC Run 2, this diagram would represent the dominant process for top squark pair production and the target signal process for this analysis.
+Diagrams associated with the signal simplified models (SMS) used in this search for interpretation of the results are shown in Fig~\ref{fig:signal_diagrams}. The top diagram is often referred to as T2tt($x,y$) and represents direct squark-antisquark pair production with $x$ and $y$ the top squark and \chiOneZero masses, respectively~\cite{CMS-SMS-paper}. Under the assumption that the SUSY particles that could decay to top squarks are too heavy and beyond the reach of LHC Run 2, this diagram would represent the dominant process for top squark pair production and the target signal process for this analysis.
 
-If the gluino is within the LHC reach in Run 2, gluino-induced processes such as those in the bottom row of Fig~\ref{Fig:signal_diagrams} would become relevant to the analysis. The bottom left diagram is called T1tttt($x,y$) with $x$ and $y$ the gluino and \chiOneZero masses.
+If the gluino is within the LHC reach in Run 2, gluino-induced processes such as those in the middle and bottom row of Fig~\ref{fig:signal_diagrams} would become relevant to the analysis. The middle left diagram is called T1tttt($x,y$) with $x$ and $y$ the gluino and \chiOneZero masses.
 In this model, the gluino undergoes a three-body decay into \ensuremath{\rm t}, \ensuremath{\rm \bar{t}} and 
 \chiOneZero. The event kinematics are similar to the case
 where
 $\gluino\to\mathrm{t}\sTop, \sTop\to\mathrm{t}\chiOneZero$~\cite{CMS-SMS-paper}
-as in the other model shown on the bottom right, denoted as 
-T5ttcc($x,y,z$).
-The numbers in parentheses refer to the gluino, top squark, and 
+as in another model shown on the bottom right, denoted as T5ttcc($x,y,z$). The numbers in parentheses refer to the gluino, top squark, and 
 \chiOneZero masses. 
 
-Cross sections for a couple of mass points are shown in 
-Table~\ref{tab:signalMC} for the T2tt and T1tttt SMS. 
-These selected points were generated with full simulation and were used for
-cut flow studies and search region optimization. Limit setting was performed
-using fast simulation signal samples.
+Cross sections for a couple of mass points are shown in Table~\ref{tab:signalMC} for the T2tt and T1tttt SMS. These selected points were generated with full simulation and were used for cut flow studies and search region optimization. Limit setting was performed using fast simulation signal samples.
 
 \begin{table}[hp]
 \centering
