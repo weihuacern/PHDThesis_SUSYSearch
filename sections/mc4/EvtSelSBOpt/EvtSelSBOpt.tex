@@ -6,6 +6,11 @@ The data selection process starts with the triggers and follows with a pre-selec
 
 \subsection{Trigger}
 \label{sec:trig}
+
+The trigger is the first filter we need to and have to apply before we analysis the data. We choose the MET bit trigger in this analysis instead of HT bit trigger in 2015 analysis because the HT bit trigger issues in 2016 run H data. 
+
+The trigger efficiencies are calculated in a looser region with with orthogonal trigger to correct the shape of simulation. The trigger sets are used in this analysis: general trigger for search and QCD background estimation, single muon trigger for $Z$+jets background analysis. We measure the search trigger efficiencies with different orthogonal trigger to check differences of turn on behavior. The corresponding efficiencies are applied when we using simulation in the analysis.
+
 Six search triggers are used to collect events for this analysis. They are seeded by \MET seed in Level-1 trigger. 
 \begin{itemize}
 \item \texttt{ HLT\_PFMET100\_PFMHT100\_IDTight\_v*}
@@ -16,19 +21,13 @@ Six search triggers are used to collect events for this analysis. They are seede
 \item \texttt{ HLT\_PFMETNoMu120\_PFMHTNoMu120\_IDTight\_v*}
 \end{itemize}
 
-The probability for these triggers to accept events (trigger efficiency) is
-measured in a sample of events collected by the single-electron trigger
+The probability for these triggers to accept events (trigger efficiency) is measured in a sample of events collected by the single-electron trigger
 \begin{itemize}
   \item \texttt{HLT\_Ele27\_WPTight\_v*},
 \end{itemize}
-which has been commonly used within CMS for the \MET trigger efficiency measurement. 
-Event from the single electron dataset is required to have
-\texttt{HLT\_Ele27\_WPTright\_v*} trigger, also has at least one offline
-reconstructed electron with $p_{T}>$ 30GeV. These selections ensure the single
-electron trigger is efficient. 
+which has been commonly used within CMS for the \MET trigger efficiency measurement. Event from the single electron dataset is required to have \texttt{HLT\_Ele27\_WPTright\_v*} trigger, also has at least one offline reconstructed electron with $p_{T}>$ 30GeV. These selections ensure the single electron trigger is efficient. 
 
-To measure the search trigger efficiency, additional cuts to mimic the
-pre-selection, defined in Sec.~\ref{sec:pre-selection}, are required.
+To measure the search trigger efficiency, additional cuts to mimic the baseline selection, defined in Sec.~\ref{sec:baselineselection}, are required.
 \begin{itemize}
   \item Pass all filters
   \item Veto reconstructed muon
@@ -38,12 +37,8 @@ pre-selection, defined in Sec.~\ref{sec:pre-selection}, are required.
   \item $\Delta\phi(\MET, j_{1,2,3})>$ 0.5, 0.5, 0.3
 \end{itemize}
 
-The trigger efficiency of the search triggers is measured as a function of
-the offline \MET.  The events passed the above requirements are defined as the
-denominator, while the above events also triggered the search triggers are
-defined as the numerator. It has been found that the \MET trigger efficiency
-has a non-trivial dependency on the offline $\HT$. The search trigger
-efficiencies are measured in the low $\HT$ (300 $< \HT <$ 1000) and high
+The trigger efficiency of the search triggers is measured as a function of the offline \MET.  The events passed the above requirements are defined as the
+denominator, while the above events also triggered the search triggers are defined as the numerator. It has been found that the \MET trigger efficiency has a non-trivial dependency on the offline $\HT$. The search trigger efficiencies are measured in the low $\HT$ (300 $< \HT <$ 1000) and high
 $\HT$ ($\HT >$ 1000) region, as shown in Fig.~\ref{fig:TrigMET}.
 \begin{figure}[tbp]
  \begin{center}
@@ -59,10 +54,8 @@ $\HT$ ($\HT >$ 1000) region, as shown in Fig.~\ref{fig:TrigMET}.
  \end{center}
 \end{figure}
 
-Beside measuring the \MET trigger efficiency from the single electron dataset,
-the same trigger efficiency can be measured from single muon and HTMHT
-dataset. To account for possible bias from different measurements, we will
-take the measurement from the single-electron dataset as the nominal and the
+Beside measuring the \MET trigger efficiency from the single electron dataset, the same trigger efficiency can be measured from single muon and HTMHT
+dataset. To account for possible bias from different measurements, we will take the measurement from the single-electron dataset as the nominal and the
 variation from the measurements from single-muon and HTMHT dataset as
 systematic uncertainty of the trigger efficiency, as shown in
 Fig.~\ref{fig:TrigMETSys}. For \MET above 250GeV, we observe similar \MET
@@ -238,7 +231,7 @@ measurements.
 
 The search looks at multijet events, with b-jets decaying from top quarks, 
 large \MET and no leptons. Initially, a loose baseline selection is applied 
-in \MET, \HT, \njets and \nbjets. %As illustrated in Tab.~\ref{tab:cutflowMC}, 
+in \MET, \HT, \njets and \nbjets.
 This baseline selection preserves 2-20\% of the signal events. 
 The events passing the baseline selection are classified into search regions
 defined in terms of \ntops, \nbjets, \MET, \HT and \MTTwo.
@@ -461,7 +454,7 @@ above, are only rejected if they satisfy
 
 In our 2016 analysis, we bin the search regions in terms of the number of b-tagged jets and top candidates. 
 The top reconstruction and identification procedure (top-tagging) 
-is described in Sec.~\ref{sec:top-tagging}. 
+is described in Sec.~\ref{sec:toptagger}. 
 
 In order to improve background suppression, in particular the \ttbar
 contribution, the \MET, \HT and \MTTwo variables were added to the 
@@ -518,80 +511,6 @@ the top quark mass. In case no combination satisfies the invariant mass
 requirement, we use the seed jet as the only remanent of the other 
 top quark. In the latter case, \MTTwo is calculated from the reconstructed top candidate, the remanent and the \MET.
 
-%Table~%\ref{tab:cutflowMC} 
-%illustrates on the sample selection process with
-%a MC simulation. The cut flow is shown, as well as the predictions for the
-%different SM backgrounds. Table~%\ref{tab:cutflowMCSat} 
-%illustrates on the sample selection process with
-%a few signal points as well as the total MC.
-
-%\begin{landscape}
-%\newsavebox{\cutflowBox}
-%\begin{table}[htb]
-%  \caption{Sample selection cut flow and event yields from MC simulated 
-%samples. All numbers are normalized to $12.9\fbinv$. 
-%}
-%  \label{tab:cutflowMC}
-%  \vskip-5ex
-%  \begin{center}
-%    \begin{lrbox}{\cutflowBox}
-%\begin{tabular}{c | c | c | c | c | c | c | c}
-%Cut     &	 $t\bar{t}$ 	&	 QCD  &	 $Z(\nu\nu)+jets$        &	 $W(l\nu)+jets$ 	&	 Single top 	&	 Rare      &	$ t\bar{t}Z$ \\
-%\hline
-%No Cut 	&	 7.58e+05 (100\%)	&	 1.29e+09 (100\%) &1.1e+06 (100\%) &2.43e+06 (100\%) & 5.99e+04 (100\%) & 3.24e+05 (100\%) &	 1.99e+03 (100\%) \\
-%Noise Filters     &7.49e+05 (98.8\%)&1.27e+09 (98.4\%)&1.1e+06 (100\%) &2.4e+06  (98.8\%)& 5.91e+04 (98.7\%)	&	 3.2e+05  (98.8\%)	&	 1.96e+03 (98.5\%) \\
-%$\mu$ Veto         & 4.84e+05 (64.6\%)&1.27e+09 (100\%) &1.1e+06 (100\%) &1.87e+06 (77.9\%)&3.92e+04 (66.3\%)	&	 1.78e+05 (55.6\%)	&	 1.32e+03 (67.3\%) \\
-%$e$ Veto    & 3e+05 (62\%)&1.27e+09 (100\%) &1.09e+06 (99.1\%) &1.42e+06 (75.9\%)&2.49e+04 (63.5\%)	&	 9.21e+04 (51.7\%)	&	 901 (68.3\%) \\
-%IsoTrkVeto         & 1.9e+05 (63.3\%)&1.22e+09 (96\%)  &1.07e+06 (98.2\%) &1.08e+06 (76.1\%)& 1.62e+04 (65\%)  	&	 6.83e+04 (74.2\%)	&	 689 (76.5\%) \\
-%$N_{jets} \geq 4$       &1e+05 (52.6\%)	& 1.57e+07 (1.3\%) &5.85e+04 (5.46\%)  & 6.91e+04 (6.4\%)& 6.39e+03 (39.4\%)	&	 6.39e+03 (9.4\%) 	&	 571 (82.9\%) \\
-%$N_{B-jets} \geq 1$   &7.96e+04 (79.6\%)& 3.07e+06 (19.6\%)& 1.11e+04 (19\%) &1.31e+04 (19\%)& 4.66e+03 (72.9\%)	&	 2.29e+03 (35.8\%)	&	 458 (80.2\%) \\
-%$H_{T} \geq 500$  &2.55e+04 (32\%)&5.6e+05  (18.2\%) & 4.22e+03 (38\%) & 5.17e+03 (39.5\%)& 1.92e+03 (41.2\%)	&	 1.09e+03 (47.6\%)	&	 244 (53.3\%) \\
-%$\textrm{\MET} \geq 200$ &9.71e+03 (38.1\%)&2.71e+04 (4.8\%) & 2.44e+03 (57.8\%) &2.21e+03 (42.7\%)&622  (32.4\%)	&385 (35.3\%)   &	 124 (50.8\%) \\
-%$\Delta\phi$            &5.56e+03 (57.3\%)& 3.07e+03 (11.3\%)&1.77e+03 (72.5\%) &1.29e+03 (58.4\%)	&292  (46.9\%)	&212 (55.1\%)     & 95.5 (77\%) \\
-%$N_{t}\geq 1$  &	 2.5e+03 (45\%)	&589 (19.2\%)	& 305 (17.3\%)	&223 (17.3\%)	&82.8  (28.4\%)	& 70.7 (33.3\%) & 50.4 (52.8\%) \\
-%$\textrm{\MTTwo} \geq 200$ 	&1.6e+03 (64\%)	&513  (87.1\%)&266 (87.2\%)&180  (80.7\%)	&61.3 (74\%) & 50.3 (71.1\%) &	 43.7 (86.7\%) \\
-%\hline
-%Baseline                	&	 1.6e+03 	&	 513              	&	 266 	&	 180 	&	 61.3    	&	 50.3             	&	 43.7     \\
-%\end{tabular}
-%    \end{lrbox}
-%    \scalebox{0.80}{\usebox{\cutflowBox}}    
-%  \end{center}
-%\end{table}
-%\end{landscape}
-
-%\begin{landscape}
-%\newsavebox{\cutflowBoxSig}
-%\begin{table}[htb]
-%  \caption{Sample selection cut flow and event yields from MC simulated
-%samples. All numbers are normalized to $12.9\fbinv$. These are for some signal samples.}
-%  \label{tab:cutflowMC}
-%  \vskip-5ex
-%  \begin{center}
-%    \begin{lrbox}{\cutflowBox}
-%\begin{tabular}{c | c | c | c | c | c}
-%Cut           	&	 Total MC         	&	 T1tttt(1500,100)	&	 T1tttt(1200,800)   	&	 T2tt(500,325)     	&	 T2tt(850,100) \\ 	
-%\hline
-%No Cut           &	 1.29e+09 (100\%) 	&	 166 (100\%)     	&	 659 (100\%)        	&	 2.03e+03 (100\%)  	&	 217 (100\%)\\ 	
-%Noise Filters       &	 1.28e+09 (99\%)  	&	 163 (98.2\%)    	&	 651 (98.8\%)        	&	 2e+03    (98.5\%)	&	 214 (98.6\%)\\ 	
-%$\mu$ Veto           	&	 1.28e+09 (100\%) 	&	 103  (63.1\%)   	&	 417 (64\%)	&	 1.53e+03  (76.5\%)	&	 171 (79.9\%)\\ 	
-%$e$ Veto              	&	 1.27e+09 (99\%)  	&	 65.8 (68.9\%)   	&	 277 (66.4\%)	&	 1.17e+03  (76.5\%)	&	 135 (78.9\%)\\ 	
-%IsoTrkVeto           	&	 1.22e+09 (96\%)  	&	 58.1 (88.3\%)   	&	 215 (77.6\%)	&	 943       (80.6\%)	&	 126 (93.3\%)\\ 	
-%$N_{jets} \geq 4$        &	 1.6e+07 (1.3\%)  	&	 58.1 (100\%)    	&	 214 (99.5\%)	&	 850       (90.1\%)	&	 113 (89.6\%)\\ 	
-%$N_{B-jets} \geq 1$   	&	 3.18e+06 (19.8\%)	&	 55.6 (95.7\%)   	&	 203 (94.9\%)	&	 685 (80.6\%)   	&	 92.9 (82.2\%)\\ 	
-%$H_T \geq 500$  	&	 5.98e+05 (18.8\%)&55.6 (100\%)    & 183 (90.1\%)	&	 454  (66.3\%) 	&	 87.4 (94.1\%)\\ 	
-%$\textrm{\MET} \geq 200$ 	&	 4.26e+04 (7.1\%) 	&	 53.3 (95.7\%)   	&	 122 (66.7\%)	&	 305  (67.2\%) 	&	 82.6 (94.5\%)\\ 	
-%$\Delta\phi$            	&	 1.23e+04 (28.9\%)	&	 43.6 (81.8\%)   	&	 96.8 (79.3\%)	&	 192  (63\%) 	&	 74.7 (90.4\%)\\ 	
-%$N_{t} \geq 1$      	&	 3.82e+03 (31\%)  	&	 39.5 (90.6\%) 	&	 88.2 (91.1\%)   	&	 109 (56.8\%)  	&	 48.6 (65.1\%)\\ 	
-%$\textrm{\MTTwo} \geq 200$ 	&	 2.71e+03 (70.9\%)	&	 38.8 (98.3\%)	&	 82.8 (93.9\%)   	&	 87.5  (80.3\%)	&	 47.5 (97.7\%)\\ 	
-%Baseline                	&	 2.71e+03         	&	 38.8 	&	 82.8 	&	 87.5 	&	 47.5 \\ 	
-%\end{tabular}
-%    \end{lrbox}
-%    \scalebox{0.90}{\usebox{\cutflowBox}}
-%  \end{center}
-%\end{table}
-%\end{landscape}
-
-%\todo{Fig.~\ref{fig:compSBvars} are from 2015 data and MC for illustration purpose. They will be updated with 2016 data and MC samples later.}
 Fig.~\ref{fig:compSBvars} 
 shows the comparison between total SM backgrounds from simulation and several signal points for the four search bin variables after baseline cuts. We can clearly see all the variables have good discrimination power. Observed data are also shown and the total SM backgrounds are scaled to the same yield as data to ensure a shape comparison. %The same scale is applied to signals as well in addition to the ``$\times5$" or ``$\times10$" scales.
 
@@ -606,18 +525,6 @@ shows the comparison between total SM backgrounds from simulation and several si
     \label{fig:compSBvars}
   \end{center}
 \end{figure}
-
-%Fig.~\ref{fig:compMT2vsMET} shows the 2D distributions of \MTTwo versus \MET for the major \ttbar background and two signals, i.e., T2tt(850, 100) and T2tt(500, 325). We can clearly see the shapes are different between the \ttbar background and the high stop mass signal point. For the low stop mass point, the correlation between \MTTwo and \MET is not as strong as the high mass point, however difference can still be seen between this signal and the \ttbar background.
-
-%\begin{figure}[h]
-%  \begin{center}
-%    \includegraphics[width=0.32\linewidth]{}%eventSelection/figures/comb_TTbar_MT2_vs_met_baseline.pdf}
-%    \includegraphics[width=0.32\linewidth]{}%eventSelection/figures/comb_Signal_T2tt_mStop850_mLSP100_MT2_vs_met_baseline.pdf}
-%    \includegraphics[width=0.32\linewidth]{}%eventSelection/figures/comb_Signal_T2tt_mStop500_mLSP325_MT2_vs_met_baseline.pdf}
-%    \caption{ 2D distributions of \MTTwo versus \MET for the major \ttbar background and two signal points, i.e., T2tt(850, 100) in the middle and T2tt(500, 325) in the right, after the baseline cuts. }
-%    \label{fig:compMT2vsMET}
-%  \end{center}
-%\end{figure}
 
 The search bins defined after baseline cuts (in total 84 bins) are illustrated in Fig.~\ref{fig:SBXX}. An improvement we make is switching from the \MTTwo variable to \HT variable for search bins where $\nbjets>=3$ or $\ntops>=3$ since these bins should be sensitive to the T1tttt signals where the \MTTwo cannot be clearly as defined with more than two reconstructed top quarks or provide the best sensitivity. 
 To accommodate with increaing luminosity of 2016 data and improve our search sensitivity, we make harder search bins in
@@ -654,97 +561,101 @@ using the Fast Simulation application.
 
 \paragraph{Standard Model Samples}
 
-Monte Carlo samples of SM processes reconstructed with CMSSW release 8.0 
-(Summer16) are used throughout this analysis note.
-A complete list of these samples is shown in Tab.~\ref{tab:MCsamples}. 
+Monte Carlo samples of SM processes reconstructed with CMSSW release 8.0 (Summer16) are used throughout this analysis note.
+A complete list of these samples is shown in Table~\ref{tab:MCsamples1} and Table~\ref{tab:MCsamples2}. 
 The cross sections listed come from calculations performed at the 
 next-to-next-to-leading-order (NNLO) unless otherwise noted.
-All samples use the ``Moriond17" pileup scenario, which simulates a pileup 
-distribution with an average of 25 interactions per bunch crossing and a 
-25~ns interval between bunches.
+All samples use the "Moriond17" pileup scenario, which simulates a pileup distribution with an average of 25 interactions per bunch crossing and a 25~ns interval between bunches.
 
 % This table is out-dated, if needed, can copy the table from the MT2 AN2016_460
 \begin{table}[hp]
 \centering
 \caption{Standard model Monte Carlo samples used in the analysis.}
-\label{tab:MCsamples}
+\label{tab:MCsamples1}
 {\footnotesize
-\begin{tabular}{lccc}
+\begin{tabular}{lcc}
 \hline \hline
-Dataset & $\sigma$ (pb) & $\int$ (fb$^{-1}$) \\
+Dataset & $\sigma$ (pb) \\
 \hline
-\multicolumn{3}{c}{QCD MC samples (LO)} \\ \hline
-QCD\_HT100to200\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 27540000 & 0.01\\
-QCD\_HT200to300\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 1735000 & 0.01\\
-QCD\_HT300to500\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 366800 & 0.05\\
-QCD\_HT500to700\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 29370 & 0.67\\
-QCD\_HT700to1000\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 6524 & 2.30\\
-QCD\_HT1000to1500\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 1064 & 4.67\\
-QCD\_HT1500to2000\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 121.5 & 31.67\\
-QCD\_HT2000toInf\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 25.42 & 77.17\\
+\multicolumn{2}{c}{QCD MC samples (LO)} \\ \hline
+QCD\_HT100to200\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 27540000 \\
+QCD\_HT200to300\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 1735000 \\
+QCD\_HT300to500\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 366800 \\
+QCD\_HT500to700\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 29370 \\
+QCD\_HT700to1000\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 6524 \\
+QCD\_HT1000to1500\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 1064 \\
+QCD\_HT1500to2000\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 121.5 \\
+QCD\_HT2000toInf\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 25.42 \\
 \hline
-\multicolumn{3}{c}{SM \ttbar MC samples} \\ \hline
-%TTJets\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 816.0 & 13.90\\
-TTJets\_SingleLeptFromT\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 179.3 & 324.6\\
-TTJets\_SingleLeptFromTbar\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 179.3 & 335.7\\
-TTJets\_DiLept\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 86.66 & 351.2\\
-TTJets\_HT-600to800\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 2.615 & 1898\\
-TTJets\_HT-800to1200\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 1.077 & 3198\\
-TTJets\_HT-1200to2500\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 0.195 & 5063\\
-TTJets\_HT-2500toInf\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 0.002 & 218575\\
+\multicolumn{2}{c}{SM \ttbar MC samples} \\ \hline
+TTJets\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 816.0 \\
+TTJets\_SingleLeptFromT\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 179.3 \\
+TTJets\_SingleLeptFromTbar\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 179.3 \\
+TTJets\_DiLept\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 86.66 \\
+TTJets\_HT-600to800\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 2.615 \\
+TTJets\_HT-800to1200\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 1.077 \\
+TTJets\_HT-1200to2500\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 0.195 \\
+TTJets\_HT-2500toInf\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 0.002 \\
 \hline
-\multicolumn{3}{c}{SM \wlnu MC samples} \\ \hline
-WJetsToLNu\_HT-100To200\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 1635 & 6.20\\
-WJetsToLNu\_HT-200To400\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 437.0 & 11.97\\
-WJetsToLNu\_HT-400To600\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 59.50 & 31.96\\
-WJetsToLNu\_HT-600ToInf\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 22.80 & 45.44\\
-WJetsToLNu\_HT-600To800\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 15.50 & 257.1\\
-WJetsToLNu\_HT-800To1200\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 6.366 & 247.4\\
-WJetsToLNu\_HT-1200To2500\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 1.614 & 158.4\\
-WJetsToLNu\_HT-2500ToInf\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 0.037 & 6770\\
+\multicolumn{2}{c}{SM \wlnu MC samples} \\ \hline
+WJetsToLNu\_HT-100To200\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 1635 \\
+WJetsToLNu\_HT-200To400\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 437.0 \\
+WJetsToLNu\_HT-400To600\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 59.50 \\
+WJetsToLNu\_HT-600ToInf\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 22.80 \\
+WJetsToLNu\_HT-600To800\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 15.50 \\
+WJetsToLNu\_HT-800To1200\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 6.366 \\
+WJetsToLNu\_HT-1200To2500\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 1.614 \\
+WJetsToLNu\_HT-2500ToInf\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 0.037 \\
+\hline \hline
+\end{tabular}
+}
+\end{table}
+
+\begin{table}[hp]
+\centering
+\caption{Standard model Monte Carlo samples used in the analysis.}
+\label{tab:MCsamples2}
+{\footnotesize
+\begin{tabular}{lcc}
+\hline \hline
+Dataset & $\sigma$ (pb) \\
 \hline
-\multicolumn{3}{c}{SM \znunu MC samples} \\ \hline
-ZJetsToNuNu\_HT-100To200\_13TeV-madgraph & 345.0 & 14.92\\
-ZJetsToNuNu\_HT-200To400\_13TeV-madgraph & 96.38 & 52.22\\
-ZJetsToNuNu\_HT-400To600\_13TeV-madgraph & 13.46 & 75.34\\
-ZJetsToNuNu\_HT-600ToInf\_13TeV-madgraph & 5.170 & 196.5\\
-ZJetsToNuNu\_HT-600To800\_13TeV-madgraph & 3.146 & 75.34\\
-ZJetsToNuNu\_HT-800To1200\_13TeV-madgraph & 1.453 & 75.34\\
-ZJetsToNuNu\_HT-1200To2500\_13TeV-madgraph & 0.359 & 75.34\\
-ZJetsToNuNu\_HT-2500ToInf\_13TeV-madgraph & 0.008487& 75.34\\
+\multicolumn{2}{c}{SM \znunu MC samples} \\ \hline
+ZJetsToNuNu\_HT-100To200\_13TeV-madgraph & 345.0 \\
+ZJetsToNuNu\_HT-200To400\_13TeV-madgraph & 96.38 \\
+ZJetsToNuNu\_HT-400To600\_13TeV-madgraph & 13.46 \\
+ZJetsToNuNu\_HT-600ToInf\_13TeV-madgraph & 5.170 \\
+ZJetsToNuNu\_HT-600To800\_13TeV-madgraph & 3.146 \\
+ZJetsToNuNu\_HT-800To1200\_13TeV-madgraph & 1.453 \\
+ZJetsToNuNu\_HT-1200To2500\_13TeV-madgraph & 0.359 \\
+ZJetsToNuNu\_HT-2500ToInf\_13TeV-madgraph & 0.008487 \\
 \hline
-\multicolumn{3}{c}{SM \zll MC samples} \\ \hline
-DYJetsToLL\_M-50\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 6025 & 1.50\\
-DYJetsToLL\_M-50\_HT-100to200\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 171.5 & 15.31\\
-DYJetsToLL\_M-50\_HT-200to400\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 52.58 & 18.18\\
-DYJetsToLL\_M-50\_HT-400to600\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 6.984 & 155.0\\
-DYJetsToLL\_M-50\_HT-600to800\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 1.676 & xxx\\
-DYJetsToLL\_M-50\_HT-800to1200\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 0.831 & xxx\\
-DYJetsToLL\_M-50\_HT-1200to2500\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 0.143 & xxx\\
-DYJetsToLL\_M-50\_HT-2500toInf\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 0.00319 & xxx\\
+\multicolumn{2}{c}{SM \zll MC samples} \\ \hline
+DYJetsToLL\_M-50\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 6025 \\
+DYJetsToLL\_M-50\_HT-100to200\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 171.5 \\
+DYJetsToLL\_M-50\_HT-200to400\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 52.58 \\
+DYJetsToLL\_M-50\_HT-400to600\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 6.984 \\
+DYJetsToLL\_M-50\_HT-600to800\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 1.676 \\
+DYJetsToLL\_M-50\_HT-800to1200\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 0.831 \\
+DYJetsToLL\_M-50\_HT-1200to2500\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 0.143 \\
+DYJetsToLL\_M-50\_HT-2500toInf\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 0.00319 \\
 \hline
-\multicolumn{3}{c}{SM single-top MC samples} \\ \hline
-%ST\_s-channel\_4f\_leptonDecays\_13TeV-amcatnlo-pythia8\_TuneCUETP8M1 & 3.340 & 183.6\\
-%ST\_t-channel\_antitop\_4f\_leptonDecays\_13TeV-powheg-pythia8\_TuneCUETP8M1 & 26.23 & 64.64\\
-%ST\_t-channel\_top\_4f\_leptonDecays\_13TeV-powheg-pythia8\_TuneCUETP8M1 & 44.07 & 74.88\\
-ST\_tW\_antitop\_5f\_inclusiveDecays\_13TeV-powheg-pythia8\_TuneCUETP8M1 & 35.80 (NLO) & 27.93\\
-ST\_tW\_top\_5f\_inclusiveDecays\_13TeV-powheg-pythia8\_TuneCUETP8M1 & 35.80 (NLO) & 27.81\\
+\multicolumn{2}{c}{SM single-top MC samples} \\ \hline
+ST\_tW\_antitop\_5f\_inclusiveDecays\_13TeV-powheg-pythia8\_TuneCUETP8M1 & 35.80 (NLO) \\
+ST\_tW\_top\_5f\_inclusiveDecays\_13TeV-powheg-pythia8\_TuneCUETP8M1 & 35.80 (NLO) \\
 \hline
-\multicolumn{3}{c}{SM diboson and other rare process MC samples} \\ \hline
-ttHJetTobb\_M125\_13TeV\_amcatnloFXFX\_madspin\_pythia8 & 0.293 & 18269\\
-TTZToLLNuNu\_M-10\_TuneCUETP8M1\_13TeV-amcatnlo-pythia8 & 0.228 & 811.4\\
-TTZToQQ\_TuneCUETP8M1\_13TeV-amcatnlo-pythia8 & 0.530 & 663.4\\
-TTWJetsToLNu\_TuneCUETP8M1\_13TeV-amcatnloFXFX-madspin-pythia8 & 0.204 & 635.6\\
-TTWJetsToQQ\_TuneCUETP8M1\_13TeV-amcatnloFXFX-madspin-pythia8 & 0.423 & 1018\\
-%ZH\_HToBB\_ZToNuNu\_M125\_13TeV\_amcatnloFXFX\_madspin\_pythia8 & 0.100 & 12116\\
-%WH\_HToBB\_WToLNu\_M125\_13TeV\_amcatnloFXFX\_madspin\_pythia8 & 0.260 & 4782\\
-WW\_TuneCUETP8M1\_13TeV\_pythia8 & 115.0 & 64.26\\
-WZ\_TuneCUETP8M1\_13TeV\_pythia8 & 47.13 & 1339\\
-ZZ\_TuneCUETP8M1\_13TeV\_pythia8 & 16.523 & 5556\\
-%TTTT\_TuneCUETP8M1\_13TeV-amcatnlo-pythia8 & 0.009 & 57031\\
-WWZ\_TuneCUETP8M1\_13TeV-amcatnlo-pythia8 & 0.165 & 1341\\
-WZZ\_TuneCUETP8M1\_13TeV-amcatnlo-pythia8 & 0.056 & 3938\\
-ZZZ\_TuneCUETP8M1\_13TeV-amcatnlo-pythia8 & 0.014 & 15297\\
+\multicolumn{2}{c}{SM diboson and other rare process MC samples} \\ \hline
+ttHJetTobb\_M125\_13TeV\_amcatnloFXFX\_madspin\_pythia8 & 0.293 \\
+TTZToLLNuNu\_M-10\_TuneCUETP8M1\_13TeV-amcatnlo-pythia8 & 0.228 \\
+TTZToQQ\_TuneCUETP8M1\_13TeV-amcatnlo-pythia8 & 0.530 \\
+TTWJetsToLNu\_TuneCUETP8M1\_13TeV-amcatnloFXFX-madspin-pythia8 & 0.204 \\
+TTWJetsToQQ\_TuneCUETP8M1\_13TeV-amcatnloFXFX-madspin-pythia8 & 0.423 \\
+WW\_TuneCUETP8M1\_13TeV\_pythia8 & 115.0 \\
+WZ\_TuneCUETP8M1\_13TeV\_pythia8 & 47.13 \\
+ZZ\_TuneCUETP8M1\_13TeV\_pythia8 & 16.523 \\
+WWZ\_TuneCUETP8M1\_13TeV-amcatnlo-pythia8 & 0.165 \\
+WZZ\_TuneCUETP8M1\_13TeV-amcatnlo-pythia8 & 0.056 \\
+ZZZ\_TuneCUETP8M1\_13TeV-amcatnlo-pythia8 & 0.014 \\
 \hline \hline
 \end{tabular}
 }
@@ -765,33 +676,25 @@ The numbers in parentheses refer to the gluino, top squark, and
 \chiOneZero masses. 
 
 Cross sections for a couple of mass points are shown in 
-Tab.~\ref{tab:signalMC} for the T2tt and T1tttt SMS. 
+Table~\ref{tab:signalMC} for the T2tt and T1tttt SMS. 
 These selected points were generated with full simulation and were used for
 cut flow studies and search region optimization. Limit setting was performed
 using fast simulation signal samples.
 
-%%T2tt mass points selected for the study, with motivation. T1tttt and the dark matter signal points used for 
-%%additional studies aiming for next stage of work.
-
 \begin{table}[hp]
 \centering
-\caption{Cross sections for a couple of mass points for the T2tt and T1tttt 
-Simplified Models. The selected points were generated with full simulation.} %Note that all samples are generated with FullSim.}
+\caption{Cross sections for a couple of mass points for the T2tt and T1tttt Simplified Models. The selected points were generated with full simulation.} %Note that all samples are generated with FullSim.}
 \label{tab:signalMC}
 {\footnotesize
-\begin{tabular}{lccc}
+\begin{tabular}{lcc}
 \hline \hline
-Dataset & $\sigma$ (pb) & $\int$ (fb$^{-1}$) \\
+Dataset & $\sigma$ (pb) \\
 \hline
-SMS-T2tt\_mStop-500\_mLSP-325\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 0.51848 & 748 \\
-SMS-T2tt\_mStop-850\_mLSP-100\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 0.01896 & 12694 \\
+SMS-T2tt\_mStop-500\_mLSP-325\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 0.51848 \\
+SMS-T2tt\_mStop-850\_mLSP-100\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 0.01896 \\
 \hline
-SMS-T1tttt\_mGluino-1500\_mLSP-100\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 0.014 & 7268\\
-SMS-T1tttt\_mGluino-1200\_mLSP-800\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 0.086 & 1719 \\
-%T5ttttDeg\_mGo1300\_mStop300\_mCh285\_mChi280\_23bodydec\_v2 (private) & 0.0460525 & 951 \\
-%T5ttttDeg\_mGo1300\_mStop300\_mChi280\_4bodydec\_v2 (private) & 0.0460525 & 956 \\ 
-%TTDMDMJets\_M600GeV\_Tune4C\_13TeV-madgraph-tauola & 0.1038 & 1219 \\
-%TTDMDMJets\_M1000GeV\_Tune4C\_13TeV-madgraph-tauola & 0.01585 & 7686 \\
+SMS-T1tttt\_mGluino-1500\_mLSP-100\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 0.014 \\
+SMS-T1tttt\_mGluino-1200\_mLSP-800\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 0.086 \\
 \hline \hline
 \end{tabular}
 \footnotesize}
