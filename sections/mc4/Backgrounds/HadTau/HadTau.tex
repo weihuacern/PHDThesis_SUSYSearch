@@ -1,20 +1,6 @@
-The hadronic decay of $\tau$ leptons (\tauh) is one of the largest components 
-of the background from \ttbar , $W$+jets and single-top events contributing to the 
-search regions. With respect to the Run 1 analysis, the 2015 version 
-described in this note incorporates a veto on isolated tracks to reduce
-the hadronic $\tau$ background while sustaining a minimal 
-impact on signal efficiency. After applying the veto, the remnant hadronic
-$\tau$ events are estimated using the method described in the succeeding
-sections. 
+The hadronic decay of $\tau$ leptons (\tauh) is one of the largest components of the background from \ttbar , $W$+jets and single-top events contributing to the search regions. Isolated tracks veto is applied in the baseline selection to reduce the hadronic $\tau$ background while sustaining a minimal impact on signal efficiency. After applying the veto, the remnant hadronic $\tau$ events are estimated using the method described as following.
 
-\subsubsection{Tau response function method}
-\label{sec:tauresponse}
-
-When a $W$ boson decays to a neutrino and a hadronically decaying 
-$\tau$ lepton ($\tauh$), the presence of neutrinos in the final state 
-results in \MET, and the event passes the lepton veto because the 
-hadronically decaying $\tau$ is reconstructed as a jet. 
-This background is estimated from a control sample (CS) of $\mu$\,+\,jets 
+When a $W$ boson decays to a neutrino and a hadronically decaying $\tau$ lepton ($\tauh$), the presence of neutrinos in the final state results in \MET, and the event passes the lepton veto because the hadronically decaying $\tau$ is reconstructed as jets. This background is estimated from a control sample (CS) of $\mu$\,+\,jets 
 events selected from data using a $\mu+\HT$-based trigger, 
 HLT\_Mu15\_IsoVVVL\_PFHT350\_v, and requiring exactly one 
 $\mu$ with $p_{T}^{\mu}>20 GeV$ and $|\eta|<2.4$.
@@ -30,13 +16,12 @@ Because the $\mu$\,+\,jets and \tauh{}\,+\,jets events arise from the same
 physics processes, the hadronic component of the two samples is the same 
 except for the response of the detector to the muon or the $\tauh$ jet. 
 The trick consists of replacing the muon $p_{T}$ by a random sample of a
-simulated \tauh jet response ``template'' function for a 
+simulated \tauh jet response "template" function for a 
 hadronically-decaying $\tau$ lepton. The 
 global variables of the event are recalculated with this $\tauh$ jet, and the 
 search selections are applied to predict the \tauh background.
 
-As shown in Fig.~\ref{fig:templates}, the template is measured in
-four $p_{T}$ bins to account for the $p_{T}$ dependence of $\tau$ jet response.
+As shown in Fig.~\ref{fig:templates}, the template is measured in four $p_{T}$ bins to account for the $p_{T}$ dependence of $\tau$ jet response.
 
 \begin{figure}[htbp]
 \centering
@@ -45,3 +30,12 @@ four $p_{T}$ bins to account for the $p_{T}$ dependence of $\tau$ jet response.
 \label{fig:templates}
 \end{figure}
 
+The $\tauh$ background prediction is calculated as follows:
+\begin{equation}
+N_{\tau_{h}} = \sum\limits_i^{N_\mathrm{CS}^\mu}\left(\sum\limits_j^\text{Template bins}(P_{\tau_h}^\text{resp})
+\frac{\epsilon_{\tau \rightarrow \mu}}{\epsilon^{\mu}_\text{trigger}\,\epsilon^{\mu}_\text{reco}\,\epsilon^{\mu}_\text{iso}\,\epsilon^{\mu}_\text{acc}\,\epsilon^{\mu}_{m_\text{T}}} \dfrac{ \mathcal{B}(W \rightarrow \tau_h)}{\mathcal{B}(W \rightarrow \mu)}\,\epsilon_\text{isotrack}\,F_\text{dilepton}\right)
+\label{eq:tauh}
+\end{equation}
+where the first summation is over the events in the $\mu$ + jets control sample, the second is over the bins of the $\tau_h$ response template and $P_{\tau_h}^{resp}$ is the probability of $\tau_h$ response from each bin.
+
+The classical hadronic tau method is not applied in this analysis because of the issue in the HT bit L1 trigger in run H.
