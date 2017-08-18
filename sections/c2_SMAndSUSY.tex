@@ -132,16 +132,51 @@ The other property is the R-parity. The R-parity is defined as $P_{R}=(-1)^{3(B-
 \clearpage
 \subsection{SUSY naturalness}
 
+The naturalness of a theory means that the ratios between free parameters or physical constants in this theory should be in order 1, so the parameters are not fine-tuned. In the hierarchy problem, the scalar Higgs mass is fine tuned without symmetry protection. We can define a measure of the fine-tuning by Eq~\ref{eq:c2nsusymeasure}:
+\begin{equation}
+ \Delta = \frac{2\delta m_{H}^{2}}{m_{h}^{2}}
+ \label{eq:c2nsusymeasure}
+\end{equation}
+The $m_{h}$ is the physical neutral CP-even Higgs mass, and the $m_{H}$ is a general linear combination of the various masses of the Higgs fields with coefficient depend on the mixing angle ($\beta$ in MSSM). This fine-tuning measure can be used for the sparticle mass constrain. 
+
+Let’s take stop mass constrain as an example. The Higgs potential in SUSY is corrected by both gauge and Yukawa interactions. The major contribution comes from top-stop loop. The Higgs mass correction from stop loop can be expressed by Eq~\ref{eq:c2nsusystoptree}: 
 \begin{equation}
  \delta m_{H_{u}}^{2}|_{stop} = - \frac{3}{8\pi^{2}}y_{t}^{2}(m_{Q_{3}}^{2}+m_{u_{3}}^{2}+|A_{t}|^{2})log(\frac{\Lambda_{UV}}{TeV})
  \label{eq:c2nsusystoptree}
 \end{equation}
 
-
+We can eewrite it by the stop mass eigenvalues in Eq~\ref{eq:c2nsusystopeigen}:
 \begin{equation}
 	\delta m_{H_{u}}^{2}|_{stop} \approx - \frac{3}{8\pi^{2}}y_{t}^{2}(m_{\tilde{t_{1}}}^{2}+m_{\tilde{t_{2}}}^{2}-2m_{t}^{2}+\frac{m_{\tilde{t_{1}}}^{2}-m_{\tilde{t_{2}}}^{2}}{m_{t}^{2}}cos^{2}\theta_{\tilde{t}}sin^{2}\theta_{\tilde{t}})log(\frac{\Lambda_{UV}}{TeV})
  \label{eq:c2nsusystopeigen}
 \end{equation}
+
+The requirement of a natural Higgs potential sets an upper bound on the stop mass\cite{Papucci:2011wy}, described by Eq~\ref{eq:c2nsusystopbound}:
+
+\begin{equation}
+ \sqrt{m_{\tilde{t_{1}}}^{2}+m_{\tilde{t_{2}}}^{2}} \leq 600GeV\frac{sin\beta}{(1+x_{t})^{1/2}} (\frac{log(\Lambda/TeV)}{3})^{-1/2}(\frac{m_{h}}{120GeV})(\frac{\Delta^{-1}}{20\%})^{-1/2}
+ \label{eq:c2nsusystopbound}
+\end{equation}
+
+We can set the upper bound for gluino and higgsino mass in the similar way\cite{Papucci:2011wy}. To summarize, the requirements for the natural SUSY are:
+\begin{itemize}
+\item Tow stops and one left-handed sbottom, both below 500-700 GeV
+\item Two higgsinos, below 200-350 GeV
+\item Not too heavy gluino, below 900-1500GeV
+\end{itemize}
+
+Therefore, the stop, sbottom, higgsino and gluino are the interested search target in natural SUSY. Higgsinos are produced through electroweak process. The cross section is relatively low on the large hadron collider. The light stops have the leading contribution on the Higgs mass correction. Therefore, the search for stop and gluino is a desirable target on the large hadron collider (LHC). We have the most probability to find stop and gluino in hadronic channel since the hadronic process cross section is relatively high on the LHC. 
+
+Then we need to consider the R-parity. The R-parity violated (PRV) SUSY model can also be a natural SUSY model. However, since the SUSY LSP can decay into standard model particle, there is no cold dark matter candidate in RPV SUSY. 
+
+Now, we can put all fact together to obtain a motivated search strategy: 
+\begin{itemize}
+\item Naturalness requests: stop, sbottom, gluino and higgsino
+\item Cold dark matter candidate: R-parity conservation
+\item Experiment sensitivity: Large cross section in hadronic production on hadron collider
+\end{itemize}
+
+Therefore, the idea “the stop and gluino search in hadronic channel in hadronic channel” is formed after put all thoughts together.
 
 \clearpage
 \subsection{SUSY simplified model}
