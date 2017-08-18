@@ -113,4 +113,20 @@ The performance in terms of jet $p_{T}$ in different jet flavors is showed in Fi
 
 And, the quark gluon discriminator is now working well with b-jet for all cases. Therefore, we decide to force the likelihood to be 1 (quark jet) in case of a tagged b-jet before training. 
 
-All the variables are feed into random forest\cite{Ho:1995:RDF:844379.844681} training algorithm for training in simulation samples. The final top-jet efficiencies are about 0.6. The mistag rate about 0.2, 50\% reduced compared with the cut-based legacy tagger. Now, we complete our tagging algorithm in full simulation samples. We still need to study the difference between the full simulation and data, and also full simulation and fast simulation, since we are using fast simulation signals for limit setting. The scale factors are binned in the top-jet $p_{T}$ and applied in the data card before limit setting. More details are demonstrated in\cite{AN-16-461}. 
+All the variables are feed into random forest\cite{Ho:1995:RDF:844379.844681} training algorithm for training in simulation samples. We designed three working points in different efficiencies-mistag rate balance. Finally we choose the tight working points for the search after sensitivity study. The combined top-jet reconstruction efficiencies (Fig~\ref{fig:}) are about 0.6. The mistag rate (Fig~\ref{fig:}) about 0.2, 50\% reduced compared with the cut-based legacy tagger. Now, we complete our tagging algorithm in full simulation samples. We still need to study the difference between the full simulation and data, and also full simulation and fast simulation, since we are using fast simulation signals for limit setting. The scale factors are binned in the top-jet $p_{T}$ and applied in the data card before limit setting. More details are demonstrated in\cite{AN-16-461}. 
+
+\begin{figure}[htbp]
+ \begin{center}
+  \includegraphics[width=0.85\textwidth]{sections/mc4/TopTagger/figures/baseline_eff_pt_ttbar1l_tight.pdf}
+ \end{center}
+ \caption{Top-jet reconstruction efficiencies, measured in \ttbar simulation samples}
+ \label{fig:c4ttefftight}
+\end{figure}
+
+\begin{figure}[htbp]
+ \begin{center}
+  \includegraphics[width=0.45\textwidth]{sections/mc4/TopTagger/figures/baseline_fakerate_met_tight.pdf}
+  \includegraphics[width=0.45\textwidth]{sections/mc4/TopTagger/figures/baseline_fakerate_njet_tight.pdf}
+ \end{center} \caption{Top-jet reconstruction mistag rate, measured in $Z$+jets simulation samples. Left plot is the distribution in \MET, Right plot is in \njets.}
+ \label{fig:c4ttmistagtight}
+\end{figure}
