@@ -54,7 +54,7 @@ We choose the high-level physics variables and decision tree based algorithm in 
 \end{itemize}
 %todo add QGL
 
-All the variables are carefully studied before we put them into training. Let’s use quark gluon discriminator as an example. The quark gluon discriminator is likelihood to separate the quark jet and gluon jet. The value of the likelihood close to 1 means it is more like a quark jet, otherwise a gluon jet. The likelihood is constructed from three variables: 
+All the variables are carefully studied before we put them into training. Let’s use quark gluon discriminator as an example. The quark gluon discriminator is likelihood to separate the quark jet and gluon jet. The value of the likelihood close to 1 means it is more like a quark jet, otherwise a gluon jet. We expect the tagger mistag rate can be reduced after apply the quark gluon discriminator since the gluon jets can leak into top jet consituents, especially for resolved case. The likelihood is constructed from three variables: 
 \begin{itemize}
 \item $p_{T}$D: jet energy dispersion variable, defined as $ $, with sum over all PF candidates
 \item Mutiplicity: the total number of particle flow candidates that reconstructed within the jet
