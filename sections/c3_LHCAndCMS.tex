@@ -414,33 +414,33 @@ The ECAL seed electron identification algorithm starts from the supercluster ene
 The electron identification group provides several working points to satisfy the needs of various physics analysis groups. For example, we choose the "Veto" working point in the SUSY analysis described in this thesis. The "Veto" has the loosest identification criteria, which helps us to reject background events containing electrons to the maximum extent. 
 \subsubsection{Jets and Particle Flow}
 
-The jet is a collimated flux of stable hadrons that originate from quarks and gluons after fragmentation and hadronization. The jet algorithm is the approximate method to reverse the fragmentation and hadronization processes.  There are several different jet algorithm approaches. But the inputs of the jet algorithm are always the clustered energy deposits in 2-dimensional plane. 
+A jet is a collimated flux of stable hadrons that originates from a quark or a gluon following hadronization. A jet algorithm is a method to reconstruct the jets. There are several different jet algorithm approaches, but the inputs of the jet algorithm are always the clustered energy deposits in 2-dimensional plane. 
 
-There are two major requirements for the jet algorithm: collinear safe and infrared safe. The collinear safe means the results of the jet algorithm are invariant under collinear splitting of any input pixels. The infrared safety indicates that a soft emission will not change the results of jet algorithm. The infrared safety is requested not only from the soft emission QCD, but also from the collider point of view: the jet algorithm results should not change just because of a soft pile-up jet. 
+There are two major requirements for a jet algorithm: that it be collinear safe and infrared safe. Collinear safe means that the results of the jet algorithm are invariant under collinear splitting of any input momentum. Infrared safe means that a soft emission does not change the results of jet algorithm. Infrared safe is required not only from soft QCD emissions, but also from the collider point of view: the jet algorithm results should not change because of a soft jets from pile-up. 
 
-The anti-$k_{T}$ algorithm\cite{Cacciari:2008gp} is the default jet algorithm for all the LHC experiments. The anti-$k_{T}$ algorithm is one of the sequential recombination algorithms. In this approach, we define a special distance of the two input observables in the Eq~\ref{eq:c3cmsantikt}:
+The anti-$k_{T}$ algorithm\cite{Cacciari:2008gp} is the standard jet algorithm at the LHC. The anti-$k_{T}$ algorithm is a sequential recombination algorithm. In this approach, we define a special distance between two input observables in the Eq~\ref{eq:c3cmsantikt}:
 
 \begin{equation}
- d_{ij} = min(k_{Ti}^{-2},k_{Tj}^{-2})\frac{(y_{i}-y_{j})^{2}+(\phi_{i}-\phi_{j})^{2}}{R^{2}} \;
+ d_{ij} = min(k_{Ti}^{-2},k_{Tj}^{-2})\frac{(\eta_{i}-\eta_{j})^{2}+(\phi_{i}-\phi_{j})^{2}}{R^{2}}, \;
  \label{eq:c3cmsantikt}
 \end{equation}
 
-Where $k_{Ti}$ means the energy (or any other response) of the ith input pixel. The numerator is the geometrical distance between the two objects. R is the cone size parameter in the algorithm. The CMS experiment now support R=0.4 for the normal jets and R=0.8 for the fat-jets, which is useful for the boost object. The special distance between the input pixel and beam is defined as: $d_{iB} = k_{Ti}^{-2}$.
+where $k_{Ti}$ is the transverse momentum (or any other response) of the ith input. The numerator is the geometrical distance between the two objects. R is the cone size parameter in the algorithm. The CMS experiment supports R=0.4 for the normal jets and R=0.8 for fat jets. Fat jets are useful in the analysis of highly boosted objects, as will be described in top tagging section below. The special distance between an input object with respect to the beam direction is defined as: $d_{iB} = k_{Ti}^{-2}$.
 
-The first step is to compute all the $d_{ij}$ and $d_{iB}$, and find the smallest one. Then iterate the following steps until all pixels are clustered into jet: 
+The first step is to compute all the $d_{ij}$ and $d_{iB}$, and find the smallest one. Then the following steps are iterated until all objects are clustered into a jet: 
 
 \begin{itemize}
-  \item If the smallest one is a $d_{ij}$, we combine the two pixels i and j. Then we recalculate the special distance as the input of next iteration.
-  \item If the smallest one is a $d_{iB}$, we remove pixel i and call it a jet.
+  \item If the smallest one is a $d_{ij}$, we combine the two objects i and j, remove objects i and j from the list of objects, and add the combined entity to the list of objects, calculating its $d_{ij}$ and $d_{iB}$. The combined object is given by the sum of the four-momentum of objects i and j.
+  \item If the smallest one is a $d_{iB}$, we remove object i and call it a jet.
 \end{itemize}
 
-The anti-$k_{T}$ algorithm is obviously both collinear safety and infrared safety. A new collinear pixel means the geometrical distance is 0. Therefore the new pixel will be clustered first. A new soft pixel means the special distance will go to infinity. Therefore this new pixel will be clustered last or form a new zero jet. The jet results for the anti-$k_{T}$ algorithm remain unchanged for the both cases. 
+The anti-$k_{T}$ algorithm is both collinear and infrared safe. The geometrical distance between two colinear objects is zero. Therefore these two objects will be clustered first. The special distance is infinite for a soft object whose transverse momentum approaches zero. Therefore this new object will be clustered last, contributing nothing to the jet it is associated with since its transverse momentum is zero, or will form a new jet with zero transverse momentum. The jet results for the anti-$k_{T}$ algorithm remain unchanged in either case. 
 
-However, there are other algorithms that are both collinear safety and infrared safety, like SiSCone\cite{Salam:2007xv} and $k_{T}$\cite{Cacciari:2005hq}. The jets from anti-$k_{T}$ algorithm always have a near-circle jet area\cite{Cacciari:2008gn}, which makes them easier to correct for the detector-related effects.
+There are other algorithms that are also both collinear and infrared safe, like the SiSCone\cite{Salam:2007xv} and $k_{T}$\cite{Cacciari:2005hq} algorithms. However, unlike these latter two algorithms, jets from anti-$k_{T}$ algorithm always have a nearly circular jet area\cite{Cacciari:2008gn}, which makes them easier to correct for detector-related effects.
 
-Now we have a reliable jet algorithm to combine the input pixels into jets. However, we can improve the performance by a more precise measurement on the energies of input pixels. In CMS experiment, we use particle flow (PF) algorithm\cite{CMS-PAS-PFT-09-001} to construct PF candidate as the input of CMS PF jets clustering. 
+The performance of jet finding in CMS is improved using the particle-flow (PF) algorithm\cite{CMS-PAS-PFT-09-001} and by using PF candidates as the input to the anti-$k_{T}$ jet clustering. 
 
-The particle flow (PF) is a stable particle reconstruction and identification algorithm that uses the information from all sub detectors in the detector system. The PF algorithm is important especially for CMS jet and missing transverse energy reconstruction due to the uncompensated nature of CMS HCAL. A jet usually has three components: charged hadron ($\pi^{+},\pi^{-}$, etc.), photon ($\pi^{0}$), and neutral hadron ($K_{L}$, etc.). The fractions of three components are listed in the Table~\ref{tab:c3cmsjetf}. The inner tracker can perform a more precise measurement of charged hadron fraction. The CMS ECAL also provides an excellent measurement on the photon energy. The remaining 10\% neutral hadron fraction will not give a huge uncertainty to the final measurement, on the average level. 
+The particle flow algorithm is a particle reconstruction and identification method that uses the information from all sub detectors. The PF algorithm is especially important for CMS jet and missing transverse momentum reconstruction because of the uncompensated nature of the CMS HCAL. A jet usually has three components from: charged hadrons ($\pi^{+},\pi^{-}$, etc.), photons ($\pi^{0}$), and neutral hadrons ($K_{L}$, etc.). The typical fractions of the three components are listed in the Table~\ref{tab:c3cmsjetf}. The inner tracker can provide a precise measurement of the charged hadron fraction. The CMS ECAL provides an excellent measurement of the photon energy. The remaining 10\% of the jet energy, due to the neutral hadron fraction will not give a huge uncertainty to the final measurement, on average. 
 
 \begin{table}[htbp]
 \fontsize{10 pt}{1.2 em}
@@ -450,7 +450,7 @@ The particle flow (PF) is a stable particle reconstruction and identification al
 \hspace*{-4ex}
 \begin{tabular}{|c|c|c|c|}
 \hline
-Jet Constituent & Energy Fraction & Detection Instrument & Resolution \\
+Jet Constituent & Energy Fraction & Detection Instrument & Uncertainty \\
 \hline
 Charged Hadron  & 65\% & Inner Tracker & Negligible \\
 \hline
@@ -462,29 +462,30 @@ Neutral Hadron  & 10\% & ECAL and HCAL & $0.16^{2}E_{jet}$ \\
 \par\end{centering}
 \end{table}
 
-The key part of the PF algorithm is the charged fraction linking between the tracker and calorimeter. First, we have tracks collection by the iterative track reconstruction method that described in previous section. Then, we will cluster the calorimeter to obtain an initial separation the photon, charged hadron and neutral hadron. Then a complicate linking algorithm\cite{CMS-PAS-PFT-09-001} will be applied to chain the objects from inner tracker and calorimeters up. 
+The key aspect of the PF algorithm is the linking of charged particles between the tracker and calorimeter. First, we have tracks collection by the iterative track reconstruction method that described in previous section. Then, we will cluster the calorimeter to obtain an initial separation the photon, charged hadron and neutral hadron. A linking algorithm\cite{CMS-PAS-PFT-09-001} is applied to connect the objects from the inner tracker and calorimeters. 
 
-The PF jets are still not the collection that we can directly use in the physics analysis. The PF jets energies still need to be corrected to match the energies of true particle jets. For the real data, there are three corrections need to be applied. The first one is the pile-up and noise correction. This correction is related to the real collider and detector effects and should be subtracted from the raw energy. The second one is the MC simulation correction. This is a pure evaluation on the reconstruction algorithm effect with MC samples. Finally, the jet energy will be corrected with di-jet data sample after the previous two corrections. More details of the jet energy corrections are described in\cite{1748-0221-6-11-P11002}. The jet energy corrections are applied in both data and MC in the physics analysis described in this thesis. 
+The PF jets are still not the collection that are directly used in the physics analyses. The PF jet energies still need to be corrected. For the data, there are three corrections that are applied. The first correction accounts for pile-up and noise. This correction is related to collider and detector effects and is subtracted from the raw energy. The second correction accounts for reconstruction effects, and is evaluated using MC simulation. Finally, the jet energy is corrected with di-jet data. More details of the jet energy corrections are given in\cite{1748-0221-6-11-P11002}. The jet energy corrections are applied in both data and MC in the physics analysis described in this thesis. 
 
-\subsubsection{Missing Transverse Energy}
+\subsubsection{Missing Transverse Momentum}
 
-The missing transverse energy (\MET) is the imbalance in the transverse momentum of all visible particles. The \MET is an important variable in the R-parity conserved supersymmetry search since the lightest stable particles are heavy, stable in the physics model. The \MET is a powerful variable to suppress the standard model background in the search region. 
-However, on the reconstruction side, the \MET is a high-level variable since all visible particles involved in the calculation. The unexpected effects from detectors and collider or issue in any objects reconstruction can give us the wrong \MET. Therefore, we need to establish robust \MET filters before we use the \MET, especially for the high \MET case. The source of the abnormal \MET event can be HCAL noise in HPD, beam halo, etc. 
+The missing transverse momentum (\MET) is the imbalance in the transverse momentum in an event, and is calculated as the negative of the vector sum of all objects in the event. The \MET is an important variable in supersymmetry searches that assume R-parity since SUSY LSP is assumed to escape without detection, leading to potentially significant \MET. The \MET is a powerful variable to suppress the standard model background in the search region. 
 
-After the filters, the \MET also need to be corrected, like jet energy correction. The most popular correction method is to propagate the jet energy correction to \MET (so called Type 1 correction). We apply the type 1 correction in this analysis. More details of the \MET filters and corrections are covered in\cite{CMS-PAS-JME-16-004}. 
+However, on the reconstruction side, \MET is a high-level variable since all visible particles involved in the calculation. Unexpected effects from the detectors or collider issues in object reconstruction can give us the wrong \MET. Therefore, we need to establish robust \MET filters before we use the \MET, especially for the high \MET case. Source of abnormal \MET can be HCAL noise in the HPDs, beam halo, etc. 
+
+After the filters, \MET needs to be corrected, similarly to the jet energies. The usual way to do this on CMS is to propagate the jet energy correction to \MET (so-called Type 1 correction). We apply the type 1 correction in this analysis. More details of the \MET filters and corrections are covered in Ref.\cite{CMS-PAS-JME-16-004}. 
 
 
 \subsubsection{Muons}
-The muon is a heavy particle that can penetrate the calorimeter and detector by the muon system outside the solenoid. The muon reconstruction has two traditional approaches: 
+Muons are particles that can penetrate calorimeter.  They are detected when they traverse the muon detectors, outside the solenoid. Muon reconstruction is based on approaches: 
 
 \begin{itemize}
-	\item Global Muon reconstruction: The muon tracks are reconstructed first inside the muon system (DT, RPC, CSC) by a standalone method. Then, the muon standalone muon track will be matched with a tracker track by comparing the parameters of the two tracks. Finally, a global muon track will be derived from the hits of the two tracks by Kalman-filter method\cite{Fruhwirth:1987fm}. This is so called outside-in method since we start from the muon system, which is outer member of the CMS detectors. 
-  \item Tracker Muon reconstruction: In this approach, we start from the tracks reconstructed by the inner silicon detectors. The tracks with $p_{T}<0.5 GeV$ and momentum $p>2.5GeV$ will be selected as the potential muon candidate. Then, the track will be extrapolated to the muon system considering the magnet field, average expected energy loss and multiple coulomb scattering effects. The track will be qualified as muon track if at least one muon hit matched with this track. This is inside-out method since it begins with the inner tracker system. 
+	\item Global Muon reconstruction: The muon tracks are reconstructed first inside the muon system (DT, RPC, CSC) with a standalone method. Then, the muon-system standalone track is matched with a tracker track by comparing the parameters of the two tracks. Finally, a global muon track is derived by fitting the hits of the two tracks using the Kalman-filter method\cite{Fruhwirth:1987fm}. This is so-called outside-in method since we start from the muon system, which is outer element of the CMS detectors. 
+  \item Tracker Muon reconstruction: This approach begins with the track reconstructed in the inner silicon detectors. Tracks with $p_{T}<0.5 GeV$ and momentum $p>2.5GeV$ are selected as the potential muon candidate. Then, the track is extrapolated to the muon system considering the magnet field, average expected energy loss and multiple coulomb scattering effects. The track is considered to be a muon track if at least one muon hit is matched with this track. This is called inside-out method since it begins with the inner tracker system. 
 \end{itemize}
 
-The global muon reconstruction method has a better momentum resolution in the hard muons. The reason is the high $p_{T}$ tracker tracks performance is limited by the small geometry of the inner tracker system. However, the tracker muon reconstruction method has a better performance in the soft muons. This originates from the excellent low $p_{T}$ tracks measurement of inner tracker system. 
+The global muon reconstruction method has a better momentum resolution for high $p_{T}$ muons. The reason is that the inner tracker system covers only a small radial distance, limiting its ability to accurately measure the $p_{T}$ of high $p_{T}$ tracks, which exhibit little curvature in the magnetic field. However, the tracker muon reconstruction method has a better performance for the soft muons. This originates from the excellent low $p_{T}$ track reconstruction provided by the inner tracker system. 
 
-A particle flow based algorithm has been designed to obtain good performance for both soft and hard muons. This particle flow muon reconstruction method is a combination of outside-in and inside-out methods. In this approach, global muon tracks and tracker tracks are gathered together and then selected with special criteria. The selection criteria are adjusted depending on environment of muon (e.g. isolation) and other detector input (e.g. energy deposit in calorimeter). This method is optimized to identify the muons within jets. The performances of the three approaches have been studied in\cite{Chatrchyan:2012xi}. 
+A particle-flow based algorithm has been designed to obtain good performance for both soft and hard muons. This particle flow muon reconstruction method is a combination of the outside-in and inside-out methods. In this approach, global muon tracks and tracker tracks are gathered together and then selected with special criteria. The selection criteria are adjusted depending on environment of the muon (e.g. isolation) and other detector inputs (e.g. energy deposit in calorimeter). This method is optimized to identify muons within jets. The performances of the three approaches has been studied in Ref.\cite{Chatrchyan:2012xi}. 
 
 \clearpage
 \subsection{Event simulation}
