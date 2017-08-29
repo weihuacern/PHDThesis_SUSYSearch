@@ -1,10 +1,10 @@
 \subsection{Motivation}
-A cut-based top jet tagger is applied in 2015 paper for this analysis\cite{CMS-PAS-SUS-16-030}. The cut-based top jet tagger has a wonderful efficiency over the top pt spectrum. However, the mistag rate is also relatively high in this tagger. Therefore, we design a new top tagger to reduce the mistag rate. 
+A cut-based top jet tagger is applied for the analysis of the 2015 data\cite{CMS-PAS-SUS-16-030}. The cut-based top jet tagger has a good efficiency over the top quark $p_{T}$ spectrum. However, the mistag rate, i.e., the rate at which an object that is not a top quark is erroneously tagged as such by the top tagging algorithm, is relatively high with this algorithm. Therefore, we designed a new top tagger, to reduce the mistag rate. 
 
 \subsection{Description of the method}
 \label{sec:toptagger}
 
-Before we move to the top tagger algorithm, let’s review the top decay modes. The top jet decay (Fig~\ref{fig:c4twdecaymod}) can be categorized into two classes: hadronically decayed tops and leptonically (and semi-leptonically) decayed tops. We focus on the hadronically decayed tops since we are searching SUSY in hadronic channels. The hadronically decayed tops can majorly be detected in three ways (Fig~\ref{fig:c4twdecaymod}): a fat mono-jet with mass close to top mass, a fat mono-jet with mass close to W mass and one b-jet, and 3 resolved jets. Our cut-based algorithm is designed following these three scenarios respectively. 
+Before discussing the top tagging algorithm, we review the top decay modes. Top quark decays (Fig~\ref{fig:c4twdecaymod}) can be categorized into two classes: hadronically decaying top quarks and leptonically (and semi-leptonically) decaying top quarks. We focus on the hadronically decaying top quark since we are searching SUSY in hadronic channels. From the point of view of their reconstruction, hadronic top quark decays can be divided into three categories (Fig~\ref{fig:c4twdecaymod}): a fat mono-jet with a mass close to the top quark, di-jet event containing one fat jet with a mass close to the W boson mass and one tagged b-jet, and a tri-jet event with three jets. The cut-based algorithm is designed following these three scenarios. 
 
 \begin{figure}[htbp]
  \begin{center}
@@ -15,7 +15,7 @@ Before we move to the top tagger algorithm, let’s review the top decay modes. 
  \label{fig:c4twdecaymod}
 \end{figure}
 
-Only the small AK4 cone jet collection is used in the cut-based tagger to avoid jet removing from different collections. The side effect of this treatment is the remnant system can be relatively big in the mono-jet and di-jet case. The cut-based algorithm is not very powerful in the tri-jets system, compared with multi-variable algorithms. Therefore, the new top tagger has 2 major upgrades: fat jet (AK8 jet) for mono-jet and di-jet top decay, and multi-variable algorithm for tri-jet system. We expect lower mistag rate with the similar efficiencies after the upgrade. 
+Only the small AK4 cone jet collection is used in the cut-based tagger in order to simplify the procedure. A negative side effect of this choice is that the remnant system can be relatively large in the mono-jet and di-jet cases. The cut-based algorithm is not very powerful for the tri-jets system, compared with multivariate algorithms. Therefore, the new top tagger has two major upgrades: fat jets (AK8 jet) for the mono-jet and di-jet top systems, and a multivariate algorithm for the tri-jet system. We expect a lower mistag rate with the similar top quark tagging efficiencies after the upgrade. 
 
 The mono-jet top selection is relatively simple. The requirements for the mono-AK8 jet are:
 \begin{itemize}

@@ -40,7 +40,7 @@ The LHC fill scheme can be different for various purposes. A common fill scheme 
 \end{figure}
 
 \clearpage
-\subsection{LHC: Machine layout and Performance}
+\subsection{LHC: Machine layout and performance}
 
 The LHC is a nearly circular ring with 8 arcs and 8 straight sections (Fig~\ref{fig:c3lhclayout}). Each straight section is around 528 meters long and can host a detector system or beam related insertions. The general purposes experiments are located at opposite straight sections: ATLAS at point 1 and CMS at point 5. The ALICE experiment and the clockwise circulating beam (beam1) injection system are located at point 2, while the LHCb and counter clockwise circulating beam (beam2) injection system are at point 8. 
 
@@ -78,7 +78,7 @@ In the CMS and ATLAS experiments, the designed peak luminosity at the collision 
 
 The LHC is an extremely complex machine and it is almost impossible to grasp every details. However, the LHC provides a summary of status for its operational activities, which are very useful in for detector operation.
 
-\subsubsection{Acclerator Mode}
+\subsubsection{Acclerator mode}
 
 The accelerator mode indicator provides a summary of the status of the LHC machine. All the accelerator modes are listed in the Table~\ref{tab:c3lhcaccmode}. The accelerator modes can be divided into two groups by the presence or not of the beam. For example, ACCESS mode means the LHC group or at least one of the detector system groups needs access to the machine area, with the beams off, to investigate a problem. The beam must be dumped or already be off to allow this access period. Another example is the BEAM SETUP mode, which means the beam under preparation. The beam modes are described in the following section. The detector systems (e.g., CMS) make daily operational decisions depending on the accelerator modes and beam modes provided by the LHC.
 
@@ -124,7 +124,7 @@ The accelerator mode indicator provides a summary of the status of the LHC machi
 \par\end{centering}
 \end{table}
 
-\subsubsection{Beam Mode}
+\subsubsection{Beam mode}
 The beam modes are shown in the Table~\ref{tab:c3lhcbeammode}. The beam modes describe standard injection procedures and accidental abort issues of the two beams in the LHC. A standard successful injection for physics should have the following beam modes in sequence during BEAM SETUP accelerator mode:
 
 \begin{itemize}
@@ -187,16 +187,16 @@ The beam modes are shown in the Table~\ref{tab:c3lhcbeammode}. The beam modes de
 The beam modes are used to estimate the time remaining before the beginning of the subsequent data run. For example, CMS requires all the subsystem to be ready for data taking when the LHC declares injection physics beam. Some of the subsystems need to do the alignment or calibration during this period. The time estimates allowed by using the LHC beam status is important for smooth data taking.
 
 \clearpage
-\section{The CMS Experiment}
+\section{The CMS experiment}
 
 The CMS Experiment is a particle physics experiment based on the CMS detector system at the LHC. It consists of the CMS detector system and event reconstruction, supported by the detector operation team, the computing/data storage team and , the software and event reconstuction team, the detector performance groups (DPGs), the physics objects groups (POGs), the phyiscs analysis groups (PAGs), the Publications Committee, the Conference Committee, the Authorship Committee, the spokesperson and deputies, and many other people.  In total, there are around 2500 individuals listed on a typical physics publication, and around 1000 more who contribute to the operation of the experiment.
 
 \clearpage
-\subsection{CMS Detector System}
+\subsection{CMS detector system}
 
 The Compact Muon Solenoid (CMS) is one of the general-purpose detector system at the LHC. To fullfill its "general-purpose", the CMS is designed as a combination of several subsystems: Sillicon Pixels and Strips for tracking information, Electromagnetic and Hadron Calorimeters for "light" particle energy deposition and drift tubes and cathode strip/resisstive plate chambers for muon detection. The locations of these subdectors in the CMS are not random: The sillicon tracking subsystems are innermost to the collision point. The calorimeters come after the sillicon subdetectors, because the calorimeter absorb all SM particles except for muons and neutrinos. Finally the muon system is in the outermost layer. To obtain high performance, CMS is immersed in a 4-T magnetic field, which is provided by a superconducting solenoid ("S" in CMS). The magnet contributes a large fraction of the CMS total weight: 12500 tons out of 14000. However, compared with its heavy weight, the size of the CMS is relatively small: only 5000 $m^{3}$. In comparison, the ATLAS detector weighs 7000 tons and encompasses a volume of 22500 $m^{3}$. This explains the name "Compact" placed in front of "Muon Solenoid" since its density is nearly to 3000 $kg/m^{3}$.
 
-\subsubsection{Inner Tracking system}
+\subsubsection{Inner tracking system}
 
 As indicated by the name --- inner tracking system, there are two main characteristics of this CMS sub-detector: it is the closest sub-detector to the LHC beam and its purpose is to reconstruct the trajectories of charged particles ("tracks") that traverse it. The main challenge is a consequence of the first feature: the inner tracking systems have to be radiation hard during the relatively long lifetime. Moreover, since the LHC has high intensity and a small time between bunch crossings (25 nano seconds), we also need the inner tracking systems to have a fine granularity and fast response. The silicon based technology detector is the best option to satisfy these requirements. On the other hand, the second feature actually comes from the physics requirement. We need to reconstruct the tracks of charged particles and secondary vertices in the event from the three dimensional hits. The track information is not only used in the charged particle reconstruction, but also applied in the particle flow algorithm\cite{CMS-PAS-PFT-09-001} as a basis of all physics object reconstruction in CMS. The secondary vertices are also important in the heavy flavor object reconstruction, and new-physics search of long-lived particles. 
 
@@ -210,14 +210,14 @@ As a result of budget-performance balance, the CMS inner tracking systems are de
  \label{fig:c3cms2dtracker}
 \end{figure}
 
-\paragraph{Silicon Pixels}
+\paragraph{Silicon pixels}
 The pixel system is the part of inner tracking system that is closest to the collision point. It provides a precise measurement of the tracking and therefore makes a major contribution to the secondary vertex reconstruction. The pixel cells are distributed with a size of 100 $\mu m$ $\times$ 150 $\mu m$ in three-dimensional space, which allows a 3D reconstruction method for the secondary vertex. The signals are read by sensors and packed by readout chip. Then the signal is delivered to the frondend driver through the analog chain once a positive bit is received from L1 trigger.
 
 CMS detector system has three phases for different stages of the LHC. Phase 0 CMS is the baseline detectors for the LHC with 7 or 8 TeV and integrated luminosity around 25 $fb^{-1}$. Phase 1 CMS is the first detector upgrades for 13 or 14 TeV and integrated luminosity around 300 $fb^{-1}$. Phase 2 CMS is the major upgrade for high-lumi LHC (HL-LHC) with 3000 $fb^{-1}$. The phase 0 pixel detector contains three barrel layers (BPix) and two endcap disks (FPix), which covers a pseudorapidity range $-2.5<\eta<2.5$. The pseudorapidity $\eta$ is a spatial coordinate describing the angle angle of a particle relative to beam axis. It is defined as $\eta = -ln[tan(\frac{\theta}{2})]$, where $\theta$ is the angle between the particle three-momentum and beam direction. In the phase 1 upgrade\cite{Klein:2140071}, because of radiation damage, all layers and disks were replaced with new ones, and an additional layer was added both in the barrel region and in both endcap regions.
 
 %One special design of the pixel detector is the blade that module mounted are rotated by 20 degrees in a turbine geometry. Such an arrangement enhanced the charge sharing effects\cite{Giurgiu:2008ir} between the nearby pixels. The space resolution can be improved to 15 $\mu m$ by the using the "charge sharing" effect in pixels. CMS take advantage of this effect with the analog readout of the collected charges by readout pixels in-group with readout chips. 
 
-\paragraph{Silicon Strips}
+\paragraph{Silicon strips}
 
 The particles pass through ten layers of silicon strip detectors after the pixels. The silicon strip tracker is composed of 15148 detector modules. Each module carries either one 320 $\mu m$ or two 500 $\mu m$ silicon sensors from a total of 24244 sensors. The signal from a sensor is amplified, shaped and stored by a custom integrated circuit. Once a positive L1 trigger decision is received, the analog signal is multiplexed and transmitted via an optical link to the front end driver, then digitalized. 
 
@@ -226,7 +226,7 @@ The inner strip detector contains 4 barrel layers (TIB) and 3 endcap disks (TID)
 A laser alignment system\cite{Sirunyan:2017rbc} is used to monitor the stability and the alignment of the strip detector mechanical structure. An infrared laser light is delivered directly to the sensor on the 434 silicon modules (3\%) to trigger a signal pulse. The alignment data can be taken during commissioning, an inter-fill period or in the orbit gap with stable beams. The pixel detector is aligned with strip detector using the reconstructed tracks, and therefore the strip alignment is the only online and direct alignment needed for the inner tracking system. 
 
 \subsubsection{Calorimeters}
-\paragraph{Electromagnetic Calorimeter}
+\paragraph{Electromagnetic calorimeter}
 The CMS electromagnetic calorimeter (ECAL) is a hermetic homogeneous calorimeter made of lead tungstate ($PbWO_{4}$) crystals. Lead tungstate is an appropriate choice for the ECAL because the crystal is both radiation hard and has a rapid response (same level as the LHC bunch crossing). In total 61200 lead tungstate crystals are installed in the ECAL barrel region while 7324 are installed in each endcap. Lead tungstate emits 80\% of the light in 25 ns once an electron (or photon) strikes on the crystal.
 
 A photon detector is needed to collect the light yield from crystals. As for the crystal, the photon detector needs to be both radiation tolerant and fast. To satisfy these requirements, avalanche photodiodes (APD) are installed in barrel and the vacuum phototriodes in the endcap. All the photon detectors have been tested in a harsh environment (high radiation plus 4T magnet field) before actually being installed. The light yield from the crystal is weak, so it needs to be amplified with a photomultiplier. Multi-gain pre-amplifiers (MGPA), an ASIC (Application-specific integrated circuit) specifically designed for ECAL, are installed to reshape and amplify the signal from photon detectors.
@@ -235,7 +235,7 @@ The amplified signals are integrated and digitized by on-detector front end elec
 
 A last component of ECAL is the preshower system. The two photons from neutral pion decay are almost colinear when the pion energy is high. The main purpose of the preshower detector is to trigger an electromagnetic shower with high spatial resolution before the ECAL endcap. As a result, the almost collinear photons can be distinguished by the ECAL reconstruction algorithm. 
 
-\paragraph{Hadron Calorimeter}
+\paragraph{Hadron calorimeter}
 
 The CMS HCAL is a set of detectors that measure the energy of hadronic particles, i.e., particles composed of quarks and gluons. It contains four parts: Hadron Barrel (HB), Hadron Endcap (HE), Hadron Outer (HO) and Hadron Forward (HF). The overall geometry scheme is indicated in Fig~\ref{fig:c3cms2dhcal}. The CMS HCAL is a sampling calorimeter with brass absorber to trigger a shower and scintillator for the energy measurement. We take advantage of the dense absorber to fit the HCAL in the limited space inside the solenoid (Except for HO). However, the HCAL suffers from a relatively big fluctuation in energy deposit due to the invisible energy loss in the absorber and uncompensated design of the calorimeter. The following paragraphs provide more description of HB, HE, HO and HF.
 
@@ -282,7 +282,7 @@ To build a robust HCAL logical map, we need inputs from experts in different fie
 
 Subsets of the HCAL logical map are critical in the HCAL software. One of the most important applications is the electronics map (EMap). The HCAL electronics map is a subset of logical map that contains backend coordinates and detector coordinates. As was mentioned, the reconstruction software needs the EMap database to obtain the detector coordinates from the backend coordinates. This is a necessary step in the RAW to DIGI reconstruction and in DIGI to RAW in MC simulation. Another application is the QIE calibration table. In the DIGI to RECO step, we need to translate from ADC (Analog Digital count) to the fC with the piecewise linear QIE gain function. This map is produced from the logical map. The robustness of the logical map is critical for the HCAL offline reconstruction. 
 
-\subsubsection{Muon Detectors}
+\subsubsection{Muon detectors}
 
 The importance of the Muon detectors is implied by the experiment’s middle name ("M" in CMS). The CMS muon detectors provide measurements of muon track coordinates. The measurement of muons is important in both in standard model physics (e.g. Higgs to ZZ) and in new physics search (e.g. searches for supersymmetric particles that can decay to leptons). Moreover, the muon system provides a muon-related level-1 trigger that is used to reduce the data rate.
 
@@ -296,19 +296,19 @@ The CMS muon detectors consist of three sub-detectors: Drift tubes in the barrel
  \label{fig:c3cms2dmuondets}
 \end{figure}
 
-\paragraph{Drift Tubes}
+\paragraph{Drift tubes}
 The drift tubes (DT) are the part of CMS muon detectors that measure the muon tracks in the barrel region. The basic unit of the drift tubes is the drift cell. A drift cell is a 42mm-wide tube contains a thin conductive wire at high positive voltage within a gas volume. The muon knocks electron off the atom of the gas when it travels. The muon tracks can be reconstructed by measuring the drift time for different cells. 
 
 Like the HCAL outer detector, the Drift tubes contain 5 wheels along the z-axis, 4 stations for each wheel, labeled as MB1, MB2, MB3 and MB4. The three inner stations have 60 drift chambers each and the outer chamber has 70. A drift chamber consists of 2 or 3 super layers, each made of by 4 layers of drift cells staggered by half of cell. This honeycomb geometry gives an excellent time-tagging capability, with a time resolution of a few nanoseconds. The full DT provides the pseudo-rapidity coverage $0<|\eta|<1.2$.
 
-\paragraph{Cathode Strip Chambers}
+\paragraph{Cathode strip chambers}
 The cathode strip chambers (CSC) are the CMS muon detectors located in the endcap region. The CSC is also a type of wire chamber, but differently from the DT, the CSC measures the location (to be specific, phi coordinates) instead of drift time. The CSC consists of arrays of positively charged anode wires crossed with negatively charged copper cathode strip within a gas volume. The muon knocks the electron off from the gas atom. Then the electron moves to the anode wire to create an avalanche. Positive ions also move to the cathode and trigger a charged pulse.
 
 The CMS endcap muon system consists of 468 cathode strip chambers in the following arrangement: 72 ME1/1, 72 ME1/2, 72 ME1/3, 36 ME2/1, 72 ME2/2, 36 ME3/1, 72 ME3/2, and 36 ME4/1. The full CSC provides the pseudo-rapidity coverage $1.2<|\eta|<2.4$. 
 
 The RPC is designed as a fast response provider to the trigger. However, for the endcap region, the CSCs by themselves are sufficient for the trigger requirements for the current instantaneous luminosity of the LHC. Moreover, the CSCs have a better spatial resolution and a larger pseudo-rapidity coverage, providing better precision for the measurements of endcap muons.
 
-\paragraph{Resistive Plate Chambers}
+\paragraph{Resistive plate chambers}
 Resistive plate chambers (RPC) are fast gaseous detectors that provide a muon trigger system in parallel with the DT and CSC. The RPC consists of a two high resistively plastic parallel plates with gas between them. One of the plates is a positively charged anode and the other is a negatively charged cathode. Like the CSC, an electron of a gas molecule will be knocked off when a muon passes through, and trigger an avalanche. The pattern of hits on the cathodes provides a quick measurement of the muon momentum, which is passed to the trigger for decision-making. In the CMS RPC, the double-gap modules are used instead of the single-gap modules. This allows a lower bias voltage for each single-gap and higher detector efficiency. The RPC has both good spatial resolution and time resolution (one nanosecond). 
 
 The CMS RPCs are distributed in both the barrel and endcap regions. There are 96 RPCs each in wheel in the barrel region. More details on the distribution are given in Table~\ref{tab:c3cmsrpc}. In the endcap region, there are 3 RPC stations in the phase 0 design. In order to keep the high muon reconstruction efficiency with Run 2 condition, the fourth disk was installed during the long shutdown 1 as part of the phase 1 upgrade. The full RPC has the same pseudorapidity coverage as the DT in barrel, and a smaller coverage ($1.2<|\eta|<2.1$) than the CSC in the endcap.
@@ -366,7 +366,7 @@ The CMS HLT system uses all the information from the detector readout and applie
 The current (Phase 1) trigger system will be continue in operation until the end of LHC Run 3. However, there is a huge challenge on the trigger system with the following HL-LHC. The Track trigger will be necessary to maintain the current physics acceptance with the L1 rate around 1 MHz. 
 
 \clearpage
-\subsection{Event Reconstrunction}
+\subsection{Event reconstrunction}
 
 The data from the central data acquisition system is selected and built in the high-level trigger farm and then transferred to the primary computing grid at CERN (Tier-0). The data directly from the detector electronics is called DAQ-RAW, which is the input of the online HLT cluster. The data is reformatted and filtered with the high-level trigger. The outcome data are called RAW. Compared to the DAQ-RAW, the RAW contains the HLT information and is ready for offline reconstruction after reformatting. 
 
@@ -412,7 +412,7 @@ Electron reconstruction in CMS relies on the information from the inner tracker 
 The ECAL seed electron identification algorithm starts from the supercluster energy deposit in the ECAL. The supercluster is a 5 by 5 cluster combination of lead tungstate crystals in the ECAL. The initial energy and position of the supercluster is used to estimate the electron trajectory in the first tracker layer. In contrast, the tracker-based method begins with the tracks reconstructed by the general algorithm for charged particles. The tracks filtered using a pre-selection criteria and then matched to an ECAL supercluster. This mixture of seed method has been validated with electrons from W boson decays in 2010\cite{Khachatryan:2015hwa}. 
 
 The electron identification group provides several working points to satisfy the needs of various physics analysis groups. For example, we choose the "Veto" working point in the SUSY analysis described in this thesis. The "Veto" has the loosest identification criteria, which helps us to reject background events containing electrons to the maximum extent. 
-\subsubsection{Jets and Particle Flow}
+\subsubsection{Jets and particle flow}
 
 A jet is a collimated flux of stable hadrons that originates from a quark or a gluon following hadronization. A jet algorithm is a method to reconstruct the jets. There are several different jet algorithm approaches, but the inputs of the jet algorithm are always the clustered energy deposits in 2-dimensional plane. 
 
@@ -466,7 +466,7 @@ The key aspect of the PF algorithm is the linking of charged particles between t
 
 The PF jets are still not the collection that are directly used in the physics analyses. The PF jet energies still need to be corrected. For the data, there are three corrections that are applied. The first correction accounts for pile-up and noise. This correction is related to collider and detector effects and is subtracted from the raw energy. The second correction accounts for reconstruction effects, and is evaluated using MC simulation. Finally, the jet energy is corrected with di-jet data. More details of the jet energy corrections are given in\cite{1748-0221-6-11-P11002}. The jet energy corrections are applied in both data and MC in the physics analysis described in this thesis. 
 
-\subsubsection{Missing Transverse Momentum}
+\subsubsection{Missing transverse momentum}
 
 The missing transverse momentum (\MET) is the imbalance in the transverse momentum in an event, and is calculated as the negative of the vector sum of all objects in the event. The \MET is an important variable in supersymmetry searches that assume R-parity since SUSY LSP is assumed to escape without detection, leading to potentially significant \MET. The \MET is a powerful variable to suppress the standard model background in the search region. 
 
