@@ -1,17 +1,17 @@
-As we mentioned at the begining of chapter 4, The analysis is designed for maximum sensitivity to the SUSY simplified model T2tt, T1tttt, T1ttbb, T5tttt and T5ttcc topology resulting in final states with multiple top quarks, hence multiple jets and b-tagged jets, produced in stop decay, no leptons, and large \MET. The T2tt, T5ttcc and T1tttt final states differ in the number of jets, b-tagged jets and top quarks produced. 
+As mentioned at the begining of chapter 4, the analysis is designed for maximum sensitivity to the SUSY simplified model T2tt, T1tttt, T1ttbb, T5tttt and T5ttcc topology resulting in final states with multiple top quarks, hence multiple jets and b-tagged jets, produced in stop decay, no leptons, and large \MET. The T2tt, T5ttcc and T1tttt final states differ in the number of jets, b-tagged jets and top quarks produced. 
 
-Targeting the above-mentioned final states, data are initially selected by requiring a number of jets and b-jets (\njets and \nbjets) and a large \MET. The search regions are ultimately defined in exclusive bins of \ntops, \nbjets, \HT, \MET and \MTTwo. SM backgrounds come from processes such as \ttbar QCD multijet events, Z+jets, W/top+jets, and smaller contributions from rare processes.
+Targeting the above-mentioned final states, the data are initially selected by requiring a minimum number of jets and b-jets (\njets and \nbjets) and large \MET. The search regions are ultimately defined in exclusive bins of \ntops, \nbjets, \HT, \MET and \MTTwo, where \ntops is the number of reconstructed top quarks. SM backgrounds come from processes such as \ttbar, Z+jets, W/top+jets and QCD multijets with smaller contributions from rare processes.
 
-The data selection process starts with the triggers and follows with a baseline selection and the definition of the search bins. The top reconstruction and identification procedure (top tagging) is described in this section, as well as the Monte Carlo (MC) samples that model signal and backgrounds.
+The data selection process starts with the triggers and follows with a baseline selection and the definition of the search bins. The top quark reconstruction and identification procedure (top tagging) is described in this section, as well as the MC samples that model signal and backgrounds.
 
 \subsection{Trigger}
 \label{sec:trig}
 
-The trigger is the first filter we need to and have to apply before we analysis the data. We choose the MET bit trigger in this analysis instead of HT bit trigger in 2015 analysis because the HT bit trigger issues in 2016 run H data. 
+The trigger is the first filter applied to the data. We choose \MET based triggers in this analysis instead of the HT based triggers used for the analysis of the 2015 data because of HT bit trigger issues in the 2016 run H data, where Run H corresponds to a data-taking period between September 16 2016 to October 28 2016 consisting of 92.5 $fb^{-1}$ of data. 
 
-The trigger efficiencies are calculated in a looser region with with orthogonal trigger to correct the shape of simulation. The trigger sets are used in this analysis: general trigger for search and QCD background estimation, single muon trigger for $Z$+jets background analysis. We measure the search trigger efficiencies with different orthogonal trigger to check differences of turn on behavior. The corresponding efficiencies are applied when we using simulation in the analysis.
+The trigger sets are used in this analysis: a general trigger, described below, used for the search regions and for the estimation of the QCD multijet background and a single-muon trigger for the $Z$+jets background evaluation. We measure the search trigger efficiencies with different orthogonal triggers to check differences in the turn-on behavior. The corresponding efficiencies are applied to correct the simulations used in the analysis.
 
-Six search triggers are used to collect events for this analysis. They are seeded by \MET seed in Level-1 trigger. 
+Six search triggers are used to collect events for this analysis. They are seeded by \MET in the Level-1 trigger. 
 \begin{itemize}
 \item \texttt{ HLT\_PFMET100\_PFMHT100\_IDTight\_v*}
 \item \texttt{ HLT\_PFMET110\_PFMHT110\_IDTight\_v*}
@@ -23,13 +23,13 @@ Six search triggers are used to collect events for this analysis. They are seede
 
 The probability for these triggers to accept events (trigger efficiency) is measured in a sample of events collected by the single-electron trigger
 \begin{itemize}
-  \item \texttt{HLT\_Ele27\_WPTight\_v*},
+  \item \texttt{HLT\_Ele27\_WPTight\_v*}
 \end{itemize}
-which has been commonly used within CMS for the \MET trigger efficiency measurement. Event from the single electron dataset is required to have \texttt{HLT\_Ele27\_WPTright\_v*} trigger, also has at least one offline reconstructed electron with $p_{T}>$ 30GeV. These selections ensure the single electron trigger is efficient. 
+, which has been commonly used within CMS for the \MET trigger efficiency measurement. Events from the single electron dataset are also required to have at least one offline reconstructed electron with $p_{T}>$ 30 GeV. These selection criteria ensure that the single electron trigger is efficient. 
 
-To measure the search trigger efficiency, additional cuts to mimic the baseline selection, defined in Sec.~\ref{sec:baselineselection}, are required.
+To measure the search trigger efficiency, additional requirements to mimic the baseline selection, defined in Sec.~\ref{sec:baselineselection}, are imposed.
 \begin{itemize}
-  \item Pass all filters
+  \item Satisfy all filters
   \item Veto reconstructed muon
   \item $\njets\geq4$
   \item \nbjets $\ge$ 1
@@ -37,8 +37,8 @@ To measure the search trigger efficiency, additional cuts to mimic the baseline 
   \item $\Delta\phi(\MET, j_{1,2,3})>$ 0.5, 0.5, 0.3
 \end{itemize}
 
-The trigger efficiency of the search triggers is measured as a function of the offline \MET.  The events passed the above requirements are defined as the
-denominator, while the above events also triggered the search triggers are defined as the numerator. It has been found that the \MET trigger efficiency has a non-trivial dependency on the offline $\HT$. The search trigger efficiencies are measured in the low $\HT$ (300 $< \HT <$ 1000) and high
+The efficiency of the search triggers is measured as a function of the offline \MET. Events satisfying the above requirements are defined as the
+denominator, while events satisfying these criteria that are also selected by the search triggers are defined as the numerator. It has been found that the \MET trigger efficiency has a non-trivial dependency on the offline $\HT$. The search trigger efficiencies are measured in the low $\HT$ (300 $< \HT <$ 1000) and high
 $\HT$ ($\HT >$ 1000) region, as shown in Fig.~\ref{fig:TrigMET}.
 \begin{figure}[tbp]
  \begin{center}
@@ -54,29 +54,23 @@ $\HT$ ($\HT >$ 1000) region, as shown in Fig.~\ref{fig:TrigMET}.
  \end{center}
 \end{figure}
 
-Beside measuring the \MET trigger efficiency from the single electron dataset, the same trigger efficiency can be measured from single muon and HTMHT
-dataset. To account for possible bias from different measurements, we will take the measurement from the single-electron dataset as the nominal and the
-variation from the measurements from single-muon and HTMHT dataset as
-systematic uncertainty of the trigger efficiency, as shown in
-Fig.~\ref{fig:TrigMETSys}. For \MET above 250GeV, we observe similar \MET
-trigger efficiency, with systematic uncertainty less than 1\%.
+Besides measuring the \MET trigger efficiency from the single electron dataset, the trigger efficiency can be measured from a single muon and HTMHT dataset. To account for possible bias from different measurements, we take the measurement from the single-electron dataset as the nominal one, and the variation from the measurements from single-muon and HTMHT dataset as the systematic uncertainty in the trigger efficiency, as shown Fig~\ref{fig:TrigMETSys}. For \MET above 250 GeV, we observe similar \MET trigger efficiencies, with a systematic uncertainty less than 1\%.
 
-For \MET trigger efficiency measured from single-muon dataset, events are collected by the single-muon trigger
+For the \MET trigger efficiency measured from the single-muon dataset, events are collected with the single-muon trigger
 \begin{itemize}
   \item \texttt{HLT\_Mu50\_v*},
 \end{itemize}
-with requrements below:
+with the following offline requirements:
 \begin{itemize}
-  \item Pass all filters
-	\item Leading reconstructed muon with $p_{T}>$ 50GeV
+  \item Satisfy all filters
+	\item Leading reconstructed muon has $p_{T}>$ 50 GeV
   \item Veto reconstructed electron
   \item $\njets\geq4$
   \item \nbjets $\ge$ 1
   \item \HT $\ge$ 300 GeV
   \item $\Delta\phi(\MET, j_{1,2,3})>$ 0.5, 0.5, 0.3
 \end{itemize}
-For \MET trigger efficiency measured from HTMHT dataset, events are
-collected by the HT triggers
+For the \MET trigger efficiency measured from the HTMHT dataset, events are collected by the HT triggers: 
 \begin{itemize}
   \item \texttt{HLT\_PFHT200\_v*},
   \item \texttt{HLT\_PFHT250\_v*},
@@ -88,12 +82,10 @@ collected by the HT triggers
   \item \texttt{HLT\_PFHT800\_v*},
   \item \texttt{HLT\_PFHT900\_v*},
   \item \texttt{HLT\_CaloJet500\_NoJetID\_v*},
-\end{itemize}, 
-in which \texttt{HLT\_CaloJet500\_NoJetID\_v*} is recommended by Level-1 for
-recovering the inefficiency of L1\_HTT trigger during period H data taking.
-Event are required to pass below selections:
+\end{itemize} 
+, in which \texttt{HLT\_CaloJet500\_NoJetID\_v*} is recommended at Level-1 to recover the inefficiency of the L1\_HTT trigger during period H data taking. Events are required to satisfy the following criteria:
 \begin{itemize}
-  \item Pass all filters
+  \item Satisfy all filters
   \item Veto reconstructed electron
   \item Veto reconstructed muon
   \item $\njets\geq4$
@@ -117,10 +109,8 @@ Event are required to pass below selections:
  \end{center}
 \end{figure}
 
-We also checked the trigger efficiency as a function of number of AK4 jets and
-$b$-tagged jets, after requiring \MET $>$ 250GeV, as shown in
-Fig.~\ref{fig:TrigMETJets}. Similar efficiencies are observed from different
-measurements.
+We also checked the trigger efficiency as a function of number of AK4 jets and $b$-tagged jets, after requiring \MET $>$ 250 GeV, as shown in
+Fig~\ref{fig:TrigMETJets}. Similar efficiencies are observed from the different measurements.
 
 \begin{figure}[tbp]
  \begin{center}
@@ -137,16 +127,9 @@ measurements.
  \end{center}
 \end{figure}
 
-The QCD background are estimated using the events triggered by search
-triggers, but with cuts to select the QCD-enriched region. Since there are no
-real \MET in QCD sample, the \MET trigger efficiency in the QCD-enriched
-region would be different from the search region in the low \MET region. A
-measurement of the trigger efficiency in the QCD-enriched region is carried
-out in the HTMHT dataset to avoid bias. Events are required to pass the
-similar cuts as the search trigger efficiency measurement, except an inverted
-$\Delta\phi(\MET, j_{1,2,3})$ requirement as blow:
+The QCD multijet background is estimated using the events triggered by the search triggers, but with offline requirements to select a QCD-enriched region. Since there is usually very little genuine \MET in QCD events, the \MET trigger efficiency in the QCD-enriched region is expected to be different from that of the search region in the low \MET region. A measurement of the trigger efficiency in the QCD-enriched region is performed in the HTMHT dataset to avoid bias. Events are required to satisfy similar criteria as for the search trigger efficiency measurement, except an inverted $\Delta\phi(\MET, j_{1,2,3})$ requirement is imposed:
 \begin{itemize}
-  \item Pass all filters
+  \item Satisfy all filters
   \item Veto reconstructed electron
   \item Veto reconstructed muon
   \item $\njets\geq4$
@@ -154,7 +137,7 @@ $\Delta\phi(\MET, j_{1,2,3})$ requirement as blow:
   \item \HT $\ge$ 300 GeV
   \item $\Delta\phi(\MET, j_{1,2,3})<$ 0.5, 0.5, 0.3
 \end{itemize}
-The trigger efficiency is measured as a function of the offline \MET and showed in Fig.~\ref{fig:TrigMETQCD}.
+The trigger efficiency is measured as a function of the offline \MET and is shown in Fig~\ref{fig:TrigMETQCD}.
 \begin{figure}[tbp]
  \begin{center}
    \includegraphics[width=0.49\linewidth]{sections/mc4/EvtSelSBOpt/figures/TrigHT_QCD_TrigMET_HTLess1000_9.pdf}
@@ -169,34 +152,28 @@ The trigger efficiency is measured as a function of the offline \MET and showed 
  \end{center}
 \end{figure}
 
-Events in the di-muon control sample, which is used for the estimation of the
-background from events in which a Z boson decays into neutrinos, are
-collected by the single muon trigger. 
+Events in the di-muon control sample, which is used for the estimation of the background from events in which a Z boson decays into neutrinos, are collected with the single muon trigger. 
 \begin{itemize}
   \item \texttt{HLT\_IsoMu24\_eta2p1\_v*}.
   \item \texttt{HLT\_IsoTKMu24\_eta2p1\_v*}.
   \item \texttt{HLT\_Mu50\_eta2p1\_v*}.
 \end{itemize}
-The trigger efficiencies are measured in the single-electron sample with below selections:
+The trigger efficiencies are measured in the single-electron sample with the following criteria:
 \begin{itemize}
-  \item Pass all filters
-	\item Leading reconstructed electron with $p_{T}>$ 30GeV
+  \item Satisfy all filters
+	\item Leading reconstructed electron has $p_{T}>$ 30 GeV
   \item At least one reconstructed muon
   \item $\njets\geq4$
   \item \nbjets $\ge$ 1
   \item \HT $\ge$ 300 GeV
 \end{itemize}
 
-The measured single muon trigger efficiency as a function of the reconstructed
-leading muon $p_{T}$ and $\eta$ is shown in Fig.~\ref{fig:TrigMuon}.
-The muon trigger efficiency is also measured in the HT and MET dataset as
-cross checks. We also checked the benefits of adding the double muon triggers
+The measured single muon trigger efficiency as a function of the reconstructed leading muon $p_{T}$ and $\eta$ is shown in Fig.~\ref{fig:TrigMuon}. The muon trigger efficiency is also measured in the HT and MET dataset as cross checks. We also checked the benefits of adding the double muon triggers: 
 \begin{itemize}
-  \item \texttt{HLT\_Mu17\_TrkIsoVVL\_Mu8\_TrkIsoVVL\_DZ\_v*}.
+  \item \texttt{HLT\_Mu17\_TrkIsoVVL\_Mu8\_TrkIsoVVL\_DZ\_v*}
   \item \texttt{HLT\_Mu17\_TrkIsoVVL\_TkMu8\_TrkIsoVVL\_DZ\_v*}.
-\end{itemize}.
-We do observe a small gain of muon efficiencies as shown in
-Fig.~\ref{fig:TrigMuon}, but no beneficial for the $Z \rightarrow \nu \nu$ background method.
+\end{itemize}
+We do observe a small gain in the muon trigger efficiencies as shown in Fig~\ref{fig:TrigMuon}, but no benefit for the $Z \rightarrow \nu \nu$ background method.
 
 \begin{figure}[tbp]
  \begin{center}
@@ -208,10 +185,7 @@ Fig.~\ref{fig:TrigMuon}, but no beneficial for the $Z \rightarrow \nu \nu$ backg
  \end{center}
 \end{figure}
 
-We also checked the trigger efficiency as a function of number of AK4 jets and
-$b$-tagged jets, after requiring leading muon with $p_{T}>$ 50GeV, as shown in
-Fig.~\ref{fig:TrigMuonJets}. We observed similar efficiency from different
-measurements.
+We also checked the trigger efficiency as a function of number of AK4 jets and $b$-tagged jets, after requiring the highest-$p_{T}$ muon to have $p_{T}>$ 50 GeV, as shown in Fig~\ref{fig:TrigMuonJets}. We observe similar efficiencies from the different measurements.
 \begin{figure}[tbp]
  \begin{center}
    \includegraphics[width=0.49\linewidth]{sections/mc4/EvtSelSBOpt/figures/MuonNJets.pdf}
@@ -229,17 +203,12 @@ measurements.
 \subsection{Baseline selection}
 \label{sec:baselineselection}
 
-The search looks at multijet events, with b-jets decaying from top quarks, 
-large \MET and no leptons. Initially, a loose baseline selection is applied 
-in \MET, \HT, \njets and \nbjets.
-This baseline selection preserves 2-20\% of the signal events. 
-The events passing the baseline selection are classified into search regions
-defined in terms of \ntops, \nbjets, \MET, \HT and \MTTwo.
+The search is based on a sample of all-hadronic events, with b-jets decaying from top quarks, large \MET and no leptons. Initially, a loose baseline selection is applied in \MET, \HT, \njets and \nbjets. This baseline selection preserves 2-20\% of the signal events depending on the signal model. The events satisfying the baseline selection are divided into search regions defined in terms of \ntops, \nbjets, \MET, \HT and \MTTwo. By having many search regions, the analysis becomes "inclusive", i.e., sensitive to many different signal topologies.
 
-The following cuts define the baseline selection:
+The following selection criteria define the baseline selection:
 
 \begin{itemize}
-\item Pass all filters that remove detector- and beam-related noise: 
+\item Satisfies all filters that remove detector- and beam-related noise: 
   \begin{itemize}
     \item HBHE noise filter, 
     \item HBHEiso noise filter, 
@@ -247,7 +216,6 @@ The following cuts define the baseline selection:
     \item Primary vertex filter,
     \item Bad EE super crystal filter,
     \item Global tight beam halo filter,
-%    \item Fourth bad EE super crystal filter,
     \item Bad muon filter,
     \item Bad charged hadron filter,
     \item Loose JetID event filter.
@@ -255,45 +223,22 @@ The following cuts define the baseline selection:
 
 \item $\njets\geq4$:
 
-%Since the stop is produced in pairs (R-parity conservation) and each one decays to two top quarks, the all-hadronic final state must contain at least four jets. 
-Since the stop is produced in pairs and each stop decays to a top and a LSP, the all-hadronic final state will contain 6 jets. Not all the jets pass the selection cuts, therefore we only require at least four jets.
-Jets are reconstructed with the Particle Flow (PF) technique
-and clustered with the anti-$k_\mathrm{T}$ algorithm with a resolution 
-parameter D=0.4~\cite{Cacciari:2008gp} (AK4). Every jet
-is required to have $p_{T}>$30 GeV and $|\eta|<$2.4. In addition, they must 
-pass the loose jet ID criteria for PF jets as recommended by the JetMET group. 
-If any of the jets fail the loose jet ID criteria, the event
-is rejected (referred to as the loose JetID event filter
-above).
+Since the top squark is produced in pairs and each top squark decays to a top quark and an LSP, the all-hadronic final state will contain at least six jets. Not all the jets satisfy the selection criteria, therefore we only require at least four jets. Jets are reconstructed with the PF technique and clustered with the anti-$k_\mathrm{T}$ algorithm with a resolution parameter 0.4~\cite{Cacciari:2008gp} (AK4). Every jet is required to have $p_{T}>$30 GeV and $|\eta|<$2.4. In addition, they must satisfy the loose jet ID criteria for PF jets as recommended by the JetMET group. If any of the jets fail the loose jet ID criteria, the event is rejected (referred to as the loose JetID event filter above).
 
-The leading two jets are required to have 
-$p_{T}>$50 GeV since SUSY predicts centrally produced jets with 
+The two jets with highest $p_{T}$ are required to have $p_{T}>$50 GeV since SUSY predicts centrally produced jets with 
 high $p_{T}$.
 
-\item \MET $\ge$ 250 GeV, where we use the type1-corrected PFmet, using the Summer16\_23Sep2016V3 jet energy corrections and the cut threshold is constrained by trigger
-efficiency requirements.
+\item \MET $\ge$ 250 GeV, where we use the type1-corrected PFmet, using the Summer16\_23Sep2016V3 jet energy corrections and the selection threshold is constrained by trigger efficiency requirements.
 
-\item \MTTwo $\ge$ 200 GeV, which is mainly used to reduce SM background events with low value of \MTTwo. Especially it works well for the 
-\ttbar events where the \MTTwo shows a kinematic edge around the top quark mass.
+\item \MTTwo $\ge$ 200 GeV, which is mainly used to reduce SM background events with low value of \MTTwo. The \MTTwo variable works especially well for the \ttbar events, where the \MTTwo shows a kinematic edge around the top quark mass.
 
-\item \HT $\ge$ 300 GeV, with \HT = $\sum_{\mathrm{jets}} p_{T}$ where the $p_{T}$ is the magnitude.
-Jets in the \HT calculation must meet the same jet seletion criteria defined above.
+\item \HT $\ge$ 300 GeV, with \HT = $\sum_{\mathrm{jets}} p_{T}$, the scalar $p_{T}$ sum over jets. Jets in the \HT calculation must meet the same jet selection criteria defined above.
 
-\item \nbjets $\ge$ 1, with b-jets identified using the CSV b-tagging algorithm 
-(CSVM), medium working point.
+\item \nbjets $\ge$ 1, with b-jets identified using the CSV b-tagging algorithm (CSVM), medium working point.
 
 \item Muon veto:
 
-Muon candidates are selected using the ``Medium Muon" selection,
-recommended by the muon Physics Objects Group (POG).
-Muon candidates satisfy $p_{T}>10$ GeV and $|\eta|<2.4$.
-Details of the muon medium ID criteria are listed in the Table~\ref{tab:MuonMediumID} and Table~\ref{tab:MuonMediumIDGoodGlobalMuon}.
-In addition to the official medium selection, we also apply the additional impact parameter cut to select muon candidate, details listed in the Table~\ref{tab:MuonMediumIDImpactParameter}.
-%Note that there are multiple places with the words "2016 ICHEP". This is precisely because SUSY PAG recommends to keep using IDs from ICHEP therefore we label them accordingly with "2016 ICHEP".
-A PF relative-isolation criteria is enforced (mini-isolation), for which the
-the isolation cone shrinks as a function of increasing muon $p_{T}$. The $p_{T}$ 
-in the mini-isolation cone is required to be less than 20\% of the 
-muon $p_{T}$ to eliminate events with an isolated muon. 
+Muon candidates are selected using the "Medium Muon" selection, recommended by the muon Physics Objects Group (POG). Muon candidates must satisfy $p_{T}>10$ GeV and $|\eta|<2.4$. Details of the muon medium ID criteria are listed in the Table~\ref{tab:MuonMediumID} and Table~\ref{tab:MuonMediumIDGoodGlobalMuon}. In addition to the official medium selection, we also apply an impact parameter requirement, with details listed in Table~\ref{tab:MuonMediumIDImpactParameter}. A PF relative-isolation criteria is applied (mini-isolation), for which the isolation cone shrinks as a function of increasing muon $p_{T}$. The $p_{T}$ in the mini-isolation cone is required to be less than 20\% of the muon $p_{T}$ to eliminate events with an isolated muon. 
 
 \newsavebox{\closureBox}
 
@@ -370,13 +315,9 @@ muon $p_{T}$ to eliminate events with an isolated muon.
 
 \item Electron veto:
 
-Electron candidates are selected using the POG-recommended
-``Cut Based VETO" selection. 
-Different cut criteria are applied on the barrel and endcap electromagnetic calorimeter region, values of the cut based veto are listed in the Table~\ref{tab:ElectronCutBasedVeto}. 
+Electron candidates are selected using the POG-recommended "Cut Based VETO" selection. Different selection criteria are applied to the barrel and endcap electromagnetic calorimeter regions. The selection criteria are listed in Table~\ref{tab:ElectronCutBasedVeto}. 
 
-They are required to have $p_{T}>10$ GeV and $|\eta|<2.5$.
-reconstructed Isolated electrons are rejected using PF-based "mini-isolation" cut requiring
-less than 10\% of the electron energy in the isolation cone.
+Electrons are required to have $p_{T}>10$ GeV and $|\eta|<2.5$. Reconstructed isolated electrons are rejected using PF-based "mini-isolation" criteria, requiring less than 10\% of the electron energy in the isolation cone.
 
 \begin{table}[htbp]
 \fontsize{10 pt}{1.2 em}
@@ -411,19 +352,14 @@ less than 10\% of the electron energy in the isolation cone.
 \par\end{centering}
 \end{table}
 
-\item Angular cut:
+\item Angular criteria:
 
-A cut on the angle between \MET and the first three leading jets, 
-$\Delta\phi(\MET, j_{1,2,3})>$ 0.5, 0.5, 0.3, is applied to remove 
-events coming from QCD processes.
+Selection criteria on the angles between \MET and the three jets with highest $p_{T}$, $\Delta\phi(\MET, j_{1,2,3})>$ 0.5, 0.5, 0.3, are applied to remove events arising from QCD processes.
 
 \item Isolated track veto:
 
-After applying the cuts described above
-the residual background comes from
-\ttbar, single top, and $W+$jets events with one $W\rightarrow l\nu$
-decay where $l$ can be an electron, muon or tau decaying hadronically. 
-To further suppress these backgrounds, we reject events 
+After applying the criteria described above, the residual background comes from \ttbar, single top, and $W+$jets events with one $W\rightarrow l\nu$
+decay where $l$ can be an electron or muon that is not identified, or a hadron from single-prong hadronic $\tau$ lepton decay. To further suppress these backgrounds, we reject events 
 that have one or more isolated tracks. The track isolation
 is calculated from charged PF candidates consistent with the 
 reconstructed primary vertex ($|dz(PV)|<0.1~\mathrm{cm}$).
@@ -434,7 +370,7 @@ For charged hadron tracks, the $p_{T}$ requirement
 is raised to be at least 10 GeV and the relative isolation value to be less 
 than 0.1. To retain more signal, and thus improve signal-to-background
 event discrimination, events with one isolated track, as defined
-above, are only rejected if they satisfy
+above, are rejected only if they satisfy
   \begin{equation}
     \label{eq:mt_isotk}
     m_T(tk,\MET) = \sqrt{2p_{T}^{tk}\MET(1-\cos\Delta\phi)}<100\;\mathrm{GeV}
@@ -448,22 +384,21 @@ above, are only rejected if they satisfy
 \subsection{Search regions}
 \label{sec:searchregions}
 
-In our 2016 analysis, we bin the search regions in terms of the number of b-tagged jets and top candidates. 
-The top reconstruction and identification procedure (top-tagging) 
-is described in Sec.~\ref{sec:toptagger}. 
+In the analysis of the 2016 data, we bin the search regions in terms of the number of b-tagged jets and top quark candidates. 
+The top quark reconstruction and identification procedure (top-tagging) is described in Sec.~\ref{sec:toptagger}. 
 
 In order to improve background suppression, in particular the \ttbar
 contribution, the \MET, \HT and \MTTwo variables were added to the 
 set that defines the search regions. The variable 
 \MTTwo~\cite{Lester:1999tx,Barr:2003rg} is an extension of the transverse 
 mass variable that is sensitive to the pair production of heavy particles, each
-of which decays to an invisible particle.
+of which decays to a visible particle and an invisible particle.
 The \pTop, the \pRsystem, and the \MET in an event
 are used to constructed \MTTwo assuming the invisible particles are massless.
 In order to illustrate how the \MTTwo is calculated, let us take the process 
 ${\rm pp} \rightarrow \sTop\santiTop\rightarrow t\bar{t}\chi_1^0\chi_1^0$
 as an example. This process contains two simultaneous decays of an unseen 
-particle of unknown mass(\sTop or \santiTop) into another invisible 
+particle of unknown mass(\sTop or \santiTop) into an invisible 
 particle ($\chi_1^0$) and visible particle ($t$ or $\bar{t}$). The
 variable \MTTwo is defined as:
 \begin{equation} \label{eq:MT2}
@@ -479,36 +414,34 @@ where the $m_{T}^2$ is the transverse mass,
      }
    \end{array}
 \end{equation} 
+
 \MTTwo is a minimization of two transverse masses with a constraint that 
-the sum of the transverse momenta of both $\chi_1^0$'s is equal to the 
-missing transverse momentum of the event, i.e., 
-$\vec{q}_{T}^{(1)}+\vec{q}_{T}^{(2)} = \vec{p}_{T}$. 
-\MTTwo has a kinematic upper limit which is the \sTop mass. 
+the sum of the transverse momenta of both $\chi_1^0$'s be equal to the 
+missing transverse momentum in the event, i.e., $\vec{q}_{T}^{(1)}+\vec{q}_{T}^{(2)} = \vec{p}_{T}$. 
+\MTTwo has a kinematic upper limit at the \sTop mass. 
 The superscripts $(1)$ and $(2)$ in the equations refer to the individual 
 decays of the \sTop particles. In the specific case of the analysis described
-in this note, we replace the quantities related to superscript $(1)$ by those
+in this thesis, we replace the quantities related to superscript $(1)$ by those
 of associated with the fully reconstructed top quark, i.e., the \pTop. 
 Similarly, we replace the quantities related to superscript $(2)$ by those
 of the partially reconstructed top quark, i.e., the \pRsystem 
 for $\ntops =1$ and the fully reconstructed top quark for $\ntops \ge 2$. 
 \MET then corresponds to $\vec{p}_{T}$ in the equation~\ref{eq:MT2}. 
-Since we assume that the invisible particle is massless, $m_{\chi_1^0}$ should 
-be zero in Eqs.~\ref{eq:MT2}-~\ref{eq:MTdef}. 
+Since we assume that the invisible particle is massless, $m_{\chi_1^0}$ is set to zero in Eqs.~\ref{eq:MT2}-~\ref{eq:MTdef}. 
 
-In a few words, we start from the fact that there is at least one good hadronic top candidate in the search samples. 
-If there are two top candidates, \MTTwo is calculated using the pair of top 
-candidates and \MET. In case of there are more than two top candidates
+Briefly, we start from the fact that at least one hadronic top quark candidate in the search sample. 
+If there are two top quark candidates, \MTTwo is calculated using the pair of top 
+candidates and \MET. In case there are more than two top candidates
 in the sample, we compute \MTTwo for all combinations and choose the 
-\MTTwo with the smallest value. If there is only one top candidate identified
+\MTTwo with the smallest value. If there is only one top quark candidate identified
 by the top-tagging algorithm, we reconstruct the other top 
 quark from the remanent of the event using the b-tagged jet (or the hardest $p_{T}$ jet if no b-tagged jet found) as a seed and the R-sys 
 jet closest to the seed jet with an invariant mass between 50 GeV and 
-the top quark mass. In case no combination satisfies the invariant mass
+the nominal top quark mass. In case no combination satisfies the invariant mass
 requirement, we use the seed jet as the only remanent of the other 
 top quark. In the latter case, \MTTwo is calculated from the reconstructed top candidate, the remanent and the \MET.
 
-Fig.~\ref{fig:compSBvars} 
-shows the comparison between total SM backgrounds from simulation and several signal points for the four search bin variables after baseline cuts. We can clearly see all the variables have good discrimination power. Observed data are also shown and the total SM backgrounds are scaled to the same yield as data to ensure a shape comparison. %The same scale is applied to signals as well in addition to the ``$\times5$" or ``$\times10$" scales.
+Fig~\ref{fig:compSBvars} shows a comparison between total SM backgrounds from simulation and several signal points for the four search bin variables after the baseline selection requirements. We can clearly see that all the variables have good discrimination power. The data are also shown and the total SM backgrounds are scaled to the same yield as the data.
 
 \begin{figure}[h]
   \begin{center}
@@ -522,12 +455,12 @@ shows the comparison between total SM backgrounds from simulation and several si
   \end{center}
 \end{figure}
 
-The search bins defined after baseline cuts (in total 84 bins) are illustrated in Fig.~\ref{fig:SBXX}. An improvement we make is switching from the \MTTwo variable to \HT variable for search bins where $\nbjets>=3$ or $\ntops>=3$ since these bins should be sensitive to the T1tttt signals where the \MTTwo cannot be clearly as defined with more than two reconstructed top quarks or provide the best sensitivity. 
-To accommodate with increaing luminosity of 2016 data and improve our search sensitivity, we make harder search bins in
-\MET, \HT and \MTTwo dimentions. The optimization was based on significance scan of each of \MET, \MTTwo and \HT dimentions. However
-furthur adjustment was done to have reasonable control sample events for major background predictions.
-The numbers displayed in the figures are the binning indices which are used throughout the analysis.
-The bins with $\ntops>=3$ are important for T1tttt signal but for T2tt we do not use them for limit calculation.
+The search bins defined after the baseline selection criteria (in total 84 bins) are illustrated in Fig~\ref{fig:SBXX}. An improvement in the selection efficiency is made by switching from the \MTTwo variable to \HT variable for search bins with $\nbjets>=3$ or $\ntops>=3$ since these bins should be sensitive to the T1tttt signals where \MTTwo cannot be as clearly defined as for T2tt events.
+To accommodate the larger data sample collected in 2016 compared to 2015, and improve the search sensitivity, we use a finer segmentaion of the search bins in
+\MET, \HT and \MTTwo than for the analysis of the 2015 data. The search bin optimization is based on significance scan of each of \MET, \MTTwo and \HT dimentions. However
+further adjustment was performed to have a reasonable number of control sample events for the major background predictions.
+The numbers displayed in the figures are the binning indices that are used throughout the analysis.
+The bins with $\ntops>=3$ are important for T1tttt signal but for T2tt we do not use them for the limit calculation.
 
 \begin{figure}[h]
   \begin{center}
@@ -549,17 +482,16 @@ The bins with $\ntops>=3$ are important for T1tttt signal but for T2tt we do not
 \label{sec:sm-mc}
 
 The analysis uses a set of Monte Carlo samples for background estimation method
-development and predictions as well as SUSY signal samples for interpretation
-of the results in the light of a number of simplified models. All the
+development and predictions as well as SUSY signal samples for the interpretation
+of the results. All the
 background samples are generated with the Geant4-based CMS simulation 
 application while all the signal samples for limit setting are generated
 using the Fast Simulation application.
 
 \paragraph{Standard Model Samples}
 
-Monte Carlo samples of SM processes reconstructed with CMSSW release 8.0 (Summer16) are used throughout this analysis note. A complete list of these samples is shown in Table~\ref{tab:MCsamples1} and Table~\ref{tab:MCsamples2}. The cross sections listed come from calculations performed at the next-to-next-to-leading-order (NNLO) unless otherwise noted. All samples use the "Moriond17" pileup scenario, which simulates a pileup distribution with an average of 25 interactions per bunch crossing and a 25~ns interval between bunches.
+Monte Carlo samples of SM processes reconstructed with CMSSW release 8.0 (Summer16) are used in this thesis. A complete list of these samples is given in Table~\ref{tab:MCsamples1} and Table~\ref{tab:MCsamples2}. The cross sections listed come from calculations performed at the next-to-next-to-leading-order (NNLO) unless otherwise noted. All samples use the "Moriond17" pileup scenario, which simulates a pileup distribution with an average of 25 interactions per bunch crossing and a 25~ns interval between bunches.
 
-% This table is out-dated, if needed, can copy the table from the MT2 AN2016_460
 \begin{table}[hp]
 \centering
 \caption{Standard model Monte Carlo samples used in the analysis.}
