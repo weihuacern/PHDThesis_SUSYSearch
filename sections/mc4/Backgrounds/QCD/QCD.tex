@@ -2,16 +2,16 @@
 %QCD background subsubsection
 %
 
-The QCD multijet background originates in the measurement process (instrumentation) and is primarily due to catastrophic mismeasurement of the energy of one or more jets in a SM multijet event. When that happens, large amounts of spurious \MET can present in the reconstructed event, which potentially mimics an all-hadronic SUSY final state that passes the search selection. The probability to have such an event, where there are fake b jets and tops, is very low, but the high QCD cross section makes them more likely and therefore their contribution to the signal regions must be estimated. Although the expectation is for this background to be subdomiant in most search bins.
+The QCD multijet background originates in the measurement process (instrumentation) and is primarily due to mismeasurement of the energy of one or more jets in a SM multijet event. When that happens, large amounts of spurious \MET can be present in the reconstructed event, which potentially mimics an all-hadronic SUSY final state that satisfies the search selection. The probability to have such an event, where there are fake b jets and tops, is very low, but the large QCD cross section makes them more likely and therefore their contribution to the signal regions must be estimated. The expectation is for this background to be subdomiant in most search bins.
 
 MC simulation tells us a fact that the high $\MET$ and
-$\Delta\phi_{\mathrm{jets~and}~\MET}$ cuts, as well as the multiple jets, 
+$\Delta\phi_{\mathrm{jets~and}~\MET}$ requirements, as well as the requirement that there be multiple jets, 
 remove nearly all the QCD contribution. An unfortunate consequence of the excellent veto power of the selection
 criteria is that the QCD contribution is also very small 
-in the sideband samples typically used for residual QCD background 
-estimation. The fact that these control samples are most frequently 
-leptonic-\ttbar dominate makes it difficult to use the more common background 
-estimation techniques which would simply extrapolate QCD dominated distributions 
+in the sideband samples typically used to evaluate the residual QCD background 
+contribution. The fact that these control samples are most frequently 
+leptonic-\ttbar dominated makes it difficult to use the more common background 
+estimation techniques that would simply extrapolate QCD dominated distributions 
 from the sidebands into the signal regions. 
 
 The procedure developed for the analysis described in this note consists
@@ -19,25 +19,24 @@ of selecting a signal depleted data control sample rich in QCD events,
 from which contributions of other SM backgrounds, such as \ttbar, $W$+jets, 
 $Z$+jets, are subtracted. These backgrounds
 are estimated using the same procedures described in the preceeding sections.  
-A translation or transfer factor is measured to extrapolate the
+A translation or transfer factor is determined to extrapolate the
 number of QCD events from the control sample to the 
-search region. Due to lack of statistics, we use MC samples to
+search region. Due to the small number of events in data control regions, we use MC samples to
 derive the translation factor, although we normalize their values to a 
 data measurement in the 200 GeV$<\MET<$ 250 GeV bin, just below the 
-signal region, where there are enough statistics.
+signal region, where there are enough events to offer a reasonably small statistical uncertainty.
 
 \subsubsection{Description of the method}
 
 The sideband or QCD enriched control sample is defined by applying 
-the full set of baseline selection cuts to the search triggers described
-in Sec, except for the $\Delta\phi_{\mathrm{jets~and}~\MET}$ 
-requirement which is inverted to select multijet events. In other words,
+the full set of baseline selection requirements to the search triggers, except for the $\Delta\phi_{\mathrm{jets~and}~\MET}$ 
+requirements which are inverted in order to select multijet events. In other words,
 we require that
 $\Delta\phi_{1^{st}\mathrm{jet~and}~\MET} < 0.5$, 
 $\Delta\phi_{2^{nd} \mathrm{jet~and}~\MET} < 0.5$ or 
 $\Delta\phi_{3^{rd} \mathrm{jet~and}~\MET} < 0.3$ in order to maximize the 
 number of events with fake \MET, which tend to be aligned with one of the 
-leading jets.
+highest $p_{T}$ jets.
 Fig~\ref{fig:deltaPhi} depicts the topology of events passing the 
 $\Delta\phi$ and the inverted $\Delta\phi$ cuts.
 
@@ -84,11 +83,10 @@ The remaining events make up the QCD contribution, $N^{\Delta\bar{\phi}}_{QCD}$,
 is calculated as:
 
 \begin{equation}
-N^{\Delta\bar{\phi}}_{QCD} = N^{\Delta\bar{\phi}}_{Data} - N^{\Delta\bar{\phi}}_{LL} - N^{\Delta\bar{\phi}}_{\tauh} - N^{\Delta\bar{\phi}}_{Z\rightarrow \nu\nu} \; ,
+N^{\Delta\bar{\phi}}_{QCD} = N^{\Delta\bar{\phi}}_{Data} - N^{\Delta\bar{\phi}}_{LL} - N^{\Delta\bar{\phi}}_{\tauh} - N^{\Delta\bar{\phi}}_{Z\rightarrow \nu\nu} \;
 \label{eq:Nqcd}
 \end{equation}
-
-where $N^{\Delta\bar{\phi}}_{X}$ is the number of type X events in the 
+, where $N^{\Delta\bar{\phi}}_{X}$ is the number of type X events in the 
 inverted $\Delta\phi_{\mathrm{jets~and}~ \MET}$ sideband. The contributions 
 $N^{\Delta\bar{\phi}}_{LL}$, $N^{\Delta\bar{\phi}}_{\tauh}$ and 
 $N^{\Delta\bar{\phi}}_{Z \rightarrow \nu\nu}$ are estimated using the same 
@@ -99,18 +97,16 @@ predictions for the $\Delta\phi$ and $\Delta\bar{\phi}$ samples:
 
 \begin{equation}
 %T_{QCD}^{MC} = \frac{N^{\Delta\phi}_{MC-QCD}}{N^{\Delta\bar{\phi}}_{MC-QCD}}= \frac{N^{\Delta\phi}_{MC} - N^{\Delta\phi}_{MC-LL} - N^{\Delta\phi}_{MC-\tauh} - N^{\Delta\phi}_{MC-Z\rightarrow \nu\nu}}{N^{\Delta\bar{\phi}}_{MC} - N^{\Delta\bar{\phi}}_{MC-LL} - N^{\Delta\bar{\phi}}_{MC-\tauh} - N^{\Delta\bar{\phi}}_{MC-Z\rightarrow \nu\nu}} \; ,
-T_{QCD}^{MC} = \frac{N^{\Delta\phi}_{MC-QCD}}{N^{\Delta\bar{\phi}}_{MC-QCD}} \; ,
+T_{QCD}^{MC} = \frac{N^{\Delta\phi}_{MC-QCD}}{N^{\Delta\bar{\phi}}_{MC-QCD}} \;
 \label{eq:TqcdMC}
 \end{equation}
-
-while the final QCD background prediction in the search regions is calculated as:
+, while the final QCD background prediction in the search regions is calculated as:
 
 \begin{equation}
-N^{SR}_{QCD} = N^{\Delta\bar{\phi}}_{QCD} \times T_{QCD}^{Scale} \; ,
+N^{SR}_{QCD} = N^{\Delta\bar{\phi}}_{QCD} \times T_{QCD}^{Scale} \;
 \label{eq:QCDformula}
 \end{equation}
-
-where $N^{\Delta\bar{\phi}}_{QCD}$ comes from data (as defined in Eq.~\ref{eq:Nqcd}). And the $T_{QCD}^{Scale}$ is the
+, where $N^{\Delta\bar{\phi}}_{QCD}$ comes from data (as defined in Eq.~\ref{eq:Nqcd}). The $T_{QCD}^{Scale}$ term is the
 $T_{QCD}^{MC}$ normalized to a translation factor measured in the 200 GeV $<\MET<$ 250 GeV sideband from data.
 This normalization provides a more accurate
 estimation of the true translation factors because although we trust (within the assigned uncertainties)
@@ -138,7 +134,7 @@ used to evaluate the non-closure systematic uncertainty
 applied to get final QCD background predictions.
 \end{itemize}
 
-$T_{QCD}^{MC}$'s are shown in Fig~\ref{fig:TfactorPreFit} and Table~\ref{tab:TfactorPreFitExt}
+The $T_{QCD}^{MC}$'s are shown in Fig~\ref{fig:TfactorPreFit} and Table~\ref{tab:TfactorPreFitExt}
 (QCD HT-binned MC samples). The error bars are statistical uncertainties only.
 %% QCD TFactor MC
 \begin{figure}[htbp]
@@ -169,19 +165,18 @@ signal region are included.}
 \end{table}
 
 
-The low \MET $T_{QCD}^{Data}$ are measured as demonstrated in the equation from real data:
+The low \MET $T_{QCD}^{Data}$ are measured from data using the following relation:
 \begin{equation}
-T_{QCD}^{Data} = \frac{N^{\Delta\phi}_{Data} - N^{\Delta\phi}_{MC-LL} - N^{\Delta\phi}_{MC-\tauh} - N^{\Delta\phi}_{MC-Z\rightarrow \nu\nu}}{N^{\Delta\bar{\phi}}_{Data} - N^{\Delta\bar{\phi}}_{MC-LL} - N^{\Delta\bar{\phi}}_{MC-\tauh} - N^{\Delta\bar{\phi}}_{MC-Z\rightarrow \nu\nu}} \; ,
+	T_{QCD}^{Data} = \frac{N^{\Delta\phi}_{Data} - N^{\Delta\phi}_{MC-LL} - N^{\Delta\phi}_{MC-\tauh} - N^{\Delta\phi}_{MC-Z\rightarrow \nu\nu}- N^{\Delta\phi}_{MC-TTZ,Rare}}{N^{\Delta\bar{\phi}}_{Data} - N^{\Delta\bar{\phi}}_{MC-LL} - N^{\Delta\bar{\phi}}_{MC-\tauh} - N^{\Delta\bar{\phi}}_{MC-Z\rightarrow \nu\nu} - N^{\Delta\bar{\phi}}_{MC-TTZ,Rare}} \;.
 \label{eq:TqcdData}
 \end{equation}
 
-The result of $T_{QCD}^{Scale}$ are shown in Fig\ref{fig:TfactorScaled} and Table~\ref{tab:TfactorScaledExt}.
-The low \MET scaled $T_{QCD}^{Data}$ are calculated by real data and \ttbar, $W$+jets and single top MC reweight with 84\% for now. We will move to complete data driven method for the paper.
+The results for $T_{QCD}^{Scale}$ are shown in Fig~\ref{fig:TfactorScaled} and Table~\ref{tab:TfactorScaledExt}.
+The low \MET scaled $T_{QCD}^{Data}$ are calculated by real data and MC samples. The \ttbar, $W$+jets and single top MC events are reweight with a scale factor, which value is 84\%. The scale factor is derived from the data/MC comparison in the single-muon control samples, with ISR reweighing and the fake b scale factor. The Z+jets event yields are calculated in the same way decribed in the last section. The TTZ and Rare events are directly from MC samples, with generator-level leptonically decaying W and Z bosons veto.
 The error bars are the total uncertainties, obtained by adding in quadrature
-the statistical errors and the uncertainty coming
-from the $T_{QCD}^{Data}$.
+the statistical uncertainties and the uncertainty in $T_{QCD}^{Data}$.
 Since negative $T_{QCD}^{Scale}$ factors are not physical, we set the
-background prediction to zero when this is consistent within errors.
+background prediction to zero when this is consistent within the uncertainties.
 
 %% QCD TFactor Scaled
 \begin{figure}[htbp]
@@ -211,12 +206,12 @@ signal region are included.}
 \par\end{centering}
 \end{table}
 
-The trigger effects have been taken into account when calculating the translation factor. We measure the trigger efficiencies in low/high \HT and $\Delta\phi$/inverted $\Delta\phi$ respectively, and then apply them into translation factors calculation, both MC shape and low \MET sideband.
+The trigger effects are taken into account when calculating the translation factors. We measure the trigger efficiencies in low/high \HT and $\Delta\phi$/inverted $\Delta\phi$ data samples, and then apply them into translation factors calculation, both for the MC shape and for the low \MET sideband.
 
 \subsubsection{Closure Test}
-The closure test is the comparison between the MC expectation after baseline and $T_{QCD}^{MC}$ prediction. It is not a circular test since we measure the $T_{QCD}^{MC}$ without binning in \ntops and \nbjets. 
-The closure test aims on testing if the $T_{QCD}^{MC}$ method works on the QCD MC sample by comparing the distribution of expectation and $T_{QCD}^{MC}$ prediction in QCD MC.
-As we can see in Fig~\ref{fig:ClorureTestQCD}, closure is reasonable for all search bin variables. The non-closure uncertainty will be evaluated in the following section.
+The closure test is the comparison between the MC expectation after the baseline selection and the $T_{QCD}^{MC}$ prediction. It is not a circular test since we measure the $T_{QCD}^{MC}$ without binning in \ntops and \nbjets. 
+The closure test aims to test whether the $T_{QCD}^{MC}$ method works on the QCD MC sample by comparing the distribution of expectation and $T_{QCD}^{MC}$ prediction in QCD MC.
+As seen in Fig~\ref{fig:ClorureTestQCD}, the closure is reasonable for all search bin variables. The non-closure uncertainty is evaluated in the following section.
 %% Closure test for QCD
 \begin{figure}[hp]
 \begin{center}
@@ -235,8 +230,8 @@ and number of b jets (left) and number of top jets (right) on bottom.}
 \label{fig:ClorureTestQCD}
 \end{figure}
 
-QCD closure tests with $T_{QCD}^{MC}$ applied for all search bins are shown in
-Fig~\ref{fig:SBClosure}. The uncertainties showed in the plot are just statistics uncertainty.
+QCD closure tests with $T_{QCD}^{MC}$ applied to all search bins are shown in
+Fig~\ref{fig:SBClosure}. The uncertainties shown in the plot are statistical only.
 %% QCD search bin closure
 \begin{figure}[htbp]
 \begin{center}
@@ -250,25 +245,25 @@ Fig~\ref{fig:SBClosure}. The uncertainties showed in the plot are just statistic
 The sources of QCD background systematical uncertainty are:
 
 \begin{itemize}
-\item \textbf{$T_{QCD}^{Scale}$}
-\item \textbf{Non-closure}
-\item \textbf{Contamination from other backgrounds}
+\item $T_{QCD}^{Scale}$
+\item Non-closure
+\item Contamination from other backgrounds
 %\item \textbf{Trigger efficiency}
 \end{itemize}
 
 \paragraph{$T_{QCD}^{Scale}$ uncertainties}
-The uncertainty of $T_{QCD}^{Scale}$ factors are the statistical uncertainty when we calculate $T_{QCD}^{MC}$ and $T_{QCD}^{Data}$.
+The uncertainty of the $T_{QCD}^{Scale}$ factors are the statistical uncertainties when we calculate $T_{QCD}^{MC}$ and $T_{QCD}^{Data}$.
 
 \paragraph{Non-Closure uncertainty}
 
 For the evaluation of the systematic uncertainty, the prediction is 
-derived from $T_{QCD}^{MC}$'s. 
+derived from the $T_{QCD}^{MC}$'s. 
 The expectations and predictions are compatiable in 
-most of the search bins. In the case of the bins without enough ($<4$) expected MC events,
-we take the uncertainties from \MET and  \MTTwo or \MET and  \HT 2 dimensional inclusive closure plots, then combine with 1 dimensional \ntops and \nbjets closure in quardrature. If no enough MC statistics in \MET and  \MTTwo or \MET and  \HT 2 dimensional inclusive closure plots, we will take 4 independent closure from search bin variables inclusive closure plots then combine them in quardrature. However, we will have no MC evnets in some bins, like when \MET greater than 700 GeV, in this case, we will take the value from its neighbour. 
+most of the search bins. In the case of bins without enough ($<4$) expected MC events,
+we take the uncertainties from \MET and  \MTTwo or \MET and  \HT 2 dimensional inclusive closure plots, then combine them with 1 dimensional \ntops and \nbjets closure results in quardrature. If there are not enough MC events in \MET and  \MTTwo or \MET and  \HT 2 dimensional inclusive closure plots, we will take 4 independent closure results from search bin variables inclusive closure plots and then combine them in quadrature. However, there are no MC events in some bins, such as when \MET greater than 700 GeV. In these case, we use the uncertainty from the neighboring bin.
 
 \paragraph{Contamination uncertainty}
-Since we are using input from other background to estimate the contamination in QCD control region, we also integrate this into total systematic uncertainty.
+Since we are using input from other backgrounds to estimate the contamination to the QCD control region, we also incorporate this into the total systematic uncertainty.
 
 \begin{table}[htbp]
 \fontsize{10 pt}{1.2 em}
@@ -291,7 +286,7 @@ Closure & \specialcell{Non-closure and statistical \\ precision of the closure} 
 \end{table}
 
 \subsubsection{QCD background prediction}
-The QCD background predictions for the full $35.9$fb$^{-1}$ dataset in all search bins are shown in Fig~\ref{fig:SBPrediction} and listed in Table~\ref{tab:QCDpred84_1}, Table~\ref{tab:QCDpred84_2} and Table~\ref{tab:QCDpred84_3}, which includes statistical and systematic uncertainties.
+The QCD background predictions for the full $35.9$ fb$^{-1}$ dataset in all search bins are shown in Fig~\ref{fig:SBPrediction} and listed in Tables~\ref{tab:QCDpred84_1}, \ref{tab:QCDpred84_2} and \ref{tab:QCDpred84_3}. The uncertainties include both statistical and systematic terms.
 %% QCD search bin Prediction
 \begin{figure}[htbp]
 \begin{center}

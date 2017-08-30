@@ -4,8 +4,8 @@ These include the diboson ($WW$, $WZ$, $ZZ$) processes, multiboson ($WWW$,
 $WWZ$, $WZZ$, $ZZZ$) processes, the associated production with a top quark
 pair ({\ensuremath{{\ttbar{}\mathrm{H}}}\xspace}, {\ensuremath{{\ttbar{}\mathrm{G}}}\xspace}, \ttbarW, and
 \ttbarZ), and others ($tWZ$, $WZG$, $WWG$). 
-Due to the requirement of the present of reconstructed top candidate, the processes associated
-with top quark are expected to have higher selection efficiency than the rest.  The
+Due to the requirement that at least one reconstructed top quark candidate be present, the associated
+with top quarks are expected to have higher selection efficiency than those without top quarks.  The
 Feynman diagrams for the dominant \ttbarW and \ttbarZ production mechanisms in
 proton-proton collisions are shown in Fig~\ref{fig:ttV_feynman}. 
 
@@ -20,34 +20,32 @@ proton-proton collisions are shown in Fig~\ref{fig:ttV_feynman}.
   \label{fig:ttV_feynman}
 \end{figure}
 
-The lost lepton and hadronic tau background used data driven method, which
-takes into account the leptonically-decayed $W$ and $Z$ component of these
-backgrounds. The $Z$ invisible background method only used $DY$ MC to derive
-its scale factors. So only the hadronically-decayed $W$ and $Z$,
-$Z\rightarrow\nu\nu$ component of these rare backgrounds remain. To remove the
+The lost lepton and hadronic tau background used a data driven method, which therefore automatically takes into account the leptonically decaying $W$ and $Z$ components of these
+backgrounds. The invisible $Z$ background method uses simulation only to derive scale factors. So only the hadronically decaying $W$ and $Z$,
+$Z\rightarrow\nu\nu$ components of these rare backgrounds need to be explicitly addressed. To remove the
 overlap between the prediction and the lost lepton and hadronic tau background
-prediction, a veto on the generator level leptonically decay $W$ and $Z$ is
-applied in the final yeild.
+prediction, a veto on the generator level leptonically decaying $W$ and $Z$ is
+applied.
 
 \subsubsection{\texorpdfstring{\ttbarZ Background}{\ttbarZ Background}}
 \label{sss:ttZ}
 
 Similarly to the $Z\rightarrow\nu\nu$+jets background, \ttbarZ is an
-irreducible background when $Z$ decays to $\nu \nu$ and both top quarks decay
+irreducible background when the $Z$ decays to $\nu \nu$ and both top quarks decay
 hadronically.  The \ttbarZ cross section at 13~TeV is 782.6 pb. The predicted
 yield of \ttbarZ events in the search bins is less than 10\% of the total
 background. Given the small cross section associated with this process, we
 rely on simulation to generate a prediction, although this estimation is
-validated using real collider data. A validation study is performed in the
-three-leptons channel following the \ttbarZ normalization exercise within the
+validated using data. A validation study is performed in the
+three-lepton channel following the \ttbarZ normalization exercise within the
 SUSY group. The three-lepton channel is defined by the following selection:
 
 \begin{itemize}
-  \item Pass all filters that remove detector- and beam-related noise: 
+  \item Satisfies all filters that remove detector- and beam-related noise: 
     \begin{itemize}
       \item HBHE noise filter, 
       \item HBHEiso noise filter, 
-      \item Ecal dead cell trigger primitive filter,
+      \item ECAL dead cell trigger primitive filter,
       \item Primary vertex filter,
       \item Bad EE super crystal filter,
       \item Global tight beam halo filter,
@@ -55,7 +53,7 @@ SUSY group. The three-lepton channel is defined by the following selection:
       \item Bad charged hadron filter,
       \item Loose JetID event filter.
     \end{itemize}
-  \item Pass the trigger, here we only consider the single muon trigger
+  \item Satisfies the trigger, here we only consider the single muon trigger
     \begin{itemize}
       \item \texttt{HLT\_Mu50\_v*}.
       \item \texttt{HLT\_IsoMu24\_v*}.
@@ -63,30 +61,29 @@ SUSY group. The three-lepton channel is defined by the following selection:
     \end{itemize}
   \item Has exactly 3 leptons
     \begin{itemize}
-			\item Leading lepton, which is muon required by the trigger, with $p_{T}>$ 40GeV
-			\item Second and third leading leptons with $p_{T}>$ 20GeV
+			\item Highest $p_{T}$ lepton, which is required by the trigger to be a muon, with $p_{T}>$ 40 GeV
+			\item Leptons with the second and third largest $p_{T}$ with $p_{T}>$ 20 GeV
     \end{itemize}
-  \item Has one reconstructed $Z$ boson within the mass window of 81 and 101
-	\item At least 4 jets with $p_{T}>$ 40GeV
-	\item At least 2 b-tagged jets with $p_{T}>$ 30GeV
-  \item \MET $>$ 30GeV
+  \item Has one reconstructed $Z$ boson within the mass window between 81 and 101 GeV
+	\item At least 4 jets with $p_{T}>$ 40 GeV
+	\item At least 2 b-tagged jets with $p_{T}>$ 30 GeV
+  \item \MET $>$ 30 GeV
 \end{itemize}
 
-The list of MC samples for \ttbarZ and backgrounds are listed in
-Table~\ref{tab:ttzNorm}. The \ttbarZ and backgrounds are normalized to the SM
-prediction. The measured yield of the \ttbarZ and backgrounds are compared with
-Single Muon data as shown in Fig~\ref{fig:ttZSUSY}, as a function of the
-reconstructed $Z$ boson mass. The observed \ttbarZ is calculated by
-subtracting backgrounds yeild from the data yield. The derived \ttbarZ scale
-factor is $1.03 \pm 0.31$. The \ttbarZ is consistent with data within the
+The list of MC samples for \ttbarZ and other rare backgrounds are listed in
+Table~\ref{tab:ttzNorm}. The \ttbarZ and other rare backgrounds are normalized to the SM
+prediction. The measured yield of \ttbarZ and other rare backgrounds are compared with
+single-muon data as shown in Fig~\ref{fig:ttZSUSY}, as a function of the
+reconstructed $Z$ boson mass. The observed \ttbarZ rate is calculated by
+subtracting the backgrounds yields from the data yield. The derived \ttbarZ scale
+factor is $1.03 \pm 0.31$. The predicted \ttbarZ rate is consistent with data within the
 statistical uncertainty. Thus we don't apply a scale factor for the \ttbarZ
 yield in this analysis. A 30\% systematic uncertainty is assigned to the
-\ttbarZ background yield.
+\ttbarZ background prediction.
 
 \begin{table}[hp]
   \centering
-  \caption{The list of MC samples for \ttbarZ and backgroundsThe list of MC
-  samples for \ttbarZ and backgrounds.}
+  \caption{The list of MC samples for \ttbarZ and other rare backgrounds}
   \label{tab:ttzNorm}
   \footnotesize
   \begin{tabular}{ll}
@@ -149,14 +146,14 @@ reweighing, pileup correction, $b$--tagging scale factor are also considered.
 
 \subsubsection{Yields of Other SM Backgrounds}
 \label{sss:otherSM}
-The yields of rare and \ttbarZ are derived from MC samples, normalized to the
-SM predicted cross section. A generator-level veto of the leptonically-decayed
-$W$ and $Z$ is applied to avoid double-counting with the lost-lepton and
-hadronic tau backgrounds. Except \ttbarZ process, the other backgrounds are
-combined as rare background. Their yield with statistical uncertainties are
+The yields of the \ttbarZ and other rare backgrounds are derived from MC samples, normalized to the
+SM predicted cross section. A generator-level veto of the leptonically decaying
+$W$ and $Z$ bosons is applied to avoid double-counting with the lost-lepton and
+hadronic tau backgrounds. Except for \ttbarZ process, the other backgrounds are
+combined as the rare background. Their yield with statistical uncertainties is
 shown in Fig~\ref{fig:ttZRareYeild}. Additional systematic uncertainties come from the choice
 of renormalization/factorization scale and PDF in the rare MC samples, ISR
-reweighting, pileup correction, b-tagging scale factor are are also included.
+reweighting, pileup correction, and b-tagging scale factors.
 
 \begin{figure}[htbp]
   \begin{center}
