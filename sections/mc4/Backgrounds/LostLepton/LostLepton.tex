@@ -1,6 +1,6 @@
-The classical lost lepton method is a validated method that used in 2015 analysis\cite{PhysRevD.96.012004}. Although we use simulation based translation factor method for the background estimation for \ttbar, single top and W+jets, the classical method is still an important cross check method. 
+The classical lost lepton method is a validated method that used in analysis of the 2015 data\cite{PhysRevD.96.012004}. Although the analysis of the 2016 data uses the simulation based translation factor method for the background estimation for \ttbar, single top and W+jets, the classical method is still an important cross check method. 
 
-Actually the name (lost lepton) of the background is just interesting. On one side, lost lepton just indicates leptons are lost because of not in acceptance, not reconstructed or not isolated. On the other hand, the lost lepton is just a lost boy. The boy becomes too crazy and finally misidentified as a jet. The expected numbers of lost lepton events are categorized in the Table~\ref{tab:nexpLL}. The numbers of not accepted and not isolated for muon and electron are very similar. This is expected since we have lepton flavor symmetry among \ttbar decay channels. However, the numbers of not reconstructed muon and electron are very different. The difference comes from the nature of detector: the muons detected by muon system have higher reconstruction efficiencies than electrons in ECAL. 
+The name (lost lepton) of the background is interesting. On one hand, lost lepton indicates leptons that are lost because they are not in the acceptance, not reconstructed or not isolated. On the other hand, a lost lepton is like a lost boy. The boy becomes crazy and finally is misidentified as a jet. The expected numbers of lost lepton events are categorized in Table~\ref{tab:nexpLL}. The numbers of not accepted and not isolated events for muons and electrons are very similar. This is expected because of lepton flavor symmetry among \ttbar decay channels. However, the numbers of not reconstructed muon and electron are very different. The difference comes from the nature of detector: the muons detected by muon system have higher reconstruction efficiencies than electrons in ECAL. 
 
 \begin{table}[htbp]
 \fontsize{10 pt}{1.2 em}
@@ -19,7 +19,7 @@ electrons & $148.8\pm17.8$ & $305.2\pm25.3$ & $692.8\pm38.6$ \\
 
 \paragraph{Description of the method}
 
-The lepton identification chain is showed in the Fig~\ref{fig:llmethod}. The event will pass the lepton veto if the lepton in the event is out of acceptance, identification inefficiency or not isolated. Therefore, we can calculate the acceptance, identification and isolation efficiency in the single lepton control sample in simulation. And then, apply those efficiencies on the single lepton data sample with correct model to estimate the lost lepton yield in the search region. 
+The lepton identification chain is shown in Fig~\ref{fig:llmethod}. The event will satisfy the lepton veto if the lepton in the event is out of acceptance, not identified, or not isolated. Therefore, we can calculate the acceptance, identification and isolation efficiency in the single lepton control sample in simulation. And then, apply those efficiencies to the single lepton data sample with a model to estimate the lost lepton yield in the search region. 
 
 \begin{figure}[htbp]
 \begin{center}
@@ -29,27 +29,26 @@ The lepton identification chain is showed in the Fig~\ref{fig:llmethod}. The eve
 \label{fig:llmethod}
 \end{figure}
 
-However, the single lepton control sample can have big signal contamination for some search bins. To reduce the contamination, only the events with lepton transverse mass smaller than 100 GeV are considered. The lepton $m_{\rm T}$ is defined in the Eq.~\ref{eq:MTW}:
+However, the single lepton control sample can have a large signal contamination for some search bins, i.e., a large contribution of signal events. To reduce the contamination, only events with lepton transverse mass smaller than 100 GeV are considered. The lepton $m_{\rm T}$ is defined in Eq~\ref{eq:MTW}:
 \begin{equation}
 m_{\rm T} = \sqrt{2 p_{\rm T}(lepton) E^{\rm miss}_{\rm T} (1 - \cos(\Delta \Phi))}
 \label{eq:MTW}
 \end{equation}
-where $\Delta \Phi$ is the distance in $\Phi$ between the muon and the $\MET$. For the electroweak control sample $\MET$ originates from the neutrino, $m_{\rm T}$ represents the transverse $W$-mass ($M_{T}^{W}$), and therefore the distribution falls sharply above $80$~GeV. To compensate the loss of the cut, a correction factor is added in the lost lepton prediction model. 
+, where $\Delta \Phi$ is the distance in $\Phi$ between the muon and the $\MET$. For the electroweak control sample $\MET$ originates from the neutrino, $m_{\rm T}$ represents the transverse $W$-mass ($M_{T}^{W}$), and therefore the distribution falls sharply above $80$~GeV. To compensate for the loss in efficiency due to the $m_{\rm T}$ selection requirement, a correction factor is added in the lost lepton prediction model. 
 
-We also need to consider the events with multiple lost leptons. Here we only estimate a part of first order effect: di-muon, di-electron and one electron plut one muon events. The events with higher order are not considered. The simplification is reasonable since the correction factor is very close to 1.
+We also need to consider the events with multiple lost leptons. Here we only estimate a part of the first-order effect: di-muon, di-electron and one electron plut one muon events. Events with a higher number of leptons are not considered. The simplification is reasonable since the correction factor is very close to 1.
 
-As we mentioned in the event selection section, we add isolated track veto to reject the 1-prong hadronic tau events. An overall correction factors set binning with search bins are applied to correct the prediction. 
+As mentioned in the event selection section, an isolated track veto is used to reject 1-prong hadronic tau events. An overall correction factor is applied to account for this selection requirement. 
 
-To summarize, the predicted number of \ttbar, $W$+jets and single top events with lost leptons, $N_{LostLepton}$ contributing to the search sample can be calculated by the Eq.~\ref{eq:lostleptonequation}:
+To summarize, the predicted number of \ttbar, $W$+jets and single top events with lost leptons, $N_{LostLepton}$ contributing to the search sample can be calculated by Eq~\ref{eq:lostleptonequation}:
 
 \begin{equation}
 N_{LostLepton}= \sum_{CS} (\sum_{i={e,\mu}}({F_{ISO}}^{i}+{F_{ID}}^{i}+{F_{Acc}}^{i}) \times F_{dilepton}^{i}) \times E_{Mtw} \times \epsilon_{isotrack}
 \label{eq:lostleptonequation}
 \end{equation}
+, where $\sum_{CS}$ is the sum over the events in the control sample after the baseline selection, ${F_{ISO}}^{i}$, ${F_{ID}}^{i}$ and ${F_{Acc}}^{i}$ are factors converting the number of events in the control sample to the number of lost lepton events due to respectively isolation, reconstruction or acceptance criteria, $F_{dilepton}^{i}$ is the correction factor for the dilepton contribution, $E_{Mtw}$ is the correction factor for the $M_{T}^{W}$ selection requirement and $\epsilon_{isotrack}$ is the correction factor to compensate for the isolated track veto. The simulation based factors are described in the remainder of this section.
 
-where $\sum_{CS}$ is the sum of the events that measured directly in the control sample after baseline selection, ${F_{ISO}}^{i}$, ${F_{ID}}^{i}$ and ${F_{Acc}}^{i}$ are the factor converting the number of events in the control sample to the number of lost lepton events due to respectively isolation, reconstruction or acceptance criteria, $F_{dilepton}^{i}$ is the correction factor for dilepton contribution, $E_{Mtw}$ is the correction factor for $M_{T}^{W}$ cut and $\epsilon_{isotrack}$ is the correction factor to compensate the isolated track veto. The simulation based factors are described and evaluated in the rest of this section.
-
-The control sample is normalized up to compensate for the reduction of efficiency because of $M_{T}^{W}<100$~GeV cut, as illustrated in Table~\ref{tab:mtw} which shows the $M_{T}^{W}$ correction factors, obtained from simulation, as a function of muon $p_{T}$. 
+The control sample is normalized to compensate for the reduction of efficiency because of the $M_{T}^{W}<100$~GeV requirement, as illustrated in Table~\ref{tab:mtw}, which shows the $M_{T}^{W}$ correction factors, obtained from simulation, as a function of muon $p_{T}$. 
 
 \begin{table}[htbp]
 \fontsize{10 pt}{1.2 em}
@@ -84,7 +83,7 @@ The isolation and reconstruction efficiencies as well as the acceptance are obta
 \label{eq:activity}
 \end{equation}
 
-The lepton isolation and reconstruction efficiencies are analysis independent. Therefore, they are calculated without baseline cut. They are shown in Figs~\ref{fig:muoneffiso},~\ref{fig:eleeffiso},~\ref{fig:muoneffreco} and~\ref{fig:eleeffreco}.
+The lepton isolation and reconstruction efficiencies are analysis independent. Therefore, they are calculated without the baseline selection. They are shown in Figs~\ref{fig:muoneffiso},~\ref{fig:eleeffiso},~\ref{fig:muoneffreco} and~\ref{fig:eleeffreco}.
 
 \begin{figure}[hptb]
 \begin{center}
@@ -127,10 +126,10 @@ are shown.}
 \label{fig:eleeffreco}
 \end{figure}
 
-Another multiplicative factor to $N_{CS}$ originates from leptons which 
+Another multiplicative factor to number of control region events originates from leptons that 
 are out of acceptance. Such events occur when leptons have a transverse 
 momentum below the lepton veto $p_{T}$ threshold or when leptons are emitted in 
-the forward region with an out-of-acceptance $|\eta|$. %, or when electrons are emitted in the transition reigion.
+the forward region outside the $\eta$ acceptance. %, or when electrons are emitted in the transition reigion.
 For example, leptons from leptonic-tau decays tend to have low 
 momentum as well as neutrinos that contribute to the event \MET. 
 This ${F_{Acc}}^{e/\mu}$ factor is modeled according to the following equation:
@@ -140,7 +139,7 @@ This ${F_{Acc}}^{e/\mu}$ factor is modeled according to the following equation:
 \end{equation}
 The acceptance efficiencies are derived for each search bin 
 from \ttbar and W$+$jets simulated events,
-selected following the baseline criteria. 
+selected using the baseline criteria. 
 They are shown in Fig~\ref{fig:acceptance}.
 
 \begin{figure}[hptb]
@@ -153,10 +152,9 @@ search bins. Only the statistical uncertainties are shown.}
 \end{figure}
 
 The \ttbar samples include both semileptonic/dileptonic "inclusive" samples and HT-binned samples.
-The \ttbar inclusive samples have the largest weight when we combine simulation samples together.
-However, the \ttbar inclusive samples have extremely low statistic in some bins and they dramatically influence the efficiences.
-So we set a criteria in acceptance and iso track veto efficiences calculation that if \ttbar inclusive events $<$ 5 in a bin,
-we calculate acc and iso track veto eff of that bin with only HT samples.
+The \ttbar inclusive samples have the largest weight when the samples are combined.
+However, the \ttbar inclusive samples have very few events in some bins, which dramatically influences the efficiences.
+We therefore set a criterion in the acceptance and isolated track efficiency calculations that if there are less than five events in a search bin, the acceptance and isolated track efficiencies are calculated for that bin using only the HT-binned samples.
 
 Dilepton events may also contribute to the background if both leptons are lost.
 In the muon control sample, there are dilepton events that contribute 
@@ -173,7 +171,7 @@ muon and one lost muon.
 \item $2\epsilon_{\mu}(1-\epsilon_{e})$ events with one muon and one 
 lost electron.
 \end{itemize}
-To these events we apply a $(1-\epsilon_{\mu})/\epsilon_{\mu}$ factor to
+For these events we apply a $(1-\epsilon_{\mu})/\epsilon_{\mu}$ factor to
 predict the number of events with  
 lost muons and  $(1-\epsilon_{e})/\epsilon_{\mu}$ to predict the
 number of lost electrons.
@@ -195,15 +193,15 @@ simulated \ttbar, single top and W$+$jets events as the ratio between the number
 with one or two lost leptons over the number of events with one lost 
 lepton plus twice the number of events with two lost lepton. 
 Separate correction factors are applied,  
-$F_{dilepton}^{\mu}$=$99.4\pm0.7$ for muons and 
-$F_{dilepton}^{e}$=$97.1\pm0.9$ for electrons.
+$F_{dilepton}^{\mu}$=$ (99.4\pm0.7)\% $ for muons and 
+$F_{dilepton}^{e}$=$ (97.1\pm0.9)\% $ for electrons.
 
-The purity of the electron control sample has been measured in simulation and found to be $0.96\pm0.01$. The purity of the muon control sample is assume to be 1.
+The purity of the electron control sample is measured in simulation and found to be $0.96\pm0.01$. The purity of the muon control sample is assumed to be 1.
 
 Finally, the isolated track veto efficiency factor is applied in 
-Eq.~\ref{eq:lostleptonequation}
+Eq~\ref{eq:lostleptonequation}
 to get the final number of predicted lost lepton background events.
-The isolated track veto efficiency is computed from simulation events 
+The isolated track veto efficiency is computed from simulated events 
 for each search bin and shown in Fig~\ref{fig:isotrackeff}.
 
 \begin{figure}[htbp]
@@ -216,9 +214,9 @@ for each search bin and shown in Fig~\ref{fig:isotrackeff}.
 
 \paragraph{Closure Test}
 Closure tests have been performed using \ttbar, single top and W$+$jets Monte Carlo samples. The prediction, i.e. the number of events obtained using the lost lepton 
-method explained in the previous section is compared with the expectation, i.e. the true number of Monte Carlo simulated events with one or two lost leptons (coming from the $W$ from top decay). 
+method explained in the previous section is compared with the expectation, i.e. the true number of Monte Carlo simulated events with one or two lost leptons (coming from the $W$ boson produced in top quark decays). 
 
-The results of the closure test are demonstrated in the Fig~\ref{fig:closureSBisotrk}. The expectation/prediction disagreements will be propagate into the systematic uncertainty, which is a major uncertainty in the lost lepton background estimation.
+The results of the closure test are shown in Fig~\ref{fig:closureSBisotrk}. The expectation/prediction disagreements are propagated into the systematic uncertainty, and is the major uncertainty in the lost lepton background estimation.
 
 \begin{figure}[htbp]
 \begin{center}
@@ -237,33 +235,33 @@ The following systematic uncertainties are included for the lost lepton backgrou
 
 \begin{itemize}
 \item Lepton isolation efficiency:\\
-  The muon and electron isolation efficiencies are obtained from simulated events. In order to estimate how well data and simulation agree, Tag-and-Probe efficiencies on the Z resonance from data and simulation are used which are provided by the SUSY lepton scale-factor group. The maximum between the uncertainty obtained with the Tag-and-Probe comparing Data and simulation and the uncertainty on this value is used.
-  Since no systematic bias becomes visible,
-  no correction based on data/simulation scaling factors is introduced, we are only taking this into account with the systematic uncertainty obtained by propagating the SUSY lepton scale-factor group numbers.
-  In addition the statistical uncertainty of the simulation efficiencies are
+  The muon and electron isolation efficiencies are obtained from simulated events. In order to estimate how well data and simulation agree, Tag-and-Probe efficiencies on the Z resonance from data and simulation are used, which are provided by the SUSY lepton scale-factor group. The maximum between the uncertainty obtained with the Tag-and-Probe comparing Data and simulation and the uncertainty on this value is used.
+  Since no systematic bias is visible,
+  no correction based on data/simulation scaling factors is introduced, and we merely take into account the systematic uncertainty obtained by propagating the SUSY lepton scale-factor group numbers.
+  In addition the statistical uncertainty in the simulation efficiencies are
   propagated the same way as the Tag-and-Probe uncertainty.
   \item Lepton reconstruction/ID efficiency:\\
   The muon and electron reconstruction and ID efficiencies are obtained from simulated events. The main uncertainty here arises
   from possible differences between efficiencies obtained from data and simulation. By examining the reconstruction efficiencies as a function of the search variables it seems to be reasonable that using some inclusive efficiencies also provided by the SUSY lepton scale-factor groups are sufficient for deriving data/simulation uncertainties (same procedure as above). Furthermore, the statistical uncertainties from simulation are propagated.
 \item Lepton acceptance:\\
-  The uncertainty of the acceptance efficiency consists of the uncertainty
+  The uncertainty in the acceptance efficiency consists of the uncertainty
   in the parton distribution functions (PDF), the simulation renormalization/factorization scale
   and the uncertainty arising from the statistical precision of the efficiency maps.
-  The PDF uncertainties is studied by varying PDF sets used to produce the
-  simulation samples, according to their uncertainties for the baseline selection.
+  The PDF uncertainties are studied by varying the PDF sets used to produce the
+  simulation samples, according to their uncertainties in the baseline selection.
 \item Control sample purity:\\
-The purity is expected to be very high ($>99\%$) so this only leads to a minor systematic uncertainty and a conservative uncertainty of 20\% on the impurity (which is 1-purity and $<1\%$) is assigned. Furthermore, the statistical uncertainties from simulation are propagated.
+The purity is expected to be very high ($>99\%$) so this only leads to a minor systematic uncertainty and a conservative uncertainty of 20\% on the impurity is assigned. Furthermore, the statistical uncertainties from simulation are propagated.
 \item Dilepton correction:\\
 Both dileptonic corrections are only minor compared to the remaining ones so a conservative systematic uncertainty is assigned here.
 An uncertainty of 50\% is assigned on the number of di-leptonic events. Furthermore, the statistical uncertainties from simulation are propagated.
 \item $M_T$ cut efficiency:\\
-  The uncertainty associated with the \MT cut consists of two parts: the statistical uncertainty of the efficiency map from simulation and a systematic uncertainty. For the latter, the uncertainty on the jet energy corrections (JEC) is propagated to \MET (following the latest recommendations of the MET group) and the efficiency of the $M_T$ cut is recalculated. Following this procedure, a conservative uncertainty of 1\% is assigned as a systematic uncertainty. 
+  The uncertainty associated with the \MT cut consists of two parts: the statistical uncertainty in the efficiency map from simulation and a systematic uncertainty. For the latter, the uncertainty in the jet energy corrections (JEC) is propagated to \MET (following the latest recommendations of the MET group) and the efficiency of the $M_T$ cut is recalculated. Following this procedure, a conservative uncertainty of 1\% is assigned as a systematic uncertainty. 
 \item Isolated-track vetoes:\\
   The isolated-track vetoes lead to a reduction of about 40\%
   of the lost lepton background. Due to the size of this reduction,
-  it is important to study the validity of the efficiency maps. A detailed study has been performed in the context of the RA2 analysis~\cite{Sirunyan:2017cwe} comparing Tag-and-Probe efficiencies on the Z resonance from data and simulation. This study has shown that a systematic uncertainty of 10\% is a conservative estimate for the systematic uncertainty on the number of events removed by the isolated track veto.
+  it is important to study the validity of the efficiency maps. A detailed study has been performed in the context of the RA2/b analysis~\cite{Sirunyan:2017cwe} comparing Tag-and-Probe efficiencies on the Z resonance from data and simulation. This study has shown that a systematic uncertainty of 10\% is a conservative estimate for the systematic uncertainty on the number of events removed by the isolated track veto.
 \item simulation closure:\\
-Furthermore, an uncertainty on the precision of the simulation closure test is assigned. Since no true non-closure is observed (see Fig~\ref{fig:closureSBisotrk}) the larger value of the non-closure or the stat. uncertainty on non-closure is assigned for each bin. 
+Furthermore, an uncertainty in the precision of the simulation closure test is assigned. Since no true non-closure is observed (see Fig~\ref{fig:closureSBisotrk}) the larger value of the non-closure or the statistical uncertainty in the non-closure is assigned for each bin. 
 \end{itemize}
 
 The source and contribution of the different components of the lost lepton method systematic uncertainties are shown in Table~\ref{tab:systematics}.
@@ -307,10 +305,10 @@ Total	& & 13\% to 143\% & 12\% to 131\% \\
 
 \paragraph{Lost Lepton background prediction}
 
-The lost lepton method is applied to collider data event samples (collected with the search triggers) corresponding to an integrated luminosity of $35.9$~fb$^{-1}$. The final predictions for all search bins are shown in Fig~\ref{fig:LostLeptonResult_mu} and Fig~\ref{fig:LostLeptonResult_el} (red points) and listed from Table~\ref{tab:LLpredmu1} to Table~~\ref{tab:LLpredel3} for both muon and electron channels.
+The lost lepton method is applied to data event samples (collected with the search triggers) corresponding to an integrated luminosity of $35.9$~fb$^{-1}$. The final predictions for all search bins are shown in Figs~\ref{fig:LostLeptonResult_mu} and \ref{fig:LostLeptonResult_el} (red points) and listed in Tables~\ref{tab:LLpredmu1}-\ref{tab:LLpredel3} for both the muon and electron channels.
 
 Applying the procedure indicated by Eq.~\ref{eq:lostleptonequation}, each event in the control sample is weighted by the various efficiencies. 
-Few bins have zero predicted events. In that case the statistical uncertainty is computed as the upper bound of the statistical uncertainty on 0 given by the Garwood interval (1.8) multiplied by the average translation factor to go from a raw number of events to the prediction. This poisson uncertainty is treated in the Higgs combination tool using a gamma function~\cite{HiggsCombine,cms-note-2011-005}.
+A few bins have zero predicted events. In that case the statistical uncertainty is computed as the upper bound of the statistical uncertainty on 0 given by the Garwood interval (1.8) multiplied by the average translation factor to go from a raw number of events to the prediction. This Poisson uncertainty is treated in the Higgs combination tool using a gamma function~\cite{HiggsCombine,cms-note-2011-005}.
 
 \begin{figure}[hptb]
 \begin{center}
@@ -752,4 +750,4 @@ Search Bin & \ntops & \nbjets & \MTTwo [GeV] & \MET [GeV] & Lost Lepton Predicti
 \par\end{centering}
 \end{table}
 
-Fig~\ref{fig:LostLeptonResult_mu} and Fig~\ref{fig:LostLeptonResult_el} also show the comparison of the lost lepton background prediction between this method and the TF method. The first figure shows the prediction from muon CS and the second figure shows the results from electron CS. As we can see both methods have good agreement within uncertainties. This is a good cross-check of the important background.
+Figures~\ref{fig:LostLeptonResult_mu} and \ref{fig:LostLeptonResult_el} also show the comparison of the lost lepton background prediction between this method and the TF method. The first figure shows the prediction from the muon CS and the second figure shows the results from electron CS. As seen, both methods provide good agreement within the uncertainties. Thus the lost-lepton method provides a good cross-check of this important background.
