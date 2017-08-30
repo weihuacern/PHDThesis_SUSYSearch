@@ -50,9 +50,11 @@ We design an overlap remove algorithm to avoid double counting jet energy in the
 A multivariate analysis is applied to separate signal top quarks from background for candiates in the trijet category. There are two key elements in the multi-variable algorithm design: input variables and the algorithm itself. 
 
 %FIXME
-In general, we have two input variables types: the high-level physics variables, like jet $p_{T}$, and base level physics variable, like particle flow candidate, and calorimeter pixels. The algorithm choosing is dependent on the input variables. For example, the high-level variables are more suited for the decision tree based algorithm, while base level variables prefer neutral network. 
 
-We choose the high-level physics variables and decision tree based algorithm in our analysis. 
+To identify a top quark jet, we have two set of variables for choice. The first set is on the particle candidate level. The $p_{T}, \eta, \phi$ can be used as training variables. However, there are about 400 particle-flow candidates in the tri-jet cone (R=1.5). The convolutional neural network\cite{NIPS2012_4824} (CNN) might be a good algorithm to deal with the classification problem with that amount of features in one top quark candidate. However, the CNN training is very time consuming and it is not a commonly used method in experimental high-energy physics for now. Therefore, we choose the second set: three-jet combination. There are only about 10 features per event, therefore relatively quick to be trained with a decision based algorithm. Several multivariate algorithms are applied on the simulation sample. The random forest algorithm\cite{Ho:1995:RDF:844379.844681} is used as the identification algorithm.
+
+%In general, we have two input variables types: the high-level physics variables, like jet $p_{T}$, and base level physics variable, like particle flow candidate, and calorimeter pixels. The algorithm choosing is dependent on the input variables. For example, the high-level variables are more suited for the decision tree based algorithm, while base level variables prefer neutral network. 
+%We choose the high-level physics variables and decision tree based algorithm in our analysis. 
 
 All three-jet combinations are potential top quark candidates. The following variables are considered in the algorithm: 
 \begin{itemize}
