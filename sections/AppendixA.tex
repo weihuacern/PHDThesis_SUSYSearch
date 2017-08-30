@@ -2,7 +2,7 @@
 \clearpage
 \section{Quark-gluon discriminator study}
 
-The $p_{t}D$ in terms of jet $\eta$ in different jet flavors is showed in Fig~\ref{fig:c4ttqgptdjeteta}.
+The $p_{t}D$ in terms of jet $\eta$ in different jet flavors is shown in Fig~\ref{fig:c4ttqgptdjeteta}.
 \begin{figure}[htbp]
  \begin{center}
   \includegraphics[width=0.45\textwidth]{sections/mc4/TopTagger/figures/_b_qgptdjetetabin0_.png}
@@ -16,7 +16,7 @@ The $p_{t}D$ in terms of jet $\eta$ in different jet flavors is showed in Fig~\r
  \label{fig:c4ttqgptdjeteta}
 \end{figure}
 
-The $p_{t}D$ in terms of jet $p_{T}$ in different jet flavors is showed in Fig~\ref{fig:c4ttqgptdjetpt}.
+The $p_{t}D$ in terms of jet $p_{T}$ in different jet flavors is shown in Fig~\ref{fig:c4ttqgptdjetpt}.
 \begin{figure}[htbp]
  \begin{center}
   \includegraphics[width=0.45\textwidth]{sections/mc4/TopTagger/figures/_b_qgptdjetptbin0_.png}
@@ -30,7 +30,7 @@ The $p_{t}D$ in terms of jet $p_{T}$ in different jet flavors is showed in Fig~\
  \label{fig:c4ttqgptdjetpt}
 \end{figure}
 
-The multiplicity in terms of jet $\eta$ in different jet flavors is showed in Fig~\ref{fig:c4ttqgmultjeteta}.
+The multiplicity in terms of jet $\eta$ in different jet flavors is shown in Fig~\ref{fig:c4ttqgmultjeteta}.
 \begin{figure}[htbp]
  \begin{center}
   \includegraphics[width=0.45\textwidth]{sections/mc4/TopTagger/figures/_b_qgmultjetetabin0_.png}
@@ -44,7 +44,7 @@ The multiplicity in terms of jet $\eta$ in different jet flavors is showed in Fi
  \label{fig:c4ttqgmultjeteta}
 \end{figure}
 
-The multiplicity in terms of jet $p_{T}$ in different jet flavors is showed in Fig~\ref{fig:c4ttqgmultjetpt}.
+The multiplicity in terms of jet $p_{T}$ in different jet flavors is shown in Fig~\ref{fig:c4ttqgmultjetpt}.
 \begin{figure}[htbp]
  \begin{center}
   \includegraphics[width=0.45\textwidth]{sections/mc4/TopTagger/figures/_b_qgmultjetptbin0_.png}
@@ -58,7 +58,7 @@ The multiplicity in terms of jet $p_{T}$ in different jet flavors is showed in F
  \label{fig:c4ttqgmultjetpt}
 \end{figure}
 
-The Axis2 in terms of jet $\eta$ in different jet flavors is showed in Fig~\ref{fig:c4ttqgaxis2jeteta}.
+The Axis2 in terms of jet $\eta$ in different jet flavors is shown in Fig~\ref{fig:c4ttqgaxis2jeteta}.
 \begin{figure}[htbp]
  \begin{center}
   \includegraphics[width=0.45\textwidth]{sections/mc4/TopTagger/figures/_b_qgaxis2jetetabin0_.png}
@@ -72,7 +72,7 @@ The Axis2 in terms of jet $\eta$ in different jet flavors is showed in Fig~\ref{
  \label{fig:c4ttqgaxis2jeteta}
 \end{figure}
 
-The Axis2 in terms of jet $p_{T}$ in different jet flavors is showed in Fig~\ref{fig:c4ttqgaxis2jetpt}.
+The Axis2 in terms of jet $p_{T}$ in different jet flavors is shown in Fig~\ref{fig:c4ttqgaxis2jetpt}.
 \begin{figure}[htbp]
  \begin{center}
   \includegraphics[width=0.45\textwidth]{sections/mc4/TopTagger/figures/_b_qgaxis2jetptbin0_.png}
@@ -98,4 +98,85 @@ The Event with two reconstructed top jets are demonstrated in Fig~\ref{fig:apptt
 \end{figure}
 
 \clearpage
-\section{Aggregate search bin, simplified top tagger and results}
+\section{Simplified top tagger, aggregate search bin and results}
+
+Simplified top tagger and 10 aggregate search bins are defined to simplify the use of our data. We drop the quark gluon discriminator, therefore theorist can repeat our tagging algorithm. As given in Table~\ref{tab:aggBinDescrption}, the aggregate search bins are not exclusive. The first four aggregate regions represent topologies of general interest. The fifth and sixth are sensitive to direct top squark pair production. The seventh region targets the large $\Delta M(\gluino,\chiOneZero)$ region of T5ttcc-like models, while the final three target events with a large number of top quarks such as are produced in the T1tttt and T5tttt models.
+
+\begin{table}[htb]
+\centering
+  \caption{Definition of the aggregate search regions.}
+\label{tab:aggBinDescrption}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{cccccc}
+\hline
+Region & \ntops & \nbjets & \MTTwo [GeV] & \MET [GeV] & Motivation \\
+\hline
+1  & $\geq1$     & $\geq1$      & $\geq200$       & $\geq250$        & Events satisfying selection criteria      \\
+2  & $\geq2$     & $\geq2$      & $\geq200$       & $\geq250$        & Events with $\ntops \ge 2$ and $\nbjets \ge 2$  \\
+3  & $\geq3$     & $\geq1$      & $\geq200$       & $\geq250$        & Events with $\ntops \ge 3$ and $\nbjets \ge 1$  \\
+4  & $\geq3$     & $\geq3$      & $\geq200$       & $\geq250$        & T5tttt ; small $\Delta M(\gluino,\chiOneZero)$ and $m_{\chiOneZero}<m_{t}$     \\
+5  & $\geq2$     & $\geq1$      & $\geq200$       & $\geq400$        & T2tt ; small $\Delta M(\sTop,\chiOneZero)$      \\
+6  & $\geq1$     & $\geq2$      & $\geq600$       & $\geq400$        & T2tt ; large $\Delta M(\sTop,\chiOneZero)$      \\
+\hline
+Region & \ntops & \nbjets & \HT [GeV] & \MET [GeV] & Motivation \\
+\hline
+7  & $\geq1$     & $\geq2$      & $\geq1400$      & $\geq500$        & T1ttbb \& T5ttcc ; large $\Delta M(\gluino,\chiOneZero)$    \\
+8  & $\geq2$     & $\geq3$      & $\geq600$       & $\geq350$        & T1tttt ; small $\Delta M(\gluino,\chiOneZero)$    \\
+9  & $\geq2$     & $\geq3$      & $\geq300$       & $\geq500$        & T1/T5tttt \& T1ttbb ; intermediate $\Delta M(\gluino,\chiOneZero)$    \\
+10 & $\geq2$     & $\geq3$      & $\geq1300$      & $\geq500$        & T1/T5tttt ; large $\Delta M(\gluino,\chiOneZero)$    \\
+\hline
+\end{tabular}
+\end{table}
+
+The aggregate search bin results are shown in Fig~\ref{fig:aggSearchBinResults} and Table~\ref{tab:agg_sb_obs_pred}, using the same background estimation methods mentioned in this thesis.
+
+\begin{figure}[htb]
+  \begin{center}
+  \begin{tabular}{cc}
+  \includegraphics[angle=0,width=0.9\textwidth]{figures/appendix/aggregatedSearchBins.pdf}
+  \end{tabular}
+  \caption{
+  Observed event yields (black points)
+  and predicted SM background (filled solid areas)
+  for the 10 aggregate search regions.
+  The lower panel shows the ratio of the data to
+  the total background prediction.
+  The hatched bands correspond to the total uncertainty in the
+  background prediction.
+   }
+    \label{fig:aggSearchBinResults}
+  \end{center}
+\end{figure}
+
+\begin{table}[htb]
+\centering
+\caption{
+The observed number of events and the total background prediction
+for the aggregate search regions.
+The first uncertainty in the background prediction is
+statistical and the second is systematic.
+}
+\label{tab:agg_sb_obs_pred}
+\renewcommand{\arraystretch}{1.30}
+ \begin{tabular}{cccccccccccc}
+  \hline
+     Search region &  \ntops &    \nbjets &   \MTTwo [GeV] &     \MET [GeV]  & Data & Predicted background \\
+  \hline
+    1 &  $\geq 1$ &   $\geq 1$ &   $\geq 200$ &   $\geq 250$  &  4424 &   $4100\pm 50^{ +390}_{ -340}$ \\
+    2 &  $\geq 2$ &   $\geq 2$ &   $\geq 200$ &   $\geq 250$  &   124 &   $116\pm 8^{  +15} _{  -12}$ \\
+    3 &  $\geq 3$ &   $\geq 3$ &   $\geq 200$ &   $\geq 250$  &     0 &   $0.5^{ +1.4} _{ -0.4}\pm 0.5$ \\
+    4 &  $\geq 3$ &   $\geq 1$ &   $\geq 200$ &   $\geq 250$  &     2 &   $3.3^{ +2.0} _{ -1.1}$ $^{ +1.2} _{ -1.1}$ \\
+    5 &  $\geq 2$ &   $\geq 1$ &   $\geq 200$ &   $\geq 400$  &    41 &   $30^{   +4} _{   -3}$ $^{   +5} _{   -4}$ \\
+    6 &  $\geq 1$ &   $\geq 2$ &   $\geq 600$ &   $\geq 400$  &     4 &   $7.5^{ +2.1} _{ -1.2}$ $^{ +2.0} _{ -1.9}$ \\
+  \hline
+     Search region &  \ntops &    \nbjets &   \HT [GeV] &     \MET [GeV]  &  Data & Predicted background \\
+  \hline
+    7 &  $\geq 1$ &   $\geq 2$ &   $\geq 1400$ &  $\geq 500$  &     6 &   $6.0^{ +2.7} _{ -1.5}\pm 1.5$ \\
+    8 &  $\geq 2$ &   $\geq 3$ &   $\geq 600$  &  $\geq 350$  &     7 &   $3.9^{ +2.1} _{ -1.2}\pm 0.9$ \\
+    9 &  $\geq 2$ &   $\geq 3$ &   $\geq 300$  &  $\geq 500$  &     0 &   $0.6^{ +1.0} _{ -0.4}\pm 0.4$ \\
+   10 &  $\geq 2$ &   $\geq 3$ &   $\geq 1300$ &  $\geq 500$  &     0 &   $0.2^{ +1.8} _{ -0.3}\pm 0.2$ \\
+  \hline
+ \end{tabular}
+\end{table}
+
+
