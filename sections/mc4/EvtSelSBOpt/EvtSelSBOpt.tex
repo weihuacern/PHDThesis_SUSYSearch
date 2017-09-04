@@ -228,7 +228,7 @@ Since the top squark is produced in pairs and each top squark decays to a top qu
 The two jets with highest $p_{T}$ are required to have $p_{T}>$50 GeV since SUSY predicts centrally produced jets with 
 high $p_{T}$.
 
-\item \MET $\ge$ 250 GeV, where we use the type1-corrected PFmet, using the Summer16\_23Sep2016V3 jet energy corrections and the selection threshold is constrained by trigger efficiency requirements.
+\item \MET $\ge$ 250 GeV, where we use the type1-corrected particle-flow \MET, with the jet energy corrections (Summer16\_23Sep2016V3). The selection threshold is constrained by trigger efficiency requirements.
 
 \item \MTTwo $\ge$ 200 GeV, which is mainly used to reduce SM background events with low value of \MTTwo. The \MTTwo variable works especially well for the \ttbar events, where the \MTTwo shows a kinematic edge around the top quark mass.
 
@@ -503,7 +503,9 @@ Monte Carlo samples of SM processes reconstructed with CMSSW release 8.0 (Summer
 \centering
 \caption{Standard model Monte Carlo samples used in the analysis.}
 \label{tab:MCsamples1}
-{\footnotesize
+{
+%\scriptsize
+\footnotesize
 \begin{tabular}{lcc}
 \hline \hline
 Dataset & $\sigma$ (pb) \\
@@ -546,7 +548,9 @@ WJetsToLNu\_HT-2500ToInf\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 0.037 \\
 \centering
 \caption{Standard model Monte Carlo samples used in the analysis.}
 \label{tab:MCsamples2}
-{\footnotesize
+{
+%\scriptsize
+\footnotesize
 \begin{tabular}{lcc}
 \hline \hline
 Dataset & $\sigma$ (pb) \\
@@ -559,7 +563,7 @@ ZJetsToNuNu\_HT-600ToInf\_13TeV-madgraph & 5.170 \\
 ZJetsToNuNu\_HT-600To800\_13TeV-madgraph & 3.146 \\
 ZJetsToNuNu\_HT-800To1200\_13TeV-madgraph & 1.453 \\
 ZJetsToNuNu\_HT-1200To2500\_13TeV-madgraph & 0.359 \\
-ZJetsToNuNu\_HT-2500ToInf\_13TeV-madgraph & 0.008487 \\
+ZJetsToNuNu\_HT-2500ToInf\_13TeV-madgraph & 0.0085 \\
 \hline
 \multicolumn{2}{c}{SM \zll MC samples} \\ \hline
 DYJetsToLL\_M-50\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 6025 \\
@@ -569,11 +573,11 @@ DYJetsToLL\_M-50\_HT-400to600\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 6.984 \
 DYJetsToLL\_M-50\_HT-600to800\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 1.676 \\
 DYJetsToLL\_M-50\_HT-800to1200\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 0.831 \\
 DYJetsToLL\_M-50\_HT-1200to2500\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 0.143 \\
-DYJetsToLL\_M-50\_HT-2500toInf\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 0.00319 \\
+DYJetsToLL\_M-50\_HT-2500toInf\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 0.0032 \\
 \hline
 \multicolumn{2}{c}{SM single-top MC samples} \\ \hline
-ST\_tW\_antitop\_5f\_inclusiveDecays\_13TeV-powheg-pythia8\_TuneCUETP8M1 & 35.80 (NLO) \\
-ST\_tW\_top\_5f\_inclusiveDecays\_13TeV-powheg-pythia8\_TuneCUETP8M1 & 35.80 (NLO) \\
+ST\_tW\_antitop\_5f\_inclusiveDecays\_13TeV-powheg-pythia8\_TuneCUETP8M1 & 35.80\\
+ST\_tW\_top\_5f\_inclusiveDecays\_13TeV-powheg-pythia8\_TuneCUETP8M1 & 35.80\\
 \hline
 \multicolumn{2}{c}{SM diboson and other rare process MC samples} \\ \hline
 ttHJetTobb\_M125\_13TeV\_amcatnloFXFX\_madspin\_pythia8 & 0.293 \\
