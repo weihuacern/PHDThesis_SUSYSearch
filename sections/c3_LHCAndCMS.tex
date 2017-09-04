@@ -391,8 +391,9 @@ Tracks are detected by inner silicon detector signals and form the basis of the 
 \begin{itemize}
 \item Vertex reconstruction: The vertexes in proton-proton collisions can be reconstructed from the intersecting point of tracks. However, there can be multiple vertexes in an event because the pile up effect. 
 
-%FIXME
-The vertex with the maximum sum of the square of the $p_{T}$ of all the associated tracks is identified as the primary vertex. 
+%Run 1
+%The vertex with the maximum sum of the square of the $p_{T}$ of all the associated tracks is identified as the primary vertex. 
+The reconstructed vertex with the largest value of summed physics-object $p_{T}^2$ is taken to be the primary proton-proton interaction vertex. The physics objects are the objects returned by a jet finding algorithm~\cite{Cacciari:2008gp,Cacciari:2011ma} applied to all charged tracks associated with the vertex, plus the corresponding associated missing transverse momentum.
 
 We also reconstruct secondary vertices, i.e., vertices displaced from the beam line, which can indicate the positions of the decay of long-lived particles. Secondary vertex information is very important for b-jet identification.
 \item Momentum measurement: The CMS inner silicon system has a high resolution in the track momentum measurement thanks to the strong magnetic field (3.8 T). The jet $p_{T}$ measurement benefits from the high precision track momentum with the particle flow algorithm. More details are covered in the jet reconstruction section.
