@@ -135,13 +135,14 @@
 \newcommand{\specialcell}[2][c]{\begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
 %\usepackage{amsthm}
 %\usepackage[sumlimits]{amsmath}
-\usepackage[page,header]{appendix}
+\usepackage[title,toc,titletoc,page,header]{appendix}
+%\usepackage[titletoc]{appendices}
 \usepackage{lipsum}
 %make sure the hyperref is the last package loaded
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=black,bookmarksopen=true]{hyperref}
 
-\setcounter{secnumdepth}{3}
-\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
 
 \newtheorem{theorem}{Theorem}
 \newtheorem{acknowledgement}[theorem]{Acknowledgement}
