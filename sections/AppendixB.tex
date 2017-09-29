@@ -2,7 +2,13 @@
 \clearpage
 
 \section{HCAL logical map}
+HCAL Logical map has been described in detail in the HCAL section in chapter 3. The HCAL map validation plots are listed here in different period and various sub-detectors. The FrontEnd electronics variables are the based coordinates that used in the validation plots. The validation plots are separated into 2 categories: BackEnd variables in FrontEnd coordinates and Geometry variables in FrontEnd coordinates. A complete FrontEnd coordinates set has 4 variables, RBX (readout box), RM (readout module), RM fibers and fiber channel for HB, HE and HO. HF is special since it does have RM (readout module). HF FrontEnd can be described by RBX, QIE10 slot, QIE10 fiber and fiber channel. BackEnd and Geometry variables will be described separately in the following sections.
+\clearpage
+
 \subsection{Remapped phase 1 HB in 2018}
+The 2018 HB is still in HPD+QIE8 FrontEnd+uTCA BackEnd stage. We are in this hardware setting since 2016. However, HE will be upgraded to SiPM+QIE11 FrontEnd+uTCA BackEnd with more readout channels. Then the patch panels need to be reorganized since HB and HE share the same BackEnd electronics. The remapped 2018 HB is followed by the design from Richard Kellogg, coordinated with Jeremy Mans on the requirement of trigger sum algorithm in BackEnd firmware. 
+
+The validation plots of remapped HB in 2018 are showed from Fig~\ref{fig:lmapHBPEtaFEC} to Fig~\ref{fig:lmapHBMuHTRFIFEC}. There are 2592 readout channels in total for remapped HB (same as 2016 HB, before remap). In order to satisfy the trigger latency requirement, the frontend channel permutation is applied in this map. HB BackEnd electronics are still in uTCA, 12 uHTR in one crate, 24 out going fibers per uHTR card, with 3 channels per fiber. 
 \clearpage
 
 \begin{figure}[htb]
