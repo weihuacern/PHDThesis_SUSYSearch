@@ -144,6 +144,9 @@ The validation plots of remapped HB in 2018 are showed from Fig~\ref{fig:lmapHBP
 \clearpage
 
 \subsection{Phase 2 HB in 2020}
+The 2018 HB will be replaced and move to SiPM+QIE11 FrontEnd+uTCA BackEnd stage in 2020, during the long shutdown 2. A complicate swap scheme is applied inside the FrontEnd board to satisfy the trigger latency requirement. Fortunately, thanks to Dick’s elegant design, we do not need to unplug HE fibers from patch panel to fit in the new 2020 HB.
+
+The phase 2 2020 HB validation plots are shown from Fig~\ref{fig:lmapngHBPEtaFEC} to Fig~\ref{fig:lmapngHBMuHTRFIFEC}. There are 9216 readout channels. 9072 channels are physical readout channel, corresponding to actual tower and layer on detector. 144 of them are dummy calibration channels, which are readout by FrontEnd with no corresponding detector components. Those dummy calibration channels are labeled as "HBX" channels. HBX channels are distributed among 144 HB readout modules, but only on two locations: RM fiber 2 fiber channel 2 and RM fiber 3 fiber channel 6. BackEnd electronics are still in 12 uHTR and 24 uHTR fibers, but number of fiber channels per fiber is increased from 3 to 8, to accommodating more readout channels, comparing with 2018 remapped HB.
 \clearpage
 
 \begin{figure}[htb]
@@ -279,6 +282,9 @@ The validation plots of remapped HB in 2018 are showed from Fig~\ref{fig:lmapHBP
 \clearpage
 
 \subsection{Phase 1 HE in 2018}
+The 2018 HE is in SiPM+QIE11 FrontEnd+uTCA BackEnd stage. HE mapping algorithm is always more complicate than HB due to the tricky geometry structure in detector coordinates. Comparing to 2016 HE with QIE8, no swap trick inside the FrontEnd board is applied in 2018 HE. This indeed increases the difficulty for the firmware expert to pin down the latency within L1 trigger requirement. 
+
+The phase 1 2018 HE validation plots are shown from Fig~\ref{fig:lmapngHEPEtaFEC} to Fig~\ref{fig:lmapngHEMuHTRFIFEC}. There are 6912 readout channels. 6768 channels are physical readout channel, corresponding to actual tower and layer on detector. 144 of them are dummy calibration channels, which are readout by FrontEnd with no corresponding detector components. Those dummy calibration channels are labeled as “HEX” channels. HEX channels are distributed among 144 HE readout modules, on four different locations: RM fiber 2 fiber channel 1, RM fiber 3 fiber channel 6, RM fiber 5 fiber channel 5 and RM fiber 7 fiber channel 1. BackEnd electronics are still in 12 uHTR and 24 uHTR fibers, but number of fiber channels per fiber is increased from 3 to 6, to accommodating more readout channels, comparing with 2016 HE.
 \clearpage
 
 \begin{figure}[htb]
