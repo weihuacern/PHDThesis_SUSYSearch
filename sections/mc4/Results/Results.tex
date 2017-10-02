@@ -24,11 +24,11 @@ The b term is the expected number of background events from all sources. We trea
 
 \begin{equation}
  \begin{aligned}
-  L(\mu,b)= \frac{(\mu s+b)^{n}}{n!}e^{-(\mu s+b)} \prod_{k=1}^{M}\frac{b_{k}^{m_{k}}}{m_{k}!}e^{-b_{k}}
+	 L(\mu,b)= \prod_{i=1}^{N} \frac{(\mu s_{i}+\sum_{j=1}^{M}b_{ij})^{n_{i}}}{n_{i}!}e^{-(\mu s_{i}+\sum_{j=1}^{M}b_{ij})}
  \end{aligned}
  \label{eq:c4clslikelihood}
 \end{equation}
-, where M is the number of different background categories. In this analysis, M=4: one category for the lost lepton and hadronic tau lepton background, and the other three for the Z+jets, QCD, and TTZ/rare backgrounds. The likelihood is maximized following the procedure described in Ref~\cite{Cowan:2010js}.
+, where M is the number of different background categories. In this analysis, M=4: one category for the lost lepton and hadronic tau lepton background, and the other three for the Z+jets, QCD, and TTZ/rare backgrounds. N is the total number of search bins, $N=84$ in this analysis. The likelihood is maximized following the procedure described in Ref~\cite{Cowan:2010js}.
 
 We consider the following uncertainties in the signal yields: 
 
@@ -129,5 +129,3 @@ T5ttcc & 1070 GeV & 1850 GeV \\
 \end{tabular}
 \par\end{centering}
 \end{table}
-
-
