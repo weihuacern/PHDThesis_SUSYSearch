@@ -12,11 +12,11 @@ The analysis is interpreted as the upper limit of the signal model cross section
 
 \begin{equation}
  \begin{aligned}
-  CL_{s}=\frac{CL_{s+b}}{CL_{b}}
+  CL_{s}=\frac{CL_{s+b}}{CL_{b}},
  \end{aligned}
  \label{eq:c4cls}
 \end{equation}
-, where the $CL_{s+b}$ is the confidence level in signal plus background hypothesis, and $CL_{b}$ is the confidence level with the background only assumption. 
+where the $CL_{s+b}$ is the confidence level in signal plus background hypothesis, and $CL_{b}$ is the confidence level with the background only assumption. 
 
 In the $CL_{s+b}$ calculation, we assume that the observed number of events n to follows a Poisson distribution with an expected value $E[n]=\mu s+b$. The s term is the mean number of events from a signal model, which is a known number from simulation. The b term is the expected number of background events, also a known number. The $\mu$ term is the signal acceptance, which is the value we need to obtain with likelihood. 
 
@@ -24,11 +24,11 @@ The b term is the expected number of background events from all sources. We trea
 
 \begin{equation}
  \begin{aligned}
-	 L(\mu,b)= \prod_{i=1}^{N} \frac{(\mu s_{i}+\sum_{j=1}^{M}b_{ij})^{n_{i}}}{n_{i}!}e^{-(\mu s_{i}+\sum_{j=1}^{M}b_{ij})}
+	 L(\mu,b)= \prod_{i=1}^{N} \frac{(\mu s_{i}+\sum_{j=1}^{M}b_{ij})^{n_{i}}}{n_{i}!}e^{-(\mu s_{i}+\sum_{j=1}^{M}b_{ij})},
  \end{aligned}
  \label{eq:c4clslikelihood}
 \end{equation}
-, where M is the number of different background categories. In this analysis, M=4: one category for the lost lepton and hadronic tau lepton background, and the other three for the Z+jets, QCD, and TTZ/rare backgrounds. N is the total number of search bins, $N=84$ in this analysis. Wilks's theorem\cite{Wilks:1938dza} states that the log of $CL_{s}$ is asymptotically $\chi^{2}$ distributed. This asymptotic method is applied in the limit setting to accelerate the process. The likelihood ratio is maximized following the procedure described in Ref~\cite{Cowan:2010js}.
+where M is the number of different background categories. In this analysis, M=4: one category for the lost lepton and hadronic tau lepton background, and the other three for the Z+jets, QCD, and TTZ/rare backgrounds. N is the total number of search bins, $N=84$ in this analysis. Wilks's theorem\cite{Wilks:1938dza} states that the log of $CL_{s}$ is asymptotically $\chi^{2}$ distributed. This asymptotic method is applied in the limit setting to accelerate the process. The likelihood ratio is maximized following the procedure described in Ref~\cite{Cowan:2010js}.
 
 We consider the following uncertainties in the signal yields: 
 
@@ -47,9 +47,9 @@ The signal acceptance was found not to depend strongly on pileup, and an uncerta
 The relative signal acceptance is modeled as a linear fit in two bins, $n_{\text{vtx}} < 20$ (low PU) or $n_{\text{vtx}} \geq 20$ (high PU). A confidence band for the linear fit is derived from the uncertainty in the relative acceptance due to the statistical uncertainty in the Monte Carlo event counts. The pileup acceptance uncertainty is found by calculating the expectation
 value:
 \begin{equation}
-c = \sum_{n_{\text{vtx}}=0}^{100} f_{\text{MC}}(n_{\text{vtx}})g_{\text{data}}(n_{\text{vtx}}) \label{eq:puacc-expval}
+c = \sum_{n_{\text{vtx}}=0}^{100} f_{\text{MC}}(n_{\text{vtx}})g_{\text{data}}(n_{\text{vtx}}) \label{eq:puacc-expval},
 \end{equation}
-, where $f_{\text{MC}}$ is taken from the central fit value or the lower or upper limit from the confidence band.
+where $f_{\text{MC}}$ is taken from the central fit value or the lower or upper limit from the confidence band.
 The $g_{\text{data}}(n_{\text{vtx}})$ term is measured in a single electron control region (requiring $\njets\geq2$, $n_{\text{electron}}=1$, and \texttt{HLT\_Elea27\_WPTight}).
 The up and down variations of c are normalized to the value from the central variation of the fit. The magnitude of the uncertainty is found to be 0.2-4.1\%
 \item {\bf Renormalization and factorization scales:} The uncertainty is calculated using the envelope of the weights obtained by varying the renormalization and factorization scales, $\mu_{R}$ and $\mu_{F}$, by factor of two \cite{Cacciari:2003fi,Catani:2003zt}. The effects on the signal shapes are considered as their uncertainties on the signal cross sections. %The effect on the T2tt signal samples ranges from 0 to 2.9\%.
@@ -58,7 +58,7 @@ The up and down variations of c are normalized to the value from the central var
 \item {\bf \MET uncertainty:} To account for uncertainties in \MET in the fast simulation, the evaluation of the signal yield is repeated using generator \MET. The average of both yields is used as an uncertainty.
 \item {\bf PDFs:} The LHC4PDF\cite{Butterworth:2015oua} prescription for the uncertainty in the total cross section is included as $\pm$1 sigma band in the limit plots. As recommended by the SUSY group, no additional PDF uncertainty is included.
 \item {\bf Full/fastsim scale for top quark reconstruction:} We use the full simulation to fastsim scale factor as measured in Ref~\cite{AN-16-461}. In the fastsim signal events for any of the reconstructed top quark candidates that are matched to a generator-level top quark, we apply the corresponding scale factor measured as a function of top quark $p_{T}$. We then propagate the statistical uncertainties on the scale factor to the signal yields in our search bins.
-\item {\bf Top tagger data/MC difference:} As discussed in Ref~\cite{AN-16-461}, the top tagger efficiency agrees well between data and MC (full simulation) within uncertainties. We applied the measured correction factors for each type of the mono-jet, di-jet and tri-jet reconstructed top quark candidates. We then propagate the measured uncertainties to the signal yields in our search bins.
+\item {\bf Top tagger data/MC difference:} As discussed in Ref~\cite{AN-16-461}, the top tagger efficiency agrees well between data and MC (full simulation) within uncertainties. We apply the measured correction factors for each type of the mono-jet, di-jet and tri-jet reconstructed top quark candidates. We then propagate the measured uncertainties to the signal yields in our search bins.
 \end{itemize}
 
 The analysis interpretations are presented in Fig~\ref{fig:signal_results}. The T2tt interpretation is not given for $|m_{\sTop}-m_{\chiOneZero}-m{t}|<25~GeV$ and $m_{\sTop}<275~GeV$ because the signal acceptance is difficult to model in these regions, due to the similarity between signal events and the standard model \ttbar events in these regions. 
@@ -84,7 +84,7 @@ The expected exclusion limits on the model parameters are summarized in Table~\r
 \fontsize{10 pt}{1.2 em}
 \selectfont
 \begin{centering}
-\caption{\label{tab:c4limitsummary_exp} Expected Exclusion summary table}
+\caption{\label{tab:c4limitsummary_exp} Expected Exclusion summary table.}
 \hspace*{-4ex}
 \begin{tabular}{|c|c|c|}
 \hline
@@ -110,7 +110,7 @@ The observed exclusion limits on the model parameters are summarized in Table~\r
 \fontsize{10 pt}{1.2 em}
 \selectfont
 \begin{centering}
-\caption{\label{tab:c4limitsummary_obs} Observed Exclusion summary table}
+\caption{\label{tab:c4limitsummary_obs} Observed Exclusion summary table.}
 \hspace*{-4ex}
 \begin{tabular}{|c|c|c|}
 \hline
