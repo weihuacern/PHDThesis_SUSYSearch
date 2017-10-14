@@ -66,7 +66,7 @@ All three-jet combinations are potential top quark candidates. The following var
 All the variables are carefully studied before being used to train the decision tree. We can use the quark gluon discriminator as an example. Because of its larger color charge, gluon jets radiate more, leading to a larger particle multiplicity, a broader $p_{T}$ spectrum of its emitted particles with respect to the jet axis, and a softer energy spectrum of the emitted particles. The quark gluon discriminator is a likelihood method used to separate quark and gluon jets. A likelihood value near 1 means it is more like a quark jet, and otherwise that it is more like a gluon jet. We expect the top tagger mistag rate to be reduced after incorporating the quark-gluon discriminator into the decision tree since gluon jets, which tend to be fat, can be similar to the fat jets used in the mono-jet and di-jet top quark reconstruction categories. The likelihood is constructed from three variables: 
 \begin{itemize}
 \item $p_{T}D$: jet energy dispersion variable, defined as $p_{T}D=\frac{\sqrt{\sum_{i}p_{T,i}^{2}}}{\sum_{i}p_{T,i}}$, with a sum over all PF candidates. Quark jets usually have a higher $p_{T}D$ than gluon jets.
-\item Mutiplicity: the total number of particle-flow candidates in the jet. On average, gluon jets have a higher mutiplicity than quark jets.
+\item Multiplicity: the total number of particle-flow candidates in the jet. On average, gluon jets have a higher multiplicity than quark jets.
 \item Axis2: minor axis RMS in the $\eta - \phi$ plane of the particle flow candidates. This is an angular spread for the jet. Gluon jets are usually more spread out than quark jets.
 \end{itemize}
 
