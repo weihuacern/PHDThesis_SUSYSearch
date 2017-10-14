@@ -423,10 +423,10 @@ There are two major requirements for a jet algorithm: that it be collinear safe 
 The anti-$k_{T}$ algorithm\cite{Cacciari:2008gp} is the standard jet algorithm at the LHC. The anti-$k_{T}$ algorithm is a sequential recombination algorithm. In this approach, we define a special distance between two input observables as in  Eq~\ref{eq:c3cmsantikt}:
 
 \begin{equation}
- d_{ij} = min(k_{Ti}^{-2},k_{Tj}^{-2})\frac{(\eta_{i}-\eta_{j})^{2}+(\phi_{i}-\phi_{j})^{2}}{R^{2}} \;
+ d_{ij} = min(k_{Ti}^{-2},k_{Tj}^{-2})\frac{(\eta_{i}-\eta_{j})^{2}+(\phi_{i}-\phi_{j})^{2}}{R^{2}}, \;
  \label{eq:c3cmsantikt}
 \end{equation}
-, where $k_{Ti}$ is the transverse momentum (or any other response) of the ith input. The numerator is the geometrical distance between the two objects. R is the cone size parameter in the algorithm. The CMS experiment supports R=0.4 for the normal jets and R=0.8 for fat jets. Fat jets are useful in the analysis of highly boosted objects, as will be described in top tagging section below. The special distance between an input object with respect to the beam direction is defined as: $d_{iB} = k_{Ti}^{-2}$.
+where $k_{Ti}$ is the transverse momentum (or any other response) of the ith input. The numerator is the geometrical distance between the two objects. R is the cone size parameter in the algorithm. The CMS experiment supports R=0.4 for the normal jets and R=0.8 for fat jets. Fat jets are useful in the analysis of highly boosted objects, as will be described in top tagging section below. The special distance between an input object with respect to the beam direction is defined as: $d_{iB} = k_{Ti}^{-2}$.
 
 The first step is to compute all the $d_{ij}$ and $d_{iB}$, and find the smallest one. Then the following steps are iterated until all objects are clustered into a jet: 
 
@@ -507,7 +507,7 @@ The physics process simulation is described in this section. The high-energy pro
  %\end{aligned}
  \label{eq:c3cmsppdf}
 \end{equation}
-, where M is the matrix element, a calculable quantity in perturbative QCD and $f^{PDF}$ is the parton distribution function (PDF)\cite{Butterworth:2015oua}. The PDF cannot be calculated from first principles. Therefore, the PDF needs to be parameterized and determined from data. There are several different PDF collaborations, e.g. CTEQ\cite{Lai:2010nw} or NNPDF\cite{Ball:2014uwa}. In Run 2, CMS uses the CTEQ6L1 PDF set. The D is the fragmentation function, which states the probability for the outgoing parton $s_{i}$ to produce the final state X through the hadronization process. The fragmentation function, like the PDFs, cannot be derived from first principles but must be determined from data.
+where M is the matrix element, a calculable quantity in perturbative QCD and $f^{PDF}$ is the parton distribution function (PDF)\cite{Butterworth:2015oua}. The PDF cannot be calculated from first principles. Therefore, the PDF needs to be parameterized and determined from data. There are several different PDF collaborations, e.g. CTEQ\cite{Lai:2010nw} or NNPDF\cite{Ball:2014uwa}. In Run 2, CMS uses the CTEQ6L1 PDF set. The D is the fragmentation function, which states the probability for the outgoing parton $s_{i}$ to produce the final state X through the hadronization process. The fragmentation function, like the PDFs, cannot be derived from first principles but must be determined from data.
 
 In practice, it is not practical to calculate the cross section directly from Eq~\ref{eq:c3cmsppdf} because there are too many combinations of final-state hadrons for the given outgoing partons. Therefore, the calculation is truncated before the hadronization stage and parton shower MC simulations are used to finish the calculation. Collinear parton splitting and soft gluon emission are considered at each order of the strong coupling strength in the parton shower simulations since they are dominant processes. Then the
 partons from the shower are combined to form hadrons using models, such as the Lund string\cite{Andersson:1983ia} or the cluster model, based on the preconfinement property of QCD\cite{Amati:1979fg}. More details of the parton shower simulation are given in Ref.\cite{Hoche:2014rga}.
