@@ -1,4 +1,4 @@
-The classical lost lepton method is a validated method that used in analysis of the 2015 data\cite{PhysRevD.96.012004}. Although the analysis of the 2016 data uses the simulation based translation factor method for the background estimation for \ttbar, single top and W+jets, the classical method is still an important cross check method. 
+The classical lost lepton method is a validated method that was used in analysis of the 2015 data\cite{PhysRevD.96.012004}. Although the analysis of the 2016 data uses the simulation based translation factor method for the background estimation for \ttbar, single top and W+jets, the classical method is still an important cross check method. 
 
 The name (lost lepton) of the background is interesting. On one hand, lost lepton indicates leptons that are lost because they are not in the acceptance, not reconstructed or not isolated. On the other hand, a lost lepton is like a lost boy. The boy becomes crazy and finally is misidentified as a jet. The expected numbers of lost lepton events are categorized in Table~\ref{tab:nexpLL}. The numbers of not accepted and not isolated events for muons and electrons are very similar. This is expected because of lepton flavor symmetry among \ttbar decay channels. However, the numbers of not reconstructed muon and electron are very different. The difference comes from the nature of detector: the muons detected by muon system have higher reconstruction efficiencies than electrons in ECAL. 
 
@@ -31,10 +31,10 @@ The lepton identification chain is shown in Fig~\ref{fig:llmethod}. The event wi
 
 However, the single lepton control sample can have a large signal contamination for some search bins, i.e., a large contribution of signal events. To reduce the contamination, only events with lepton transverse mass smaller than 100 GeV are considered. The lepton $m_{\rm T}$ is defined in Eq~\ref{eq:MTW}:
 \begin{equation}
-m_{\rm T} = \sqrt{2 p_{\rm T}(lepton) E^{\rm miss}_{\rm T} (1 - \cos(\Delta \Phi))}
+m_{\rm T} = \sqrt{2 p_{\rm T}(lepton) E^{\rm miss}_{\rm T} (1 - \cos(\Delta \Phi))},
 \label{eq:MTW}
 \end{equation}
-, where $\Delta \Phi$ is the distance in $\Phi$ between the muon and the $\MET$. For the electroweak control sample $\MET$ originates from the neutrino, $m_{\rm T}$ represents the transverse $W$-mass ($M_{T}^{W}$), and therefore the distribution falls sharply above $80$~GeV. To compensate for the loss in efficiency due to the $m_{\rm T}$ selection requirement, a correction factor is added in the lost lepton prediction model. 
+where $\Delta \Phi$ is the distance in $\Phi$ between the muon and the $\MET$. For the electroweak control sample $\MET$ originates from the neutrino, $m_{\rm T}$ represents the transverse $W$-mass ($M_{T}^{W}$), and therefore the distribution falls sharply above $80$~GeV. To compensate for the loss in efficiency due to the $m_{\rm T}$ selection requirement, a correction factor is added in the lost lepton prediction model. 
 
 We also need to consider the events with multiple lost leptons. Here we only estimate a part of the first-order effect: di-muon, di-electron and one electron plut one muon events. Events with a higher number of leptons are not considered. The simplification is reasonable since the correction factor is very close to 1.
 
@@ -43,10 +43,10 @@ As mentioned in the event selection section, an isolated track veto is used to r
 To summarize, the predicted number of \ttbar, $W$+jets and single top events with lost leptons, $N_{LostLepton}$ contributing to the search sample can be calculated by Eq~\ref{eq:lostleptonequation}:
 
 \begin{equation}
-N_{LostLepton}= \sum_{CS} (\sum_{i={e,\mu}}({F_{ISO}}^{i}+{F_{ID}}^{i}+{F_{Acc}}^{i}) \times F_{dilepton}^{i}) \times E_{Mtw} \times \epsilon_{isotrack}
+N_{LostLepton}= \sum_{CS} (\sum_{i={e,\mu}}({F_{ISO}}^{i}+{F_{ID}}^{i}+{F_{Acc}}^{i}) \times F_{dilepton}^{i}) \times E_{Mtw} \times \epsilon_{isotrack},
 \label{eq:lostleptonequation}
 \end{equation}
-, where $\sum_{CS}$ is the sum over the events in the control sample after the baseline selection, ${F_{ISO}}^{i}$, ${F_{ID}}^{i}$ and ${F_{Acc}}^{i}$ are factors converting the number of events in the control sample to the number of lost lepton events due to respectively isolation, reconstruction or acceptance criteria, $F_{dilepton}^{i}$ is the correction factor for the dilepton contribution, $E_{Mtw}$ is the correction factor for the $M_{T}^{W}$ selection requirement and $\epsilon_{isotrack}$ is the correction factor to compensate for the isolated track veto. The simulation based factors are described in the remainder of this section.
+where $\sum_{CS}$ is the sum over the events in the control sample after the baseline selection, ${F_{ISO}}^{i}$, ${F_{ID}}^{i}$ and ${F_{Acc}}^{i}$ are factors converting the number of events in the control sample to the number of lost lepton events due to respectively isolation, reconstruction or acceptance criteria, $F_{dilepton}^{i}$ is the correction factor for the dilepton contribution, $E_{Mtw}$ is the correction factor for the $M_{T}^{W}$ selection requirement and $\epsilon_{isotrack}$ is the correction factor to compensate for the isolated track veto. The simulation based factors are described in the remainder of this section.
 
 The control sample is normalized to compensate for the reduction of efficiency because of the $M_{T}^{W}<100$~GeV requirement, as illustrated in Table~\ref{tab:mtw}, which shows the $M_{T}^{W}$ correction factors, obtained from simulation, as a function of muon $p_{T}$. 
 
@@ -126,7 +126,7 @@ are shown.}
 \label{fig:eleeffreco}
 \end{figure}
 
-Another multiplicative factor to number of control region events originates from leptons that 
+Another multiplicative factor to the number of control region events originates from leptons that 
 are out of acceptance. Such events occur when leptons have a transverse 
 momentum below the lepton veto $p_{T}$ threshold or when leptons are emitted in 
 the forward region outside the $\eta$ acceptance. %, or when electrons are emitted in the transition reigion.

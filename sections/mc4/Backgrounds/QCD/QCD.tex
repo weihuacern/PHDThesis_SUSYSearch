@@ -83,10 +83,10 @@ The remaining events make up the QCD contribution, $N^{\Delta\bar{\phi}}_{QCD}$,
 is calculated as:
 
 \begin{equation}
-N^{\Delta\bar{\phi}}_{QCD} = N^{\Delta\bar{\phi}}_{Data} - N^{\Delta\bar{\phi}}_{LL} - N^{\Delta\bar{\phi}}_{\tauh} - N^{\Delta\bar{\phi}}_{Z\rightarrow \nu\nu} \;
+N^{\Delta\bar{\phi}}_{QCD} = N^{\Delta\bar{\phi}}_{Data} - N^{\Delta\bar{\phi}}_{LL} - N^{\Delta\bar{\phi}}_{\tauh} - N^{\Delta\bar{\phi}}_{Z\rightarrow \nu\nu}, \;
 \label{eq:Nqcd}
 \end{equation}
-, where $N^{\Delta\bar{\phi}}_{X}$ is the number of type X events in the 
+where $N^{\Delta\bar{\phi}}_{X}$ is the number of type X events in the 
 inverted $\Delta\phi_{\mathrm{jets~and}~ \MET}$ sideband. The contributions 
 $N^{\Delta\bar{\phi}}_{LL}$, $N^{\Delta\bar{\phi}}_{\tauh}$ and 
 $N^{\Delta\bar{\phi}}_{Z \rightarrow \nu\nu}$ are estimated using the same 
@@ -97,16 +97,16 @@ predictions for the $\Delta\phi$ and $\Delta\bar{\phi}$ samples:
 
 \begin{equation}
 %T_{QCD}^{MC} = \frac{N^{\Delta\phi}_{MC-QCD}}{N^{\Delta\bar{\phi}}_{MC-QCD}}= \frac{N^{\Delta\phi}_{MC} - N^{\Delta\phi}_{MC-LL} - N^{\Delta\phi}_{MC-\tauh} - N^{\Delta\phi}_{MC-Z\rightarrow \nu\nu}}{N^{\Delta\bar{\phi}}_{MC} - N^{\Delta\bar{\phi}}_{MC-LL} - N^{\Delta\bar{\phi}}_{MC-\tauh} - N^{\Delta\bar{\phi}}_{MC-Z\rightarrow \nu\nu}} \; ,
-T_{QCD}^{MC} = \frac{N^{\Delta\phi}_{MC-QCD}}{N^{\Delta\bar{\phi}}_{MC-QCD}} \;
+T_{QCD}^{MC} = \frac{N^{\Delta\phi}_{MC-QCD}}{N^{\Delta\bar{\phi}}_{MC-QCD}}, \;
 \label{eq:TqcdMC}
 \end{equation}
-, while the final QCD background prediction in the search regions is calculated as:
+while the final QCD background prediction in the search regions is calculated as:
 
 \begin{equation}
-N^{SR}_{QCD} = N^{\Delta\bar{\phi}}_{QCD} \times T_{QCD}^{Scale} \;
+N^{SR}_{QCD} = N^{\Delta\bar{\phi}}_{QCD} \times T_{QCD}^{Scale}, \;
 \label{eq:QCDformula}
 \end{equation}
-, where $N^{\Delta\bar{\phi}}_{QCD}$ comes from data (as defined in Eq.~\ref{eq:Nqcd}). The $T_{QCD}^{Scale}$ term is the
+where $N^{\Delta\bar{\phi}}_{QCD}$ comes from data (as defined in Eq.~\ref{eq:Nqcd}). The $T_{QCD}^{Scale}$ term is the
 $T_{QCD}^{MC}$ normalized to a translation factor measured in the 200 GeV $<\MET<$ 250 GeV sideband from data.
 This normalization provides a more accurate
 estimation of the true translation factors because although we trust (within the assigned uncertainties)
@@ -172,7 +172,7 @@ The low \MET $T_{QCD}^{Data}$ are measured from data using the following relatio
 \end{equation}
 
 The results for $T_{QCD}^{Scale}$ are shown in Fig~\ref{fig:TfactorScaled} and Table~\ref{tab:TfactorScaledExt}.
-The low \MET scaled $T_{QCD}^{Data}$ are calculated by real data and MC samples. The \ttbar, $W$+jets and single top MC events are reweight with a scale factor, which value is 84\%. The scale factor is derived from the data/MC comparison in the single-muon control samples, with ISR reweighing and the fake b scale factor. The Z+jets event yields are calculated in the same way decribed in the last section. The TTZ and Rare events are directly from MC samples, with generator-level leptonically decaying W and Z bosons veto.
+The low \MET scaled $T_{QCD}^{Data}$ are calculated using data and MC samples. The \ttbar, $W$+jets and single top MC events are reweighted with a scale factor, whose value is 84\%. The scale factor is derived from the data/MC comparison in the single-muon control samples, with ISR reweighting and the fake b scale factor. The Z+jets event yields are calculated in the same way described in the last section. The TTZ and Rare events are obtained directly from MC samples, with generator-level leptonically decaying W and Z bosons vetoed.
 The error bars are the total uncertainties, obtained by adding in quadrature
 the statistical uncertainties and the uncertainty in $T_{QCD}^{Data}$.
 Since negative $T_{QCD}^{Scale}$ factors are not physical, we set the
