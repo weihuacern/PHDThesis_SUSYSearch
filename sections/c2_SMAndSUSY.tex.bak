@@ -86,7 +86,7 @@ The standard model is very successful, but not perfect. There are issues the sta
 SUSY is a promising candidate to explain both of these two problems, and will be discussed in the next section. 
 
 \clearpage
-\section{The supersymmetric extension of the standard model}
+\section{The supersymmetric extentsion of the standard model}
 A natural idea to solve the fine-tuning problem is to introduce a symmetry to protect the Higgs field. A basic symmetry relating bosons and fermions can be introduced to solve the hierarchy problem. This is so-called supersymmetry. Furthermore, in R-parity\cite{Martin:1997ns} conserved SUSY, we can have a stable, neutral, massive lightest SUSY particle, which is an ideal candidate for cold dark matter. We will use the minimal supersymmetric standard model as an example to demonstrate the basics of this theory. 
 
 \clearpage
@@ -118,7 +118,7 @@ Higgs/Higgsino   & \specialcell{$(H_{u}^{+},H_{u}^{0})$ \\ $(H_{d}^{0},H_{d}^{-}
 \par\end{centering}
 \end{table}
 
-There are two important features of the MSSM. The first is the spontaneous breaking of supersymmetry. The particles in the same super-partner pair must have the same mass in unbroken supersymmetry. However, no super partners have been observed so far. Spontaneously broken supersymmetry is introduced to explain this observation. Heavy sparticles, the super-partners of the standard model particles, thus emerge from supersymmetry breaking. Therefore, the Higgs boson mass correction can be expressed by Eq~\ref{eq:c2mssmhmc}:
+There are two important features of the MSSM. The first is the spontaneious breaking of supersymmetry. The particles in the same super-partner pair must have the same mass in unbroken supersymmetry. However, no super partners have been observed so far. Spontaneously broken supersymmetry is introduced to explain this observation. Heavy sparticles, the super-partners of the standard model particles, thus emerge from supersymmetry breaking. Therefore, the Higgs boson mass correction can be expressed by Eq~\ref{eq:c2mssmhmc}:
 
 \begin{equation}
  \Delta m_{H}^{2} = \frac{1}{8\pi}(\lambda_{S}-|\lambda_{f}|^{2})\Lambda_{UV}+m_{s}^{2}(\frac{\lambda}{16\pi^{2}}ln(\Lambda_{UV}/m_{s}))+...
@@ -145,7 +145,7 @@ One can take the top squark mass constraint as an example. The Higgs boson poten
  \label{eq:c2nsusystoptree}
 \end{equation}
 
-We can re-express this result using top squark mass eigenvalues in Eq~\ref{eq:c2nsusystopeigen}:
+We can reexpress this result using top squark mass eigenvalues in Eq~\ref{eq:c2nsusystopeigen}:
 \begin{equation}
 	\delta m_{H_{u}}^{2}|_{top squark} \approx - \frac{3}{8\pi^{2}}y_{t}^{2}(m_{\tilde{t_{1}}}^{2}+m_{\tilde{t_{2}}}^{2}-2m_{t}^{2}+\frac{m_{\tilde{t_{1}}}^{2}-m_{\tilde{t_{2}}}^{2}}{m_{t}^{2}}cos^{2}\theta_{\tilde{t}}sin^{2}\theta_{\tilde{t}})log(\frac{\Lambda_{UV}}{TeV})
  \label{eq:c2nsusystopeigen}
@@ -187,7 +187,7 @@ the right-handed bottom squark.
 
 Therefore, the top squarks, bottom squark, higgsino and gluino are the interesting search targets in natural SUSY. The top squarks provide the leading contribution to the Higgs boson mass correction. We have a relatively high probability to find top squark and gluino in hadronic channel since the hadronic process cross section is relatively high at the LHC. 
 
-Then we need to consider R-parity. R-parity violating (RPV) SUSY models can also be natural SUSY models. However, since the SUSY LSP can decay into standard model particle in RPV models. There is no cold dark matter candidate in RPV SUSY. 
+Then we need to consider R-parity. R-parity violating (PRV) SUSY models can also be natural SUSY models. However, since the SUSY LSP can decay into standard model particle in RPV models. There is no cold dark matter candidate in RPV SUSY. 
 
 Now, we can put all facts together to motivate a search strategy: 
 \begin{itemize}

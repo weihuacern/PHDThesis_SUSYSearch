@@ -78,7 +78,7 @@ In the CMS and ATLAS experiments, the design peak luminosity at the collision po
 
 The LHC is an extremely complex machine and it is almost impossible to grasp every detail. However, the LHC provides a summary of status for its operational activities, which are very useful in for detector operation.
 
-\subsubsection{Accelerator mode}
+\subsubsection{Acclerator mode}
 
 The accelerator mode indicator provides a summary of the status of the LHC machine. All the accelerator modes are listed in Table~\ref{tab:c3lhcaccmode}. The accelerator modes can be divided into two groups by the presence or not of the beam. For example, ACCESS mode means that the LHC group or at least one of the detector system groups needs access to the machine area, with the beams off, to investigate a problem. The beam must be dumped or already be off to allow this access period. Another example is the BEAM SETUP mode, which means the beam is under preparation. The beam modes are described in the following section. The detector systems (e.g., CMS) make daily operational decisions depending on the accelerator modes and beam modes provided by the LHC.
 
@@ -86,7 +86,7 @@ The accelerator mode indicator provides a summary of the status of the LHC machi
 \fontsize{10 pt}{1.2 em}
 \selectfont
 \begin{centering}
-\caption{\label{tab:c3lhcaccmode} Accelerator Mode.}
+\caption{\label{tab:c3lhcaccmode} Acclerator Mode.}
 \hspace*{-4ex}
 \begin{tabular}{|c|c|c|}
 \hline
@@ -146,7 +146,7 @@ The beam modes are shown in the Table~\ref{tab:c3lhcbeammode}. The beam modes de
 \hline
  Mode Name &  Description \\
 \hline
- SETUP & \specialcell{Beam in transfer line, but not in the ring} \\
+ SETUP & \specialcell{Beam in transferline, but not in the ring} \\
 \hline
  ABORT & \specialcell{Recovery mode following beam drop} \\
 \hline
@@ -189,12 +189,12 @@ The beam modes are used to estimate the time remaining before the beginning of t
 \clearpage
 \section{The CMS experiment}
 
-The CMS Experiment is a particle physics experiment at the LHC. It consists of the CMS detector system and event reconstruction, supported by the detector operation team, the computing/data storage team and , the software and event reconstruction team, the detector performance groups (DPGs), the physics objects groups (POGs), the physics analysis groups (PAGs), the Publications Committee, the Conference Committee, the Authorship Committee, the spokesperson and deputies, and many other people.  In total, there are around 2500 individuals listed on a typical physics publication, and around 1000 more who contribute to the operation of the experiment.
+The CMS Experiment is a particle physics experiment at the LHC. It consists of the CMS detector system and event reconstruction, supported by the detector operation team, the computing/data storage team and , the software and event reconstuction team, the detector performance groups (DPGs), the physics objects groups (POGs), the phyiscs analysis groups (PAGs), the Publications Committee, the Conference Committee, the Authorship Committee, the spokesperson and deputies, and many other people.  In total, there are around 2500 individuals listed on a typical physics publication, and around 1000 more who contribute to the operation of the experiment.
 
 \clearpage
 \subsection{CMS detector system}
 
-The Compact Muon Solenoid (CMS) is one of the two general purpose detectors at the LHC, along with the ATLAS detector. To fulfill its ``general purpose", CMS is designed as a combination of several subsystems: Silicon Pixels and Strips for tracking information, Electromagnetic and Hadron Calorimeters for ``light" particle energy deposition and drift tubes and cathode strip/resistive plate chambers for muon detection. The locations of these subdectors in the CMS are not random: The silicon tracking subsystems are closest to the collision point. The calorimeters come after the silicon subdetectors, because the calorimeter absorbs all SM particles except for muons and neutrinos. Finally the muon system is the outermost detector. To obtain high performance, CMS is immersed in a 4-T magnetic field, which is provided by a super-conducting solenoid (``S" in CMS). The magnet contributes a large fraction of the CMS total weight: 12500 tons out of 14000. However, compared with its heavy weight, the size of the CMS is relatively small: only 5000 m$^{3}$. In comparison, the ATLAS detector weighs 7000 tons and encompasses a volume of 22500 m$^{3}$. This explains the name ``Compact" placed in front of ``Muon Solenoid" since its density is nearly to 3000 kg/m$^{3}$.
+The Compact Muon Solenoid (CMS) is one of the two general purpose detectors at the LHC, along with the ATLAS detector. To fullfill its ``general purpose", CMS is designed as a combination of several subsystems: Sillicon Pixels and Strips for tracking information, Electromagnetic and Hadron Calorimeters for ``light" particle energy deposition and drift tubes and cathode strip/resisstive plate chambers for muon detection. The locations of these subdectors in the CMS are not random: The sillicon tracking subsystems are closest to the collision point. The calorimeters come after the sillicon subdetectors, because the calorimeter absorbs all SM particles except for muons and neutrinos. Finally the muon system is the outermost detector. To obtain high performance, CMS is immersed in a 4-T magnetic field, which is provided by a superconducting solenoid (``S" in CMS). The magnet contributes a large fraction of the CMS total weight: 12500 tons out of 14000. However, compared with its heavy weight, the size of the CMS is relatively small: only 5000 m$^{3}$. In comparison, the ATLAS detector weighs 7000 tons and encompasses a volume of 22500 m$^{3}$. This explains the name ``Compact" placed in front of ``Muon Solenoid" since its density is nearly to 3000 kg/m$^{3}$.
 
 \subsubsection{Inner tracking system}
 
@@ -211,7 +211,7 @@ As a result of budget-performance balance, the CMS inner tracking systems are de
 \end{figure}
 
 \paragraph{Silicon pixels}
-The pixel system is the part of inner tracking system that is closest to the collision point. It provides a precise measurement of the tracking and therefore makes a major contribution to the secondary vertex reconstruction. The pixel cells are distributed with a size of 100 $\mu m$ $\times$ 150 $\mu m$ in three-dimensional space, which allows a 3D reconstruction method for the secondary vertex. The signals are read by sensors and packed by readout chip. Then the signal is delivered to the front-end driver through the analog chain once a positive bit is received from the L1 trigger.
+The pixel system is the part of inner tracking system that is closest to the collision point. It provides a precise measurement of the tracking and therefore makes a major contribution to the secondary vertex reconstruction. The pixel cells are distributed with a size of 100 $\mu m$ $\times$ 150 $\mu m$ in three-dimensional space, which allows a 3D reconstruction method for the secondary vertex. The signals are read by sensors and packed by readout chip. Then the signal is delivered to the frontend driver through the analog chain once a positive bit is received from the L1 trigger.
 
 The CMS detector system has three phases, corresponding to different stages of the LHC. Phase 0 CMS is the baseline detectors for the LHC with 7 or 8 TeV and integrated luminosity around 25 fb$^{-1}$. Phase 1 CMS is the first detector upgrades for 13 or 14 TeV and integrated luminosity around 300 fb$^{-1}$. Phase 2 CMS is the major upgrade for high-lumi LHC (HL-LHC) with 3000 fb$^{-1}$. The phase 0 pixel detector contains three barrel layers (BPix) and two endcap disks (FPix), which cover a pseudorapidity range $-2.5<\eta<2.5$. The pseudorapidity $\eta$ is a spatial coordinate describing the angle angle of a particle relative to beam axis. It is defined as $\eta = -ln[tan(\frac{\theta}{2})]$, where $\theta$ is the angle between the particle three-momentum and beam direction. In the phase 1 upgrade\cite{Klein:2140071}, because of radiation damage, all layers and disks were replaced with new ones, and an additional layer was added both in the barrel region and in both endcap regions.
 
@@ -234,7 +234,7 @@ A photon detector is needed to collect the light yield from the crystals. As for
 
 The amplified signals are integrated and digitized by on-detector front end electronics and then sent to the central data acquisition system from the off-detector back end electronics. The ECAL electronics, especially for the off-detector electronics, are very similar to the phase 0 HCAL off-detector electronics. The HCAL electronics are discussed in the next section.
 
-A last component of ECAL is the preshower system. The two photons from neutral pion decay are almost collinear when the pion energy is high. The main purpose of the preshower detector is to trigger an electromagnetic shower with high spatial resolution before the ECAL endcap. As a result, the almost collinear photons can be distinguished by the ECAL reconstruction algorithm. 
+A last component of ECAL is the preshower system. The two photons from neutral pion decay are almost colinear when the pion energy is high. The main purpose of the preshower detector is to trigger an electromagnetic shower with high spatial resolution before the ECAL endcap. As a result, the almost collinear photons can be distinguished by the ECAL reconstruction algorithm. 
 
 \paragraph{Hadron calorimeter}
 
@@ -367,7 +367,7 @@ The CMS HLT system uses all the information from the detector readout and applie
 The current (Phase 1) trigger system will continue in operation until the end of LHC Run 3. However, there will be a huge challenge on the trigger system with the HL-LHC. The Track trigger will be necessary to maintain the current physics acceptance with the L1 rate around 1 MHz. 
 
 \clearpage
-\subsection{Event reconstruction}
+\subsection{Event reconstrunction}
 
 The data from the central data acquisition system is selected and built in the high-level trigger farm and then transferred to the primary computing grid at CERN (Tier-0). The data directly from the detector electronics is called DAQ-RAW, which is the input of the online HLT cluster. The data is reformatted and filtered with the high-level trigger. The outcome data are called RAW. Compared to the DAQ-RAW, the RAW contains the HLT information and is ready for offline reconstruction after reformatting. 
 
@@ -435,7 +435,7 @@ The first step is to compute all the $d_{ij}$ and $d_{iB}$, and find the smalles
   \item If the smallest one is a $d_{iB}$, we remove object i and call it a jet.
 \end{itemize}
 
-The anti-$k_{T}$ algorithm is both collinear and infrared safe. The geometrical distance between two collinear objects is zero. Therefore these two objects will be clustered first. The special distance is infinite for a soft object whose transverse momentum approaches zero. Therefore this new object will be clustered last, contributing nothing to the jet it is associated with since its transverse momentum is zero, or will form a new jet with zero transverse momentum. The jet results for the anti-$k_{T}$ algorithm remain unchanged in either case. 
+The anti-$k_{T}$ algorithm is both collinear and infrared safe. The geometrical distance between two colinear objects is zero. Therefore these two objects will be clustered first. The special distance is infinite for a soft object whose transverse momentum approaches zero. Therefore this new object will be clustered last, contributing nothing to the jet it is associated with since its transverse momentum is zero, or will form a new jet with zero transverse momentum. The jet results for the anti-$k_{T}$ algorithm remain unchanged in either case. 
 
 There are other algorithms that are also both collinear and infrared safe, like the SiSCone\cite{Salam:2007xv} and $k_{T}$\cite{Cacciari:2005hq} algorithms. However, unlike these latter two algorithms, jets from anti-$k_{T}$ algorithm always have a nearly circular jet area\cite{Cacciari:2008gn}, which makes them easier to correct for detector-related effects.
 
@@ -518,7 +518,7 @@ Besides particles created in the hard scattering process, particles in proton-pr
  \begin{center}
   \includegraphics[width=0.8\textwidth]{figures/c3/c3_cms_underlyingevents.png}
  \end{center}
- \caption{Left: Illustration of the underlying event modeled by PYTHIA, together with hard process. Right: Illustration of the correlations in the azimuthal angle relative to the direction of the leading charged jet.}
+ \caption{Left: Illustration of the underlying event modeled by PYTHIA, togather with hard process. Right: Illustration of the correlations in the azimuthal angle relative to the direction of the leading charged jet.}
  \label{fig:c3cmsunderlyingevents}
 \end{figure}
 
