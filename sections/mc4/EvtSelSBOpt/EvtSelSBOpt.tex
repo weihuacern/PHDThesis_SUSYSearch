@@ -1,15 +1,15 @@
-As mentioned at the begining of chapter 4, the analysis is designed for maximum sensitivity to the SUSY simplified model T2tt, T1tttt, T1ttbb, T5tttt and T5ttcc topology resulting in final states with multiple top quarks, hence multiple jets and b-tagged jets, produced in stop decay, no leptons, and large \MET. The T2tt, T5ttcc and T1tttt final states differ in the number of jets, b-tagged jets and top quarks produced. 
+As mentioned at the begining of chapter 4, the analysis is designed for maximum sensitivity to the SUSY simplified model T2tt, T1tttt, T1ttbb, T5tttt and T5ttcc topology resulting in final states with multiple top quarks, hence multiple jets and b-tagged jets, produced in top squark decay, no leptons, and large \MET. The T2tt, T5ttcc and T1tttt final states differ in the number of jets, b-tagged jets and top quarks produced. 
 
-Targeting the above-mentioned final states, the data are initially selected by requiring a minimum number of jets and b-jets (\njets and \nbjets) and large \MET. The search regions are ultimately defined in exclusive bins of \ntops, \nbjets, \HT, \MET and \MTTwo, where \ntops is the number of reconstructed top quarks. SM backgrounds come from processes such as \ttbar, Z+jets, W/top+jets and QCD multijets with smaller contributions from rare processes.
+Targeting the above-mentioned final states, the data are initially selected by requiring a minimum number of jets and b-jets (\njets and \nbjets) and large \MET. The search regions are ultimately defined in exclusive bins of \ntops, \nbjets, \HT, \MET and \MTTwo, where \ntops is the number of reconstructed top quarks. SM backgrounds arise from processes such as \ttbar, Z+jets, W/top+jets and QCD multijets with smaller contributions from rare processes.
 
 The data selection process starts with the triggers and follows with a baseline selection and the definition of the search bins. The top quark reconstruction and identification procedure (top tagging) is described in this section, as well as the MC samples that model signal and backgrounds.
 
 \subsection{Trigger}
 \label{sec:trig}
 
-The trigger is the first filter applied to the data. We choose \MET based triggers in this analysis instead of the HT based triggers used for the analysis of the 2015 data because of HT bit trigger issues in the 2016 run H data, where Run H corresponds to a data-taking period between September 16 2016 to October 28 2016 consisting of 92.5 $fb^{-1}$ of data. 
+The trigger is the first filter applied to the data. We choose \MET based triggers in this analysis instead of the HT based triggers used for the analysis of the 2015 data because of HT bit trigger issues in the 2016 run H data, where Run H corresponds to a data-taking period between September 16 2016 and October 28 2016 consisting of 92.5 fb$^{-1}$ of data. 
 
-The trigger sets are used in this analysis: a general trigger, described below, used for the search regions and for the estimation of the QCD multijet background and a single-muon trigger for the $Z$+jets background evaluation. We measure the search trigger efficiencies with different orthogonal triggers to check differences in the turn-on behavior. The corresponding efficiencies are applied to correct the simulations used in the analysis.
+The trigger sets are used in this analysis are: a general trigger, described below, used for the search regions and for the estimation of the QCD multijet background and a single-muon trigger for the $Z$+jets background evaluation. We measure the search trigger efficiencies with different orthogonal triggers to check differences in the turn-on behavior. The corresponding efficiencies are applied to correct the simulations used in the analysis.
 
 Six search triggers are used to collect events for this analysis. They are seeded by \MET in the Level-1 trigger. 
 \begin{itemize}
@@ -23,9 +23,9 @@ Six search triggers are used to collect events for this analysis. They are seede
 
 The probability for these triggers to accept events (trigger efficiency) is measured in a sample of events collected by the single-electron trigger
 \begin{itemize}
-  \item \texttt{HLT\_Ele27\_WPTight\_v*}
+  \item \texttt{HLT\_Ele27\_WPTight\_v*},
 \end{itemize}
-, which has been commonly used within CMS for the \MET trigger efficiency measurement. Events from the single electron dataset are also required to have at least one offline reconstructed electron with $p_{T}>$ 30 GeV. These selection criteria ensure that the single electron trigger is efficient. 
+which has been commonly used within CMS for the \MET trigger efficiency measurement. Events from the single electron dataset are also required to have at least one offline reconstructed electron with $p_{T}>$ 30 GeV. These selection criteria ensure that the single electron trigger is efficient. 
 
 To measure the search trigger efficiency, additional requirements to mimic the baseline selection, defined in Sec.~\ref{sec:baselineselection}, are imposed.
 \begin{itemize}
@@ -83,7 +83,7 @@ For the \MET trigger efficiency measured from the HTMHT dataset, events are coll
   \item \texttt{HLT\_PFHT900\_v*},
   \item \texttt{HLT\_CaloJet500\_NoJetID\_v*},
 \end{itemize} 
-, in which \texttt{HLT\_CaloJet500\_NoJetID\_v*} is recommended at Level-1 to recover the inefficiency of the L1\_HTT trigger during period H data taking. Events are required to satisfy the following criteria:
+in which \texttt{HLT\_CaloJet500\_NoJetID\_v*} is recommended at Level-1 to recover the inefficiency of the L1\_HTT trigger during period H data taking. Events are required to satisfy the following criteria:
 \begin{itemize}
   \item Satisfy all filters
   \item Veto reconstructed electron
@@ -394,8 +394,8 @@ set that defines the search regions. The variable
 mass variable that is sensitive to the pair production of heavy particles, each
 of which decays to a visible particle and an invisible particle.
 The \pTop, the \pRsystem, and the \MET in an event
-are used to constructed \MTTwo assuming the invisible particles are massless.
-In order to illustrate how the \MTTwo is calculated, let us take the process 
+are used to construct \MTTwo assuming the invisible particles are massless.
+In order to illustrate how \MTTwo is calculated, let us take the process 
 ${\rm pp} \rightarrow \sTop\santiTop\rightarrow t\bar{t}\chi_1^0\chi_1^0$
 as an example. This process contains two simultaneous decays of an unseen 
 particle of unknown mass(\sTop or \santiTop) into an invisible 
@@ -429,7 +429,7 @@ for $\ntops =1$ and the fully reconstructed top quark for $\ntops \ge 2$.
 \MET then corresponds to $\vec{p}_{T}$ in the equation~\ref{eq:MT2}. 
 Since we assume that the invisible particle is massless, $m_{\chi_1^0}$ is set to zero in Eqs.~\ref{eq:MT2}-~\ref{eq:MTdef}. 
 
-Briefly, we start from the fact that at least one hadronic top quark candidate in the search sample. 
+Briefly, we start from the fact that at least one hadronic top quark candidate is required to be present in the search sample. 
 If there are two top quark candidates, \MTTwo is calculated using the pair of top 
 candidates and \MET. In case there are more than two top candidates
 in the sample, we compute \MTTwo for all combinations and choose the 
@@ -464,7 +464,7 @@ Figs~\ref{fig:compSBvars1} and \ref{fig:compSBvars2} show a comparison between t
 
 The search bins defined after the baseline selection criteria (in total 84 bins) are illustrated in Fig~\ref{fig:SBXX}. An improvement in the selection efficiency is made by switching from the \MTTwo variable to \HT variable for search bins with $\nbjets>=3$ or $\ntops>=3$ since these bins should be sensitive to the T1tttt signals where \MTTwo cannot be as clearly defined as for T2tt events.
 To accommodate the larger data sample collected in 2016 compared to 2015, and improve the search sensitivity, we use a finer segmentaion of the search bins in
-\MET, \HT and \MTTwo than for the analysis of the 2015 data. The search bin optimization is based on significance scan of each of \MET, \MTTwo and \HT dimentions. However
+\MET, \HT and \MTTwo than for the analysis of the 2015 data. The search bin optimization is based on a significance scan of each of \MET, \MTTwo and \HT dimension. However
 further adjustment was performed to have a reasonable number of control sample events for the major background predictions.
 The numbers displayed in the figures are the binning indices that are used throughout the analysis.
 The bins with $\ntops>=3$ are important for T1tttt signal but for T2tt we do not use them for the limit calculation.
