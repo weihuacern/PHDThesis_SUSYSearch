@@ -1,0 +1,68 @@
+\chapter{SUSY Search with a customized top tagger}
+
+%\clearpage
+\section{Introduction}
+\label{sec:c4intro}
+\input{sections/mc4/Introduction/Introduction.tex}
+
+%\clearpage
+\section{Customized top tagger}
+\label{sec:c4tt}
+\input{sections/mc4/TopTagger/TopTagger.tex}
+
+%\clearpage
+\section{Event selection and search bin design}
+\label{sec:c4evssbd}
+\input{sections/mc4/EvtSelSBOpt/EvtSelSBOpt.tex}
+
+%\clearpage
+\section{Background estimation}
+
+The standard model processes are suppressed after the baseline selection criteria are applied, and signal sensitivities are optimized through the search bin design. However, there are still standard model backgrounds in the search region. In this analysis, the events from \ttbar, $W$+jets and single top are the major background. $Z$+jets, QCD and other rare processes also make non-negligible contributions in some search bins. The simulated background distributions are shown in the Fig~\ref{fig:c4bgmcpie} in the \ntops and \nbjets categories.
+
+\begin{figure}[htbp]
+ \begin{center}
+  \includegraphics[width=0.85\textwidth]{figures/c4/c4_bg_mcpie.pdf}
+ \end{center}
+ \caption{Background pie chart, from simulation.}
+ \label{fig:c4bgmcpie}
+\end{figure}
+
+%\clearpage
+\subsection{Backgrounds from top and W decays}
+The background from \ttbar, $W$+jets and single-top events that is not removed by the explicit lepton-veto and isolated track veto is the largest background in the analysis. It can contain either a hadronically decaying tau lepton or light leptons (electrons or muons) that are not isolated, not identified/reconstructed or are out of the acceptance region. Both types of background are estimated using the ``translation factor method" (described in this section). The classic lost lepton method, which is used to predict specifically the events with light leptons, will be discussed in the following section. It serves as an important cross-check to the translation factor method.
+
+%\clearpage
+\subsubsection{Translation factor method}
+\label{sec:c4bgtf}
+\input{sections/mc4/Backgrounds/TF/TF.tex}
+
+%\clearpage
+\subsubsection{Classical lost lepton method}
+\label{sec:c4bgll}
+\input{sections/mc4/Backgrounds/LostLepton/LostLepton.tex}
+
+%\clearpage
+\subsubsection{Classical hadronic tau method}
+\label{sec:c4bghadtau}
+\input{sections/mc4/Backgrounds/HadTau/HadTau.tex}
+
+%\clearpage
+\subsection{Backgrounds from neutrinos in Z decays}
+\label{sec:c4bgzinv}
+\input{sections/mc4/Backgrounds/ZInv/ZInv.tex}
+
+%\clearpage
+\subsection{Backgrounds from QCD multi-jet}
+\label{sec:c4bgqcd}
+\input{sections/mc4/Backgrounds/QCD/QCD.tex}
+
+%\clearpage
+\subsection{Backgrounds from TTZ and other standard model rare process}
+\label{sec:c4bgttzrare}
+\input{sections/mc4/Backgrounds/TTZRare/TTZRare.tex}
+
+%\clearpage
+\section{Results}
+\label{sec:c4results}
+\input{sections/mc4/Results/Results.tex}
