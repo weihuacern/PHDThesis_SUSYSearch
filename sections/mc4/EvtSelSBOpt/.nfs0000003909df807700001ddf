@@ -506,42 +506,42 @@ Monte Carlo samples of SM processes reconstructed with CMSSW release 8.0 (Summer
 {
 %\scriptsize
 %\footnotesize
-\fontsize{8 pt}{1.2 em}
-\begin{tabular*}{\textwidth}{lc}
+\fontsize{10 pt}{1.2 em}
+\begin{tabular}{lc}
 \hline \hline
 Dataset & $\sigma$ (pb) \\
 \hline
 \multicolumn{2}{c}{QCD MC samples (LO)} \\ \hline
-QCD\_HT100to200\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 27540000 \\
-QCD\_HT200to300\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 1735000 \\
-QCD\_HT300to500\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 366800 \\
-QCD\_HT500to700\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 29370 \\
-QCD\_HT700to1000\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 6524 \\
-QCD\_HT1000to1500\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 1064 \\
-QCD\_HT1500to2000\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 121.5 \\
-QCD\_HT2000toInf\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 25.42 \\
+QCD\_HT100to200\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 27540000 \\
+QCD\_HT200to300\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 1735000 \\
+QCD\_HT300to500\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 366800 \\
+QCD\_HT500to700\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 29370 \\
+QCD\_HT700to1000\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 6524 \\
+QCD\_HT1000to1500\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 1064 \\
+QCD\_HT1500to2000\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 121.5 \\
+QCD\_HT2000toInf\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 25.42 \\
 \hline
 \multicolumn{2}{c}{SM \ttbar MC samples} \\ \hline
-TTJets\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 816.0 \\
-TTJets\_SingleLeptFromT\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 179.3 \\
-TTJets\_SingleLeptFromTbar\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 179.3 \\
-TTJets\_DiLept\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 86.66 \\
-TTJets\_HT-600to800\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 2.615 \\
-TTJets\_HT-800to1200\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 1.077 \\
-TTJets\_HT-1200to2500\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 0.195 \\
-TTJets\_HT-2500toInf\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 0.002 \\
+TTJets\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 816.0 \\
+TTJets\_SingleLeptFromT\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 179.3 \\
+TTJets\_SingleLeptFromTbar\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 179.3 \\
+TTJets\_DiLept\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 86.66 \\
+TTJets\_HT-600to800\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 2.615 \\
+TTJets\_HT-800to1200\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 1.077 \\
+TTJets\_HT-1200to2500\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 0.195 \\
+TTJets\_HT-2500toInf\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 0.002 \\
 \hline
 \multicolumn{2}{c}{SM \wlnu MC samples} \\ \hline
-WJetsToLNu\_HT-100To200\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 1635 \\
-WJetsToLNu\_HT-200To400\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 437.0 \\
-WJetsToLNu\_HT-400To600\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 59.50 \\
-WJetsToLNu\_HT-600ToInf\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 22.80 \\
-WJetsToLNu\_HT-600To800\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 15.50 \\
-WJetsToLNu\_HT-800To1200\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 6.366 \\
-WJetsToLNu\_HT-1200To2500\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 1.614 \\
-WJetsToLNu\_HT-2500ToInf\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 0.037 \\
+WJetsToLNu\_HT-100To200\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 1635 \\
+WJetsToLNu\_HT-200To400\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 437.0 \\
+WJetsToLNu\_HT-400To600\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 59.50 \\
+WJetsToLNu\_HT-600ToInf\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 22.80 \\
+WJetsToLNu\_HT-600To800\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 15.50 \\
+WJetsToLNu\_HT-800To1200\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 6.366 \\
+WJetsToLNu\_HT-1200To2500\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 1.614 \\
+WJetsToLNu\_HT-2500ToInf\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 0.037 \\
 \hline \hline
-\end{tabular*}
+\end{tabular}
 }
 \end{table}
 
@@ -552,8 +552,8 @@ WJetsToLNu\_HT-2500ToInf\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 0.037 \\
 {
 %\scriptsize
 %\footnotesize
-\fontsize{8 pt}{1.2 em}
-\begin{tabular*}{\textwidth}{lc}
+\fontsize{10 pt}{1.2 em}
+\begin{tabular}{lc}
 \hline \hline
 Dataset & $\sigma$ (pb) \\
 \hline
@@ -568,25 +568,25 @@ ZJetsToNuNu\_HT-1200To2500\_13TeV-madgraph & 0.359 \\
 ZJetsToNuNu\_HT-2500ToInf\_13TeV-madgraph & 0.0085 \\
 \hline
 \multicolumn{2}{c}{SM \zll MC samples} \\ \hline
-DYJetsToLL\_M-50\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 6025 \\
-DYJetsToLL\_M-50\_HT-100to200\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 171.5 \\
-DYJetsToLL\_M-50\_HT-200to400\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 52.58 \\
-DYJetsToLL\_M-50\_HT-400to600\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 6.984 \\
-DYJetsToLL\_M-50\_HT-600to800\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 1.676 \\
-DYJetsToLL\_M-50\_HT-800to1200\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 0.831 \\
-DYJetsToLL\_M-50\_HT-1200to2500\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 0.143 \\
-DYJetsToLL\_M-50\_HT-2500toInf\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 0.0032 \\
+DYJetsToLL\_M-50\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 6025 \\
+DYJetsToLL\_M-50\_HT-100to200\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 171.5 \\
+DYJetsToLL\_M-50\_HT-200to400\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 52.58 \\
+DYJetsToLL\_M-50\_HT-400to600\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 6.984 \\
+DYJetsToLL\_M-50\_HT-600to800\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 1.676 \\
+DYJetsToLL\_M-50\_HT-800to1200\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 0.831 \\
+DYJetsToLL\_M-50\_HT-1200to2500\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 0.143 \\
+DYJetsToLL\_M-50\_HT-2500toInf\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 0.0032 \\
 \hline
 \multicolumn{2}{c}{SM single-top MC samples} \\ \hline
 ST\_tW\_antitop\_5f\_inclusiveDecays\_13TeV-powheg-pythia8\_TuneCUETP8M1 & 35.80\\
 ST\_tW\_top\_5f\_inclusiveDecays\_13TeV-powheg-pythia8\_TuneCUETP8M1 & 35.80\\
 \hline
 \multicolumn{2}{c}{SM di-boson and other rare process MC samples} \\ \hline
-ttHJetTobb\_M125\_13TeV\_amcatnlo-madspin-pythia8 & 0.293 \\
+ttHJetTobb\_M125\_13TeV\_amcatnloFXFX\_madspin\_pythia8 & 0.293 \\
 TTZToLLNuNu\_M-10\_TuneCUETP8M1\_13TeV-amcatnlo-pythia8 & 0.228 \\
 TTZToQQ\_TuneCUETP8M1\_13TeV-amcatnlo-pythia8 & 0.530 \\
-TTWJetsToLNu\_TuneCUETP8M1\_13TeV-amcatnlo-madspin-pythia8 & 0.204 \\
-TTWJetsToQQ\_TuneCUETP8M1\_13TeV-amcatnlo-madspin-pythia8 & 0.423 \\
+TTWJetsToLNu\_TuneCUETP8M1\_13TeV-amcatnloFXFX-madspin-pythia8 & 0.204 \\
+TTWJetsToQQ\_TuneCUETP8M1\_13TeV-amcatnloFXFX-madspin-pythia8 & 0.423 \\
 WW\_TuneCUETP8M1\_13TeV\_pythia8 & 115.0 \\
 WZ\_TuneCUETP8M1\_13TeV\_pythia8 & 47.13 \\
 ZZ\_TuneCUETP8M1\_13TeV\_pythia8 & 16.523 \\
@@ -594,7 +594,7 @@ WWZ\_TuneCUETP8M1\_13TeV-amcatnlo-pythia8 & 0.165 \\
 WZZ\_TuneCUETP8M1\_13TeV-amcatnlo-pythia8 & 0.056 \\
 ZZZ\_TuneCUETP8M1\_13TeV-amcatnlo-pythia8 & 0.014 \\
 \hline \hline
-\end{tabular*}
+\end{tabular}
 }
 \end{table}
 
@@ -619,19 +619,19 @@ Cross sections for a couple of mass points are shown in Table~\ref{tab:signalMC}
 {
 %\scriptsize
 %\footnotesize
-\fontsize{8 pt}{1.2 em}
-\begin{tabular*}{\textwidth}{lc}
+\fontsize{10 pt}{1.2 em}
+\begin{tabular}{\textwidth}{lc}
 \hline \hline
 Dataset & $\sigma$ (pb) \\
 \hline
-SMS-T2tt\_mStop500mLSP325\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 0.5185 \\
-SMS-T2tt\_mStop850mLSP100\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 0.0190 \\
+SMS-T2tt\_mStop-500\_mLSP-325\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 0.51848 \\
+SMS-T2tt\_mStop-850\_mLSP-100\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 0.01896 \\
 \hline
-SMS-T1tttt\_mGluino1500mLSP100\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 0.014 \\
-SMS-T1tttt\_mGluino1200mLSP800\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 0.086 \\
+SMS-T1tttt\_mGluino-1500\_mLSP-100\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 0.014 \\
+SMS-T1tttt\_mGluino-1200\_mLSP-800\_TuneCUETP8M1\_13TeV-madgraph-pythia8 & 0.086 \\
 \hline \hline
-\end{tabular*}
-%\scriptsize
+\end{tabular}
+\scriptsize
 %\footnotesize
 }
 \end{table}

@@ -141,6 +141,7 @@
 %make sure the hyperref is the last package loaded
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=black,bookmarksopen=true]{hyperref}
 %\usepackage{quoting}
+%\usepackage{tabularx}
 
 \widowpenalty10000
 \clubpenalty10000
