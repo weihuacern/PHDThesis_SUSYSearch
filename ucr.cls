@@ -140,6 +140,7 @@
 \usepackage{lipsum}
 %make sure the hyperref is the last package loaded
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=black,bookmarksopen=true]{hyperref}
+%\usepackage{quoting}
 
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{4}
@@ -435,6 +436,8 @@
     \bigskip \medskip
 \fmsmallfont
   Dissertation Committee:
+%\quotingsetup{vskip=0pt}
+\renewcommand{\quote}{\list{}{\rightmargin=\leftmargin\topsep=0pt}\item\relax}
 \begin{quote}
 {\@chair}, Chairperson\newline
 {\@othermembers}
