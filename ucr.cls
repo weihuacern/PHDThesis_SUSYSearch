@@ -142,6 +142,9 @@
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=black,bookmarksopen=true]{hyperref}
 %\usepackage{quoting}
 
+\widowpenalty10000
+\clubpenalty10000
+
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{4}
 
